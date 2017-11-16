@@ -1,12 +1,12 @@
-# CRAN Task View: Optimization and Mathematical Programming
+CRAN Task View: Optimization and Mathematical Programming
+---------------------------------------------------------
 
-|                 |                                                |
-|-----------------|------------------------------------------------| 
-| **Maintainer:** | Stefan Theussl and Hans W. Borchers            | 
-| **Contact:**    | R-optimization at mailbox.org                  |
-| **Version:**    | 2017-11-10                                     |
-| **URL:**        | <https://CRAN.R-project.org/view=Optimization> |
-
+|                 |                                                  
+|-----------------|------------------------------------------------  
+| **Maintainer:** | Stefan Theussl and Hans W. Borchers              
+| **Contact:**    | R-optimization at mailbox.org                    
+| **Version:**    | 2017-11-16                                       
+| **URL:**        | <https://CRAN.R-project.org/view=Optimization>   
 
 This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#SolverInfrastructure), [General Purpose Continuous Solvers](#GeneralPurposeSolvers), [Mathematical Programming Solvers](#MathematicalProgrammingSolvers) and [Specific Applications in Optimization](#SpecificApplications). Packages are categorized in these four sections.
 
@@ -14,15 +14,15 @@ Many packages provide functionality for more than one of the subjects listed at 
 
 If you think that some package is missing from the list, please let us know.
 
-
-## Optimization Infrastructure Packages
+<span id="SolverInfrastructure">Optimization Infrastructure Packages</span>
+---------------------------------------------------------------------------
 
 Trying to unify optimization algorithms via a single wrapper function, [optimx](https://cran.r-project.org/package=optimx/index.html) helps to proper specify the (nonlinear) optimization problem including objective function, gradient function, and scaling. This package supports the (local) optimization of smooth, nonlinear functions with at most box constraints (bounds). [optimx](../packages/optimx/index.html) depends not only on packages and/or functions mentioned in this section of this task view but also on two packages implemented by the author(s), namely [Rcgmin](../packages/Rcgmin/index.html) and [Rvmmin](../packages/Rvmmin). Both are "pure R" implementations of conjugate gradient minimization and variable metric nonlinear function minimization algorithms, respectively.
 
 The R Optimization Infrastructure ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework for handling optimization problems in R. It uses an object oriented approach to define and solve various optimization tasks in R which can be from different problem classes (e.g., linear, quadratic, non-linear programming problems). This makes optimization transparent for the R user as the corresponding workflow is completely abstracted from the underlying solver. Furthermore, this approach allows for easy switching between solvers, given that corresponding solver plugins are available, and thus enhances comparability.
 
-
-## General Purpose Continuous Solvers
+<span id="GeneralPurposeSolvers">General Purpose Continuous Solvers</span>
+--------------------------------------------------------------------------
 
 Package stats offers several general purpose optimization routines. For one-dimensional unconstrained function optimization there is `optimize()` which searches an interval for a minimum or maximum. Function `optim()` provides an implementation of the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, bounded BFGS, conjugate gradient (CG), Nelder-Mead, and simulated annealing (SANN) optimization methods. It utilizes gradients, if provided, for faster convergence. Typically it is used for unconstrained optimization but includes an option for box-constrained optimization.
 
@@ -75,7 +75,7 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   Package [nnls](https://cran.r-project.org/package=nnls) interfaces the Lawson-Hanson implementation of an algorithm for non-negative least-squares, allowing the combination of non-negative and non-positive constraints.
 -   Package [bvls](https://cran.r-project.org/package=bvls) interfaces the Stark-Parker implementation of an algorithm for least-squares with upper and lower bounded variables.
 -   Package [onls](https://cran.r-project.org/package=onls) implements orthogonal nonlinear least-squares regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR) using a Levenberg-Marquardt-type minimization algorithm based on the ODRPACK Fortran library.
--   [colf](https://cran.r-project.org/package=colf) performs least squares constrained optimization on a linear objective function. It contains a number of algorithms to choose from and offers a formula syntax similar to `lm()`
+-   [colf](https://cran.r-project.org/package=colf) performs least squares constrained optimization on a linear objective function. It contains a number of algorithms to choose from and offers a formula syntax similar to `lm()`.
 
 ### Semidefinite and Convex Solvers
 
@@ -111,8 +111,8 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   [SACOBRA](https://cran.r-project.org/package=SACOBRA) is a package for numeric constrained optimization of expensive black-box functions under severely limited budgets; it implements an extension of the COBRA algorithm with initial design generation and self-adjusting random restarts.
 -   [RCEIM](https://cran.r-project.org/package=RCEIM) implements a stochastic heuristic method for performing multidimensional function optimization.
 
-
-## Mathematical Programming Solvers
+<span id="MathematicalProgrammingSolvers">Mathematical Programming Solvers</span>
+---------------------------------------------------------------------------------
 
 This section provides an overview of open source as well as commercial optimizers. Which type of mathematical programming problem can be solved by a certain package or function can be seen from the abbreviations in square brackets. For a [classification by subject](#ClassificationBySubject) see the list at the end of this task view.
 -   Package [ompr](https://cran.r-project.org/package=ompr) is an optimization modelling package to model and solve Mixed Integer Linear Programs in an algebraic way directly in R. The models are solver-independent and thus offer the possibility to solve models with different solvers. (Inspired by Julia's JuMP project.)
@@ -141,8 +141,8 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 -   Gurobi Optimization ships an R binding since their 5.0 release that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models from within R. See the [R with Gurobi](https://www.gurobi.com/products/modeling-languages/r) website for more details. \[LP, QP, MILP, MIQP\]
 -   The [localsolver](https://cran.r-project.org/package=localsolver) package provides an interface to the hybrid mathematical programming software LocalSolver from Innovation 24. LocalSolver is a commercial product, academic licenses are available on request. \[LP, MIP, QP, NLP, HEUR\]
 
-
-## Specific Applications in Optimization
+<span id="SpecificApplications">Specific Applications in Optimization</span>
+----------------------------------------------------------------------------
 
 -   Package [adagio](https://cran.r-project.org/package=adagio) provides functions for single and multiple knapsack problems and solves subset sum and assignment tasks.
 -   In package [clue](https://cran.r-project.org/package=clue) `solve_LSAP()` enables the user to solve the linear sum assignment problem (LSAP) using an efficient C implementation of the Hungarian algorithm. \[SPLP\]
@@ -165,8 +165,8 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 -   Package [sna](https://cran.r-project.org/package=sna) contains the function `lab.optim()` which is the front-end to a series of heuristic routines for optimizing some bivariate graph statistic. \[GRAPH\]
 -   Package [TSP](https://cran.r-project.org/package=TSP/index.html) provides basic infrastructure for handling and solving the traveling salesperson problem (TSP). The main routine `solve_TSP()` solves the TSP through several heuristics. In addition, it provides an interface to the [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde), which has to be downloaded separately. \[SPLP\]
 
-
-## Classification According to Subject
+<span id="ClassificationBySubject">Classification According to Subject</span>
+-----------------------------------------------------------------------------
 
 What follows is an attempt to provide a by-subject overview of packages. The full name of the subject as well as the corresponding [MSC 2010](http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&btn=Current) code (if available) are given in brackets.
 
@@ -219,6 +219,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [dfoptim](https://cran.r-project.org/package=dfoptim) (core)
 -   [ECOSolveR](https://cran.r-project.org/package=ECOSolveR)
 -   [ecr](https://cran.r-project.org/package=ecr)
+-   [flacco](https://cran.r-project.org/package=flacco)
 -   [GA](https://cran.r-project.org/package=GA)
 -   [genalg](https://cran.r-project.org/package=genalg)
 -   [GenSA](https://cran.r-project.org/package=GenSA)
@@ -309,8 +310,8 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
 -   [Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
 -   [Modern Optimization With R -- Paulo Cortez (Springer UseR Series)](https://www.springer.com/mathematics/book/978-3-319-08262-2)
--   [Comparison of some heuristic optimization methods](http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/)
 -   [COIN-OR Project](http://www.coin-or.org/)
 -   [NEOS Optimization Guide](http://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
 -   [Mathematics Subject Classification - Mathematical programming](http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&btn=Current)
+
