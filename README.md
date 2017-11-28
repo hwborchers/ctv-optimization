@@ -1,7 +1,7 @@
 CRAN Task View: Optimization and Mathematical Programming
 ---------------------------------------------------------
 
-|                 |                                                  
+|                 |                                                |
 |-----------------|------------------------------------------------  
 | **Maintainer:** | Stefan Theussl and Hans W. Borchers              
 | **Contact:**    | R-optimization at mailbox.org                    
