@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------|
 | **Maintainer:** | Stefan Theussl and Hans W. Borchers            |
 | **Contact:**    | R-optimization at mailbox.org                  |
-| **Version:**    | 2017-11-28                                     |
+| **Version:**    | 2018-01-26                                     |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization> |
 
 This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#SolverInfrastructure), [General Purpose Continuous Solvers](#GeneralPurposeSolvers), [Mathematical Programming Solvers](#MathematicalProgrammingSolvers) and [Specific Applications in Optimization](#SpecificApplications). Packages are categorized in these four sections.
@@ -315,7 +315,6 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
 -   [Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
 -   [Modern Optimization With R -- Paulo Cortez (Springer UseR Series)](https://www.springer.com/mathematics/book/978-3-319-08262-2)
--   [Comparison of some heuristic optimization methods](http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/)
 -   [COIN-OR Project](http://www.coin-or.org/)
 -   [NEOS Optimization Guide](http://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
