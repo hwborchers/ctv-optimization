@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------|
 | **Maintainer:** | Stefan Theussl and Hans W. Borchers            |
 | **Contact:**    | R-optimization at mailbox.org                  |
-| **Version:**    | 2018-01-26                                     |
+| **Version:**    | 2018-02-22                                     |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization> |
 
 This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#SolverInfrastructure), [General Purpose Continuous Solvers](#GeneralPurposeSolvers), [Mathematical Programming Solvers](#MathematicalProgrammingSolvers) and [Specific Applications in Optimization](#SpecificApplications). Packages are categorized in these four sections.
@@ -74,6 +74,7 @@ Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined sy
 
 -   Package [nlmrt](https://cran.r-project.org/package=nlmrt) provides tools for minimizing nonlinear sums of squares. The function to be minimized can be provided as an R function or as an expression, similar to the way that nls() works. `nlmrt::nlxb()` tries to compute analytic derivatives for the Jacobian used in a Levenberg-Marquardt. This allows for the solution of problems with poorly conditioned Jacobians and small residuals
 -   Package [minpack.lm](https://cran.r-project.org/package=minpack.lm) provides a function `nls.lm()` for solving nonlinear least-squares problems by a modification of the Levenberg-Marquardt algorithm, with support for lower and upper parameter bounds, as found in MINPACK.
+-   Package [lsei](https://cran.r-project.org/package=lsei) contains functions that solve least-squares linear regression problems under linear equality/inequality constraints. Functions for solving quadratic programming problems are also available, which transform such problems into least squares ones first. (Based on Fortran programs of Lawson and Hanson.)
 -   Package [nnls](https://cran.r-project.org/package=nnls) interfaces the Lawson-Hanson implementation of an algorithm for non-negative least-squares, allowing the combination of non-negative and non-positive constraints.
 -   Package [bvls](https://cran.r-project.org/package=bvls) interfaces the Stark-Parker implementation of an algorithm for least-squares with upper and lower bounded variables.
 -   Package [onls](https://cran.r-project.org/package=onls) implements orthogonal nonlinear least-squares regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR) using a Levenberg-Marquardt-type minimization algorithm based on the ODRPACK Fortran library.
@@ -245,6 +246,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [LowRankQP](https://cran.r-project.org/package=LowRankQP)
 -   [lpSolve](https://cran.r-project.org/package=lpSolve)
 -   [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI)
+-   [lsei](https://cran.r-project.org/package=lsei)
 -   [ManifoldOptim](https://cran.r-project.org/package=ManifoldOptim)
 -   [matchingMarkets](https://cran.r-project.org/package=matchingMarkets)
 -   [matchingR](https://cran.r-project.org/package=matchingR)
@@ -312,9 +314,9 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 
 ### Related links:
 
--   [Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
--   [Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
--   [Modern Optimization With R -- Paulo Cortez (Springer UseR Series)](https://www.springer.com/mathematics/book/978-3-319-08262-2)
+-   Journal of Statistical Software [Special Volume on Optimization](https://www.jstatsoft.org/v60) (Editor: Ravi Varadhan)
+-   [Nonlinear Parameter Optimization Using R Tools](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html) -- John C. Nash (Wiley)
+-   [Modern Optimization With R](https://www.springer.com/mathematics/book/978-3-319-08262-2) -- Paulo Cortez (Springer UseR Series)
 -   [COIN-OR Project](http://www.coin-or.org/)
 -   [NEOS Optimization Guide](http://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
