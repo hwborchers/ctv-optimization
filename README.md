@@ -29,7 +29,8 @@ Package stats offers several general purpose optimization routines. For one-dime
 Additionally, for minimizing a function subject to linear inequality constraints, stats contains the routine `constrOptim()`. Then there is `nlm` which is used for solving nonlinear unconstrained minimization problems. `nlminb()` offers box-constrained optimization using the PORT routines. \[RGA, QN\]
 
 -   [lbfgsb3](https://cran.r-project.org/package=lbfgsb3) interfaces the J.Nocedal et al. L-BFGS-B 3.0 Fortran code, a limited memory BFGS solver, allowing bound constraints and being applicable to higher-dimensional problems. \[QN\]
--   And [lbfgs](https://cran.r-project.org/package=lbfgs) wraps the libBFGS library by N.Okazaki (converted from Nocedal's library), interfacing both the L-BFGS and the OWL-QN algorithm, the latter being particularly suited for higher-dimensional problems. \[QN\]
+-   And [lbfgs](https://cran.r-project.org/package=lbfgs) wraps the libBFGS library by N. Okazaki (converted from Nocedal's library), interfacing both the L-BFGS and the OWL-QN algorithm, the latter being particularly suited for higher-dimensional problems. \[QN\]
+-   [RcppNumerical](https://cran.r-project.org/package=RcppNumerical) is a collection of open source libraries for numerical computing and their integration with 'Rcpp'. It provides a wrapper for the L-BFGS algorithm, based on the LBFGS++ library (based on code of N. Okazaki).
 -   The following packages implement optimization routines in pure R, for nonlinear functions with bounds constraints. [Rcgmin](https://cran.r-project.org/package=Rcgmin/index.html): gradient function minimization similar to GC; [Rvmmin](../packages/Rvmmin/index.html): variable metric function minimization; [Rtnmin](../packages/Rtnmin): truncated Newton function minimization.
 -   Package [ucminf](https://cran.r-project.org/package=ucminf) implements an algorithm of quasi-Newton type for nonlinear unconstrained optimization, combining a trust region with line search approaches. The interface of `ucminf()` is designed for easy interchange with `optim()`.\[QN\]
 -   [mize](https://cran.r-project.org/package=mize) implements optimization algorithms in pure R, including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS (L-BFGS) methods. Most internal parameters can be set through the calling interface.
@@ -56,10 +57,10 @@ Additionally, for minimizing a function subject to linear inequality constraints
 
 -   In package [quadprog](https://cran.r-project.org/package=quadprog/index.html) `solve.QP()` solves quadratic programming problems with linear equality and inequality constraints. (The matrix has to be positive definite.) [quadprogXT](../packages/quadprogXT) extends this with absolute value constraints and absolute values in the objective function. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function `ipop` for solving quadratic programming problems using interior point methods. (The matrix can be positive semidefinite.) \[IPM, QP\]
--   [Dykstra](https://cran.r-project.org/package=Dykstra) solves quadratic programming problems using R.L. Dykstra's cyclic projection algorithm for positive definite and semidefinite matrices. The routine allows for a combination of equality and inequality constraints. \[QP\]
+-   [Dykstra](https://cran.r-project.org/package=Dykstra) solves quadratic programming problems using R. L. Dykstra's cyclic projection algorithm for positive definite and semidefinite matrices. The routine allows for a combination of equality and inequality constraints. \[QP\]
 -   [rosqp](https://cran.r-project.org/package=rosqp) provides bindings to the 'OSQP' solver, the 'Operator Splitting QP Solver' of the University of Oxford Control Group, which can solve sparse convex quadratic programming problems with optional equality and inequality constraints. \[QP\]
 -   [coneproj](https://cran.r-project.org/package=coneproj) contains routines for cone projection and quadratic programming, estimation and inference for constrained parametric regression, and shape-restricted regression problems. \[QP\]
--   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior point method solving quadratic programming problems, especially for semidefinite quadratic forms. \[IPM, QP\]
+-   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior point method solving quadratic programming problems (especially for semidefinite quadratic forms). \[IPM, QP\]
 -   [limSolve](https://cran.r-project.org/package=limSolve) offers to solve linear or quadratic optimization functions, subject to equality and/or inequality constraints. \[LP, QP\]
 
 ### Optimization Test Functions
@@ -68,13 +69,13 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   [smoof](https://cran.r-project.org/package=smoof) has generators for a number of both single- and multi-objective test functions that are frequently used for benchmarking optimization algorithms; offers a set of convenient functions to generate, plot, and work with objective functions.
 -   [flacco](https://cran.r-project.org/package=flacco) contains tools and features used for an Exploratory Landscape Analysis (ELA) of continuous optimization problems, capable of quantifying rather complex properties, such as the global structure, separability, etc., of the optimization problems.
 -   [cec2013](https://cran.r-project.org/package=cec2013/index.html) and [cec2005benchmark](../packages/cec2005benchmark) contain many test functions for global optimization from the 2005 and 2013 special sessions on real-parameter optimization at the IEEE CEC congresses on evolutionary computation.
--   Package [funconstrain](https://github.com/jlmelville/funconstrain/) (on Github) implements 35 of the test functions by More, Garbow, and Hillstom, useful for testing unconstrained optimization methods.
+-   Package [<span class="GitHub">funconstrain</span>](https://github.com/jlmelville/funconstrain/) (on Github) implements 35 of the test functions by More, Garbow, and Hillstom, useful for testing unconstrained optimization methods.
 
 ### Least-Squares Problems
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined systems of linear equations, returning least-squares solutions if possible. And package stats provides `nls()` to determine least-squares estimates of the parameters of a nonlinear model. [nls2](https://cran.r-project.org/package=nls2) enhances function `nls()` with brute force or grid-based searches, to avoid being dependent on starting parameters or getting stuck in local solutions.
 
--   Package [nlmrt](https://cran.r-project.org/package=nlmrt) provides tools for minimizing nonlinear sums of squares. The function to be minimized can be provided as an R function or as an expression, similar to the way that nls() works. `nlmrt::nlxb()` tries to compute analytic derivatives for the Jacobian used in a Levenberg-Marquardt. This allows for the solution of problems with poorly conditioned Jacobians and small residuals
+-   Package [nlmrt](https://cran.r-project.org/package=nlmrt) provides tools for minimizing nonlinear sums of squares. The function to be minimized can be provided as an R function or as an expression, similar to the way that nls() works. `nlmrt::nlxb()` tries to compute analytic derivatives for the Jacobian used in a Levenberg-Marquardt. This allows for the solution of problems with poorly conditioned Jacobians and small residuals.
 -   Package [minpack.lm](https://cran.r-project.org/package=minpack.lm) provides a function `nls.lm()` for solving nonlinear least-squares problems by a modification of the Levenberg-Marquardt algorithm, with support for lower and upper parameter bounds, as found in MINPACK.
 -   Package [lsei](https://cran.r-project.org/package=lsei) contains functions that solve least-squares linear regression problems under linear equality/inequality constraints. Functions for solving quadratic programming problems are also available, which transform such problems into least squares ones first. (Based on Fortran programs of Lawson and Hanson.)
 -   Package [nnls](https://cran.r-project.org/package=nnls) interfaces the Lawson-Hanson implementation of an algorithm for non-negative least-squares, allowing the combination of non-negative and non-positive constraints.
@@ -105,7 +106,8 @@ Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined sy
 -   Machine coded genetic algorithm (MCGA) provided by package [mcga](https://cran.r-project.org/package=mcga) is a tool which solves optimization problems based on byte representation of variables.
 -   A particle swarm optimizer (PSO) is implemented in package [pso](https://cran.r-project.org/package=pso/index.html), and also in [psoptim](../packages/psoptim). Another (parallelized) implementation of the PSO algorithm can be found in package `ppso` available from [rforge.net/ppso](https://www.rforge.net/ppso/).
 -   Package [hydroPSO](https://cran.r-project.org/package=hydroPSO) implements the latest Standard Particle Swarm Optimization algorithm (SPSO-2011); it is parallel-capable, and includes several fine-tuning options and post-processing functions.
--   [ABCoptim](https://cran.r-project.org/package=ABCoptim) implements the Artificial Bee Colony (ABC) optimization.
+-   [<span class="GitHub">hydromad</span>](https://github.com/floybix/hydromad/) (on Github) contains the `SCEoptim` function for Shuffled Compex Evolution (SCE) optimization, an evolutionary algorithm, combined with a simplex method.
+-   Package [ABCoptim](https://cran.r-project.org/package=ABCoptim) implements the Artificial Bee Colony (ABC) optimization approach.
 -   Package [metaheuristicOpt](https://cran.r-project.org/package=metaheuristicOpt) contains implementations of several evolutionary optimization algorithms, such as particle swarm, dragonfly and firefly, sine cosine algorithms and many others.
 -   [ecr](https://cran.r-project.org/package=ecr) is a framework for building evolutionary algorithms for single- and multi-objective continuous or discrete optimization problems.
 -   CMA-ES by N. Hansen, a global optimization procedure using a covariance matrix adapting evolutionary strategy, is implemented in several packages: In packages [cmaes](https://cran.r-project.org/package=cmaes/index.html) and [cmaesr](../packages/cmaesr/index.html), in [parma](../packages/parma/index.html) as `cmaes`, in [adagio](../packages/adagio/index.html) as `pureCMAES`, and in [rCMA](../packages/rCMA) as `cmaOptimDP`, interfacing Hansen's own Java implementation.
@@ -155,6 +157,7 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 -   Package [nleqslv](https://cran.r-project.org/package=nleqslv) provides function `nleqslv()`, implementing Newton and Broyden methods with line search and trust region global strategies for solving medium sized system of nonlinear equations.
 -   The data cloning algorithm is a global optimization approach and a variant of simulated annealing which has been implemented in package [dclone](https://cran.r-project.org/package=dclone). The package provides low level functions for implementing maximum likelihood estimating procedures for complex models using data cloning and Bayesian Markov chain Monte Carlo methods.
 -   Package [goalprog](https://cran.r-project.org/package=goalprog) provides some functions for lexicographic linear goal programming and optimization. Goal programming is a branch of multi-objective, multi-criteria decision analysis. \[MOP\]
+-   [mlrMBO](https://cran.r-project.org/package=mlrMBO) is a flexible and comprehensive R toolbox for model-based optimization ('MBO'), also known as Bayesian optimization. It is designed for both single- and multi-objective optimization with mixed continuous, categorical and conditional parameters. \[MOP\]
 -   [igraph](https://cran.r-project.org/package=igraph), a package for graph and network analysis, uses the very fast igraph C library. It can be used to calculate shortest paths, maximal network flows, minimum spanning trees, etc. \[GRAPH\]
 -   [irace](https://cran.r-project.org/package=irace) contains an optimization algorithm for optimizing the parameters of other optimization algorithms. This problem is called "(offline) algorithm configuration". \[GO\]
 -   [matchingR](https://cran.r-project.org/package=matchingR/index.html) and [matchingMarkets](../packages/matchingMarkets) implement the Gale-Shapley algorithm for the stable marriage and the college admissions problem, the stable roommates and the house allocation problem. \[COP, MM\]
@@ -196,7 +199,6 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   HEUR (Approximation methods and heuristics, 90C59): [irace](https://cran.r-project.org/package=irace)
 
 ### CRAN packages:
-
 -   [ABCoptim](https://cran.r-project.org/package=ABCoptim)
 -   [adagio](https://cran.r-project.org/package=adagio)
 -   [alabama](https://cran.r-project.org/package=alabama) (core)
@@ -260,6 +262,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [minpack.lm](https://cran.r-project.org/package=minpack.lm)
 -   [minqa](https://cran.r-project.org/package=minqa)
 -   [mize](https://cran.r-project.org/package=mize)
+-   [mlrMBO](https://cran.r-project.org/package=mlrMBO)
 -   [n1qn1](https://cran.r-project.org/package=n1qn1)
 -   [neldermead](https://cran.r-project.org/package=neldermead)
 -   [NlcOptim](https://cran.r-project.org/package=NlcOptim)
@@ -289,6 +292,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [rCMA](https://cran.r-project.org/package=rCMA)
 -   [Rcplex](https://cran.r-project.org/package=Rcplex)
 -   [RcppDE](https://cran.r-project.org/package=RcppDE)
+-   [RcppNumerical](https://cran.r-project.org/package=RcppNumerical)
 -   [Rcsdp](https://cran.r-project.org/package=Rcsdp)
 -   [Rdsdp](https://cran.r-project.org/package=Rdsdp)
 -   [rgenoud](https://cran.r-project.org/package=rgenoud)
