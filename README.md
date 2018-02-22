@@ -56,8 +56,10 @@ Additionally, for minimizing a function subject to linear inequality constraints
 
 -   In package [quadprog](https://cran.r-project.org/package=quadprog/index.html) `solve.QP()` solves quadratic programming problems with linear equality and inequality constraints. (The matrix has to be positive definite.) [quadprogXT](../packages/quadprogXT) extends this with absolute value constraints and absolute values in the objective function. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function `ipop` for solving quadratic programming problems using interior point methods. (The matrix can be positive semidefinite.) \[IPM, QP\]
+-   [Dykstra](https://cran.r-project.org/package=Dykstra) solves quadratic programming problems using R.L. Dykstra's cyclic projection algorithm for positive definite and semidefinite matrices. The routine allows for a combination of equality and inequality constraints. \[QP\]
+-   [rosqp](https://cran.r-project.org/package=rosqp) provides bindings to the 'OSQP' solver, the 'Operator Splitting QP Solver' of the University of Oxford Control Group, which can solve sparse convex quadratic programming problems with optional equality and inequality constraints. \[QP\]
 -   [coneproj](https://cran.r-project.org/package=coneproj) contains routines for cone projection and quadratic programming, estimation and inference for constrained parametric regression, and shape-restricted regression problems. \[QP\]
--   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior point method solving quadratic programming problems \[IPM, QP\]
+-   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior point method solving quadratic programming problems, especially for semidefinite quadratic forms. \[IPM, QP\]
 -   [limSolve](https://cran.r-project.org/package=limSolve) offers to solve linear or quadratic optimization functions, subject to equality and/or inequality constraints. \[LP, QP\]
 
 ### Optimization Test Functions
@@ -221,6 +223,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [DEoptimR](https://cran.r-project.org/package=DEoptimR)
 -   [desirability](https://cran.r-project.org/package=desirability)
 -   [dfoptim](https://cran.r-project.org/package=dfoptim) (core)
+-   [Dykstra](https://cran.r-project.org/package=Dykstra)
 -   [ECOSolveR](https://cran.r-project.org/package=ECOSolveR)
 -   [ecr](https://cran.r-project.org/package=ecr)
 -   [flacco](https://cran.r-project.org/package=flacco)
@@ -295,6 +298,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [Rmosek](https://cran.r-project.org/package=Rmosek)
 -   [rneos](https://cran.r-project.org/package=rneos)
 -   [ROI](https://cran.r-project.org/package=ROI)
+-   [rosqp](https://cran.r-project.org/package=rosqp)
 -   [Rsolnp](https://cran.r-project.org/package=Rsolnp)
 -   [Rsymphony](https://cran.r-project.org/package=Rsymphony)
 -   [Rtnmin](https://cran.r-project.org/package=Rtnmin)
