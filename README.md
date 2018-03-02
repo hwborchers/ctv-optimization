@@ -5,24 +5,24 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------|
 | **Maintainer:** | Stefan Theussl and Hans W. Borchers            |
 | **Contact:**    | R-optimization at mailbox.org                  |
-| **Version:**    | 2018-02-22                                     |
+| **Version:**    | 2018-03-02                                     |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization> |
 
-This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#SolverInfrastructure), [General Purpose Continuous Solvers](#GeneralPurposeSolvers), [Mathematical Programming Solvers](#MathematicalProgrammingSolvers) and [Specific Applications in Optimization](#SpecificApplications). Packages are categorized in these four sections.
+This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#optimization-infrastructure-packages), [General Purpose Continuous Solvers](#general-purpose-continuous-solvers), [Mathematical Programming Solvers](#mathematical-programming-solvers), and [Specific Applications in Optimization](#specific-applications-in-optimization). Packages are categorized in these four sections.
 
-Many packages provide functionality for more than one of the subjects listed at the end of this task view. E.g., mixed integer linear programming solvers typically offer standard linear programming routines like the simplex algorithm. Therefore following each package description a list of abbreviations describes the typical features of the optimizer (i.e., the problems which can be solved). The full names of the abbreviations given in square brackets can be found at the end of this task view under [Classification According to Subject](#ClassificationBySubject).
+Many packages provide functionality for more than one of the subjects listed at the end of this task view. E.g., mixed integer linear programming solvers typically offer standard linear programming routines like the simplex algorithm. Therefore following each package description a list of abbreviations describes the typical features of the optimizer (i.e., the problems which can be solved). The full names of the abbreviations given in square brackets can be found at the end of this task view under [Classification According to Subject](#classification-according-to-subject).
 
 If you think that some package is missing from the list, please let us know.
 
-<span id="SolverInfrastructure">Optimization Infrastructure Packages</span>
----------------------------------------------------------------------------
+<span id="optimization-infrastructure-packages">Optimization Infrastructure Packages</span>
+-------------------------------------------------------------------------------------------
 
 -   Trying to unify optimization algorithms via a single wrapper function, [optimr](https://cran.r-project.org/package=optimr/index.html) (and 'optimrx' on R-Forge) helps to proper specify (nonlinear) optimization problems, including objective function, gradient function, and scaling. It supports the (local) optimization of smooth, nonlinear functions with at most box/bound constraints. Function `opm`, returning a dataframe, compares solvers for a selected optimization task. (Note that [optimx](../packages/optimx) will get deprecated.)
 -   The R Optimization Infrastructure ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework for handling optimization problems in R. It uses an object-oriented approach to define and solve various optimization tasks in R which can be from different problem classes (e.g., linear, quadratic, non-linear programming problems). This makes optimization transparent for the R user as the corresponding workflow is completely abstracted from the underlying solver. The approach allows for easy switching between solvers and thus enhances comparability.
 -   The package [CVXR](https://cran.r-project.org/package=CVXR) provides an object-oriented modeling language for Disciplined Convex Programming (DCP). It allows the user to formulate convex optimization problems in a natural way following mathematical convention and DCP rules. The system analyzes the problem, verifies its convexity, converts it into a canonical form, and hands it off to an appropriate solver such as ECOS or SCS to obtain the solution. (CVXR is derived from the well-known MATLAB toolbox CVX, developed at Stanford University.)
 
-<span id="GeneralPurposeSolvers">General Purpose Continuous Solvers</span>
---------------------------------------------------------------------------
+<span id="general-purpose-continuous-solvers">General Purpose Continuous Solvers</span>
+---------------------------------------------------------------------------------------
 
 Package stats offers several general purpose optimization routines. For one-dimensional unconstrained function optimization there is `optimize()` which searches an interval for a minimum or maximum. Function `optim()` provides an implementation of the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, bounded BFGS, conjugate gradient (CG), Nelder-Mead, and simulated annealing (SANN) optimization methods. It utilizes gradients, if provided, for faster convergence. Typically it is used for unconstrained optimization but includes an option for box-constrained optimization.
 
@@ -53,7 +53,7 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   In package [trust](https://cran.r-project.org/package=trust), a routine with the same name offers local optimization based on the "trust region" approach.
 -   [trustOptim](https://cran.r-project.org/package=trustOptim) implements a "trust region" algorithm for unconstrained nonlinear optimization. The algorithm is optimized for objective functions with sparse Hessians. This makes the algorithm highly scalable and efficient, in terms of both time and memory footprint.
 
-### Quadratic Optimization
+### <span id="quadratic-optimization">Quadratic Optimization</span>
 
 -   In package [quadprog](https://cran.r-project.org/package=quadprog/index.html) `solve.QP()` solves quadratic programming problems with linear equality and inequality constraints. (The matrix has to be positive definite.) [quadprogXT](../packages/quadprogXT) extends this with absolute value constraints and absolute values in the objective function. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function `ipop` for solving quadratic programming problems using interior point methods. (The matrix can be positive semidefinite.) \[IPM, QP\]
@@ -63,7 +63,7 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior point method solving quadratic programming problems (especially for semidefinite quadratic forms). \[IPM, QP\]
 -   [limSolve](https://cran.r-project.org/package=limSolve) offers to solve linear or quadratic optimization functions, subject to equality and/or inequality constraints. \[LP, QP\]
 
-### Optimization Test Functions
+### <span id="optimization-test-functions">Optimization Test Functions</span>
 
 -   Objective functions for benchmarking the performance of global optimization algorithms can be found in [globalOptTests](https://cran.r-project.org/package=globalOptTests).
 -   [smoof](https://cran.r-project.org/package=smoof) has generators for a number of both single- and multi-objective test functions that are frequently used for benchmarking optimization algorithms; offers a set of convenient functions to generate, plot, and work with objective functions.
@@ -71,11 +71,11 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   [cec2013](https://cran.r-project.org/package=cec2013/index.html) and [cec2005benchmark](../packages/cec2005benchmark) contain many test functions for global optimization from the 2005 and 2013 special sessions on real-parameter optimization at the IEEE CEC congresses on evolutionary computation.
 -   Package [<span class="GitHub">funconstrain</span>](https://github.com/jlmelville/funconstrain/) (on Github) implements 35 of the test functions by More, Garbow, and Hillstom, useful for testing unconstrained optimization methods.
 
-### Least-Squares Problems
+### <span id="least-squares-problems">Least-Squares Problems</span>
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined systems of linear equations, returning least-squares solutions if possible. And package stats provides `nls()` to determine least-squares estimates of the parameters of a nonlinear model. [nls2](https://cran.r-project.org/package=nls2) enhances function `nls()` with brute force or grid-based searches, to avoid being dependent on starting parameters or getting stuck in local solutions.
 
--   Package [nlmrt](https://cran.r-project.org/package=nlmrt) provides tools for minimizing nonlinear sums of squares. The function to be minimized can be provided as an R function or as an expression, similar to the way that nls() works. `nlmrt::nlxb()` tries to compute analytic derivatives for the Jacobian used in a Levenberg-Marquardt. This allows for the solution of problems with poorly conditioned Jacobians and small residuals.
+-   Package [nlsr](https://cran.r-project.org/package=nlsr/index.html) provides tools for working with nonlinear least-squares problems. Functions `nlfb` and `nlxb` are intended to eventually supersede the 'nls()' function in Base R, by applying a variant of the Marquardt procedure for nonlinear least-squares, with bounds constraints and optionally Jacobian described as R functions. (It is based on the now-deprecated package [nlmrt](../packages/nlmrt).)
 -   Package [minpack.lm](https://cran.r-project.org/package=minpack.lm) provides a function `nls.lm()` for solving nonlinear least-squares problems by a modification of the Levenberg-Marquardt algorithm, with support for lower and upper parameter bounds, as found in MINPACK.
 -   Package [lsei](https://cran.r-project.org/package=lsei) contains functions that solve least-squares linear regression problems under linear equality/inequality constraints. Functions for solving quadratic programming problems are also available, which transform such problems into least squares ones first. (Based on Fortran programs of Lawson and Hanson.)
 -   Package [nnls](https://cran.r-project.org/package=nnls) interfaces the Lawson-Hanson implementation of an algorithm for non-negative least-squares, allowing the combination of non-negative and non-positive constraints.
@@ -83,7 +83,7 @@ Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined sy
 -   Package [onls](https://cran.r-project.org/package=onls) implements orthogonal nonlinear least-squares regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR) using a Levenberg-Marquardt-type minimization algorithm based on the ODRPACK Fortran library.
 -   [colf](https://cran.r-project.org/package=colf) performs least squares constrained optimization on a linear objective function. It contains a number of algorithms to choose from and offers a formula syntax similar to `lm()`.
 
-### Semidefinite and Convex Solvers
+### <span id="semidefinite-and-convex-solvers">Semidefinite and Convex Solvers</span>
 
 -   Package [ECOSolveR](https://cran.r-project.org/package=ECOSolveR) provides an interface to the Embedded COnic Solver (ECOS), a well-known, efficient, and robust C library for convex problems. Conic and equality constraints can be specified in addition to integer and boolean variable constraints for mixed-integer problems.
 -   Package [scs](https://cran.r-project.org/package=scs) applies operator splitting to solve linear programs, cone programs (SOCP), and semidefinite programs; cones can be second-order, exponential, power cones, or any combination of these.
@@ -94,7 +94,7 @@ Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined sy
 -   The DSDP library implements an interior-point method for semidefinite programming with primal and dual solutions; it is interfaced in package [Rdsdp](https://cran.r-project.org/package=Rdsdp). \[SDP\]
 -   Package [Rmosek](https://cran.r-project.org/package=Rmosek) provides an interface to the (commercial) MOSEK optimization library for large-scale LP, QP, and MIP problems, with emphasis on (nonlinear) conic, semidefinite, and convex tasks; academic licenses are available. (An article on Rmosek appeared in the JSS special issue on Optimization with R, see below.) \[SDP, CP\]
 
-### Global and Stochastic Optimization
+### <span id="global-and-stochastic-optimization">Global and Stochastic Optimization</span>
 
 -   Package [DEoptim](https://cran.r-project.org/package=DEoptim/index.html) provides a global optimizer based on the Differential Evolution algorithm. [RcppDE](../packages/RcppDE) provides a C++ implementation (using Rcpp) of the same `DEoptim()` function.
 -   [DEoptimR](https://cran.r-project.org/package=DEoptimR) provides an implementation of the jDE variant of the differential evolution stochastic algorithm for nonlinear programming problems (It allows to handle constraints in a flexible manner.)
@@ -109,20 +109,21 @@ Function `solve.qr()` (resp. `qr.solve()`) handles over- and under-determined sy
 -   [<span class="GitHub">hydromad</span>](https://github.com/floybix/hydromad/) (on Github) contains the `SCEoptim` function for Shuffled Compex Evolution (SCE) optimization, an evolutionary algorithm, combined with a simplex method.
 -   Package [ABCoptim](https://cran.r-project.org/package=ABCoptim) implements the Artificial Bee Colony (ABC) optimization approach.
 -   Package [metaheuristicOpt](https://cran.r-project.org/package=metaheuristicOpt) contains implementations of several evolutionary optimization algorithms, such as particle swarm, dragonfly and firefly, sine cosine algorithms and many others.
--   [ecr](https://cran.r-project.org/package=ecr) is a framework for building evolutionary algorithms for single- and multi-objective continuous or discrete optimization problems.
--   CMA-ES by N. Hansen, a global optimization procedure using a covariance matrix adapting evolutionary strategy, is implemented in several packages: In packages [cmaes](https://cran.r-project.org/package=cmaes/index.html) and [cmaesr](../packages/cmaesr/index.html), in [parma](../packages/parma/index.html) as `cmaes`, in [adagio](../packages/adagio/index.html) as `pureCMAES`, and in [rCMA](../packages/rCMA) as `cmaOptimDP`, interfacing Hansen's own Java implementation.
+-   Package [ecr](https://cran.r-project.org/package=ecr) provides a framework for building evolutionary algorithms for single- and multi-objective continuous or discrete optimization problems.
+-   CMA-ES by N. Hansen, global optimization procedure using a covariance matrix adapting evolutionary strategy, is implemented in several packages: In packages [cmaes](https://cran.r-project.org/package=cmaes/index.html) and [cmaesr](../packages/cmaesr/index.html), in [parma](../packages/parma/index.html) as `cmaes`, in [adagio](../packages/adagio/index.html) as `pureCMAES`, and in [rCMA](../packages/rCMA) as `cmaOptimDP`, interfacing Hansen's own Java implementation.
 -   Package [Rmalschains](https://cran.r-project.org/package=Rmalschains) implements an algorithm family for continuous optimization called memetic algorithms with local search chains (MA-LS-Chains).
 -   An R implementation of the Self-Organising Migrating Algorithm (SOMA) is available in package [soma](https://cran.r-project.org/package=soma). This stochastic optimization method is somewhat similar to genetic algorithms.
 -   [nloptr](https://cran.r-project.org/package=nloptr) supports several global optimization routines, such as DIRECT, controlled random search (CRS), multi-level single-linkage (MLSL), improved stochastic ranking (ISR-ES), or stochastic global optimization (StoGO).
 -   The [NMOF](https://cran.r-project.org/package=NMOF) package provides implementations of differential evolution, particle swarm optimization, local search and threshold accepting (a variant of simulated annealing). The latter two methods also work for discrete optimization problems, as does the implementation of a genetic algorithm that is included in the package.
 -   [SACOBRA](https://cran.r-project.org/package=SACOBRA) is a package for numeric constrained optimization of expensive black-box functions under severely limited budgets; it implements an extension of the COBRA algorithm with initial design generation and self-adjusting random restarts.
--   [RCEIM](https://cran.r-project.org/package=RCEIM) implements a stochastic heuristic method for performing multidimensional function optimization.
+-   [RCEIM](https://cran.r-project.org/package=RCEIM) implements a stochastic heuristic method for performing multi-dimensional function optimization.
 
-<span id="MathematicalProgrammingSolvers">Mathematical Programming Solvers</span>
----------------------------------------------------------------------------------
+<span id="mathematical-programming-solvers">Mathematical Programming Solvers</span>
+-----------------------------------------------------------------------------------
 
-This section provides an overview of open source as well as commercial optimizers. Which type of mathematical programming problem can be solved by a certain package or function can be seen from the abbreviations in square brackets. For a [classification by subject](#ClassificationBySubject) see the list at the end of this task view.
--   Package [ompr](https://cran.r-project.org/package=ompr) is an optimization modelling package to model and solve Mixed Integer Linear Programs in an algebraic way directly in R. The models are solver-independent and thus offer the possibility to solve models with different solvers. (Inspired by Julia's JuMP project.)
+This section provides an overview of open source as well as commercial optimizers. Which type of mathematical programming problem can be solved by a certain package or function can be seen from the abbreviations in square brackets. For a [Classification According to Subject](#classification-according-to-subject) see the list at the end of this task view.
+
+-   Package [ompr](https://cran.r-project.org/package=ompr) is an optimization modeling package to model and solve Mixed Integer Linear Programs in an algebraic way directly in R. The models are solver-independent and thus offer the possibility to solve models with different solvers. (Inspired by Julia's JuMP project.)
 -   [linprog](https://cran.r-project.org/package=linprog/index.html) solves linear programming problems using the function `solveLP()` (the solver is based on [lpSolve](../packages/lpSolve)) and can read model files in MPS format. \[LP\]
 -   In the [boot](https://cran.r-project.org/package=boot) package there is a routine called `simplex()` which realizes the two-phase tableau simplex method for (relatively small) linear programming problems. \[LP\]
 -   [rcdd](https://cran.r-project.org/package=rcdd) offers the function `lpcdd()` for solving linear programs with exact arithmetic using the [GNU Multiple Precision (GMP)](https://gmplib.org) library. \[LP\]
@@ -131,7 +132,7 @@ This section provides an overview of open source as well as commercial optimizer
 
 -   The [NEOS Server for Optimization](https://www.neos-server.org/neos/) provides online access to state-of-the-art optimization problem solvers. Package [rneos](https://cran.r-project.org/package=rneos) enables the user to pass optimization problems to NEOS and retrieve results within R.
 
-### Interfaces to Open Source Optimizers
+### <span id="interfaces-to-open-source-optimizers">Interfaces to Open Source Optimizers</span>
 
 -   Package [clpAPI](https://cran.r-project.org/package=clpAPI) provides high level access from R to low-level API routines of the [COIN OR Clp](https://projects.coin-or.org/Clp) solver library. \[LP\]
 -   Package [lpSolve](https://cran.r-project.org/package=lpSolve/index.html) contains the routine `lp()` to solve LPs and MILPs by calling the freely available solver [lp\_solve](http://lpsolve.sourceforge.net). This solver is based on the revised simplex method and a branch-and-bound (B&B) approach. It supports semi-continuous variables and Special Ordered Sets (SOS). Furthermore `lp.assign()` and `lp.transport()` are aimed at solving assignment problems and transportation problems, respectively. Additionally, there is the package [lpSolveAPI](../packages/lpSolveAPI/index.html) which provides an R interface to the low level API routines of lp\_solve (see also project [<span class="Rforge">lpsolve</span>](https://R-Forge.R-project.org/projects/lpsolve/) on R-Forge). [lpSolveAPI](../packages/lpSolveAPI) supports reading linear programs from files in lp and MPS format. \[BP, IP, LP, MILP, SPLP\]
@@ -139,17 +140,18 @@ This section provides an overview of open source as well as commercial optimizer
 -   [Rsymphony](https://cran.r-project.org/package=Rsymphony) has the routine `Rsymphony_solve_LP()` that interfaces the SYMPHONY solver for mixed-integer linear programs. (SYMPHONY is part of the [Computational Infrastructure for Operations Research](http://www.coin-or.org/) (COIN-OR) project.) Package `lsymphony` in Bioconductor provides a similar interface to SYMPHONY that is easier to install. \[LP, IP, MILP\]
 -   The NOMAD solver is implemented in the [crs](https://cran.r-project.org/package=crs) package for solving mixed integer programming problems. This algorithm is accessible via the `snomadr()` function and is primarily designed for constrained optimization of blackbox functions.
 
-### Interfaces to Commercial Optimizers
+### <span id="interfaces-to-commercial-optimizers">Interfaces to Commercial Optimizers</span>
 
 This section surveys interfaces to commercial solvers. Typically, the corresponding libraries have to be installed separately.
--   Packages [cplexAPI](https://cran.r-project.org/package=cplexAPI/index.html) and [Rcplex](../packages/Rcplex) provide an interface to the CPLEX solver package from [IBM](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/). CPLEX provides dual/primal simplex optimizers as well as a barrier optimizer for solving large scale linear and quadratic programs. Furthermore, it offers a mixed integer optimizer to solve difficult mixed integer programs including (possibly non-convex) MIQCP. Note that CPLEX is **not free** and you have to get a license from [IBM](https://www.ibm.com/). Academics will receive a free licence upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
--   The API of the commercial solver LINDO can be accessed in R via package [rLindo](https://cran.r-project.org/package=rLindo). The [LINDO API](http://www.lindo.com/) allows for solving linear, integer, quadratic, conic, general nonlinear, global, and stochastic programming problems. \[LP, IP, BP, QP, MILP, MIQP, SP\]
--   Package [Rmosek](https://cran.r-project.org/package=Rmosek) offers an interface to the commercial optimizer from [MOSEK](https://www.mosek.com/). It provides dual/primal simplex optimizers as well as a barrier optimizer. In addition to solving LP and QP problems this solver can handle SOCP and quadratically constrained programming (QPQC) tasks. Furthermore, it offers a mixed integer optimizer to solve difficult mixed integer programs (MILP, MISOCP, etc.). Note that you have to get a license from [MOSEK](https://www.mosek.com/). Academic licenses are free of charge. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
--   Gurobi Optimization ships an R binding since their 5.0 release that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models from within R. See the [R with Gurobi](https://www.gurobi.com/products/modeling-languages/r) website for more details. \[LP, QP, MILP, MIQP\]
--   The [localsolver](https://cran.r-project.org/package=localsolver) package provides an interface to the hybrid mathematical programming software LocalSolver from Innovation 24. LocalSolver is a commercial product, academic licenses are available on request. \[LP, MIP, QP, NLP, HEUR\]
 
-<span id="SpecificApplications">Specific Applications in Optimization</span>
-----------------------------------------------------------------------------
+-   Packages [cplexAPI](https://cran.r-project.org/package=cplexAPI/index.html) and [Rcplex](../packages/Rcplex) provide interfaces to the IBM [CPLEX Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/). CPLEX provides dual/primal simplex optimizers as well as a barrier optimizer for solving large scale linear and quadratic programs. It offers a mixed integer optimizer to solve difficult mixed integer programs including (possibly non-convex) MIQCP. Note that CPLEX is **not free** and you have to get a license. Academics will receive a free licence upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
+-   The API of the commercial solver LINDO can be accessed in R via package [rLindo](https://cran.r-project.org/package=rLindo). The [LINDO API](http://www.lindo.com/) allows for solving linear, integer, quadratic, conic, general nonlinear, global and stochastic programming problems. \[LP, IP, BP, QP,MILP, MIQP, SP\]
+-   Package [Rmosek](https://cran.r-project.org/package=Rmosek) offers an interface to the commercial optimizer from [MOSEK](https://www.mosek.com/). It provides dual/primal simplex optimizers as well as a barrier optimizer. In addition to solving LP and QP problems this solver can handle SOCP and quadratically constrained programming (QPQC) tasks. Furthermore, it offers a mixed integer optimizer to solve difficult mixed integer programs (MILP, MISOCP, etc.). You have to get a license, but Academic licenses are free of charge. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
+-   Gurobi Optimization ships an R binding since their 5.0 release that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models from within R. See the [R with Gurobi](https://www.gurobi.com/products/modeling-languages/r) website for more details. \[LP, QP, MILP, MIQP\]
+-   The [localsolver](https://cran.r-project.org/package=localsolver) package provides an interface to the hybrid mathematical programming software [LocalSolver](http://www.localsolver.com/) from Innovation 24. LocalSolver is a commercial product, academic licenses are available on request. \[LP, MIP, QP, NLP, HEUR\]
+
+<span id="specific-applications-in-optimization">Specific Applications in Optimization</span>
+---------------------------------------------------------------------------------------------
 
 -   Package [adagio](https://cran.r-project.org/package=adagio) provides functions for single and multiple knapsack problems and solves subset sum and assignment tasks.
 -   In package [clue](https://cran.r-project.org/package=clue) `solve_LSAP()` enables the user to solve the linear sum assignment problem (LSAP) using an efficient C implementation of the Hungarian algorithm. \[SPLP\]
@@ -173,8 +175,8 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 -   Package [sna](https://cran.r-project.org/package=sna) contains the function `lab.optim()` which is the front-end to a series of heuristic routines for optimizing some bivariate graph statistic. \[GRAPH\]
 -   Package [TSP](https://cran.r-project.org/package=TSP/index.html) provides basic infrastructure for handling and solving the traveling salesperson problem (TSP). The main routine `solve_TSP()` solves the TSP through several heuristics. In addition, it provides an interface to the [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde), which has to be downloaded separately. \[SPLP\]
 
-<span id="ClassificationBySubject">Classification According to Subject</span>
------------------------------------------------------------------------------
+<span id="classification-according-to-subject">Classification According to Subject</span>
+-----------------------------------------------------------------------------------------
 
 What follows is an attempt to provide a by-subject overview of packages. The full name of the subject as well as the corresponding [MSC 2010](http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&btn=Current) code (if available) are given in brackets.
 
@@ -199,6 +201,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   HEUR (Approximation methods and heuristics, 90C59): [irace](https://cran.r-project.org/package=irace)
 
 ### CRAN packages:
+
 -   [ABCoptim](https://cran.r-project.org/package=ABCoptim)
 -   [adagio](https://cran.r-project.org/package=adagio)
 -   [alabama](https://cran.r-project.org/package=alabama) (core)
@@ -270,6 +273,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [nlmrt](https://cran.r-project.org/package=nlmrt)
 -   [nloptr](https://cran.r-project.org/package=nloptr)
 -   [nls2](https://cran.r-project.org/package=nls2)
+-   [nlsr](https://cran.r-project.org/package=nlsr)
 -   [NMOF](https://cran.r-project.org/package=NMOF)
 -   [nnls](https://cran.r-project.org/package=nnls)
 -   [ompr](https://cran.r-project.org/package=ompr)
@@ -322,9 +326,9 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 
 ### Related links:
 
--   Journal of Statistical Software [Special Volume on Optimization](https://www.jstatsoft.org/v60) (Editor: Ravi Varadhan)
--   [Nonlinear Parameter Optimization Using R Tools](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html) -- John C. Nash (Wiley)
--   [Modern Optimization With R](https://www.springer.com/mathematics/book/978-3-319-08262-2) -- Paulo Cortez (Springer UseR Series)
+-   [Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
+-   [Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
+-   [Modern Optimization With R -- Paulo Cortez (Springer UseR Series)](https://www.springer.com/mathematics/book/978-3-319-08262-2)
 -   [COIN-OR Project](http://www.coin-or.org/)
 -   [NEOS Optimization Guide](http://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
