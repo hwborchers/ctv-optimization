@@ -2,9 +2,10 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans W. Borchers
-    </maintainer>
-<version>2018-01-26</version>
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl 
+  and Hans W. Borchers
+</maintainer>
+<version>2018-04-26</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -13,13 +14,16 @@
   problem they are not part of this view. If you are looking for regression
   methods, the following views will contain useful starting points:
   <view>Multivariate</view>, <view>SocialSciences</view>, <view>Robust</view> 
-  among others. The focus of this task view is on <a
-  href="#SolverInfrastructure">Optimization Infrastructure Packages</a>, <a
-  href="#GeneralPurposeSolvers">General Purpose Continuous
-  Solvers</a>, <a href="#MathematicalProgrammingSolvers">Mathematical
-  Programming Solvers</a> and <a href="#SpecificApplications">Specific
-  Applications in Optimization</a>. Packages are categorized in these
-  four sections.</p>
+  among others. The focus of this task view is on 
+  <a href="#optimization-infrastructure-packages">Optimization Infrastructure 
+  Packages</a>, 
+  <a
+  href="#general-purpose-continuous-solvers">General Purpose Continuous 
+  Solvers</a>, 
+  <a href="#mathematical-programming-solvers">Mathematical 
+  Programming Solvers</a>, and 
+  <a href="#specific-applications-in-optimization">Specific Applications in
+  Optimization</a>. Packages are categorized in these four sections.</p>
 
   <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
@@ -29,17 +33,16 @@
   of the optimizer (i.e., the problems which can be solved). The
   full names of the abbreviations given in square brackets can be
   found at the end of this task view under 
-  <a href="#ClassificationBySubject">Classification According to
+  <a href="#classification-according-to-subject">Classification According to
   Subject</a>.</p>
 
   <p>If you think that some package is missing from the list, please
   let us know.</p>
 
-  <h2><a name="SolverInfrastructure">Optimization Infrastructure Packages</a>
-  </h2>
-<!--
-  <h3>Solvers provided by the base R distribution</h3>
--->
+
+  <h2><a name="optimization-infrastructure-packages">
+  Optimization Infrastructure Packages</a></h2>
+
   <ul>
     <li>Trying to unify optimization algorithms via a single wrapper 
     function, <pkg>optimr</pkg> (and 'optimrx' on R-Forge) helps to proper 
@@ -69,8 +72,9 @@
     Stanford University.)</li>
   </ul>
 
-  <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
-  Solvers</a></h2>
+
+  <h2><a name="general-purpose-continuous-solvers">
+  General Purpose Continuous Solvers</a></h2>
 
   <p>Package stats offers several general purpose optimization routines.
     For one-dimensional unconstrained function optimization there is
@@ -95,10 +99,15 @@
     Fortran code, a limited memory BFGS solver, allowing bound constraints
     and being applicable to higher-dimensional problems. [QN]</li>
 
-    <li>And <pkg>lbfgs</pkg> wraps the libBFGS library by N.Okazaki
+    <li>And <pkg>lbfgs</pkg> wraps the libBFGS library by N. Okazaki
     (converted from Nocedal's library), interfacing both the L-BFGS and
     the OWL-QN algorithm, the latter being particularly suited for
     higher-dimensional problems. [QN]</li>
+
+    <li><pkg>RcppNumerical</pkg> is a collection of open source libraries 
+    for numerical computing and their integration with 'Rcpp'. It provides 
+    a wrapper for the L-BFGS algorithm, based on the LBFGS++ library 
+    (based on code of N. Okazaki).</li>
 
     <li>The following packages implement optimization routines in pure R, 
     for nonlinear functions with bounds constraints.
@@ -132,9 +141,9 @@
     equality and inequality constraints) can be found in packages 
     <pkg>alabama</pkg> and <pkg>Rsolnp</pkg>.</li>
 
-    <li><pkg>NlcOptim</pkg> solves nonlinear optimization problems with linear 
-    and nonlinear equality and inequality constraints, implementing a Sequential
-    Quadratic Programming (SQP) method.</li>
+    <li><pkg>NlcOptim</pkg> solves nonlinear optimization problems with 
+    linear and nonlinear equality and inequality constraints, implementing 
+    a Sequential Quadratic Programming (SQP) method.</li>
 
     <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
     function<code>donlp2()</code> , a wrapper for the DONLP2
@@ -168,11 +177,6 @@
     based on the GNU Scientific Library (GSL). [RGA, QN]
     </li>
 
-    <li>Package <pkg>maxLik</pkg> provides a general purpose
-    Newton-Raphson optimizer <code>maxNR()</code> as well as wrapper
-    to methods, implemented in <code>optim()</code>. It supports fitting a
-    submodel by specifying constant parameters.</li>
-
     <li>An R port of the Scilab neldermead module is packaged in
     <pkg>neldermead</pkg> offering several direct search algorithms based
     on the simplex approach. And <pkg>n1qn1</pkg> provides an R port of the 
@@ -204,9 +208,15 @@
     unconstrained nonlinear optimization. The algorithm is optimized for
     objective functions with sparse Hessians. This makes the algorithm highly
     scalable and efficient, in terms of both time and memory footprint.</li>
+
+    <li>Package <pkg>quantreg</pkg> contains variations of simplex and
+    of interior point routines (<code>nlrq()</code>,
+    <code>crq()</code>). It provides an interface to L1 regression
+    in the R code of function <code>rq()</code>. [SPLP, LP, IPM]</li>
   </ul>
 
-  <h3>Quadratic Optimization</h3>
+
+  <h3><a name="quadratic-optimization">Quadratic Optimization</a></h3>
 
   <ul>
     <li>In package <pkg>quadprog</pkg> <code>solve.QP()</code> solves
@@ -219,20 +229,37 @@
     solving quadratic programming problems using interior point
     methods. (The matrix can be positive semidefinite.) [IPM, QP]</li>
 
-    <li><pkg>coneproj</pkg> contains routines for cone projection and quadratic
-    programming, estimation and inference for constrained parametric regression,
-    and shape-restricted regression problems. [QP]</li>
+    <li><pkg>Dykstra</pkg> solves quadratic programming problems using 
+    R. L. Dykstra's cyclic projection algorithm for positive definite and 
+    semidefinite matrices. The routine allows for a combination of equality 
+    and inequality constraints. [QP]</li>
 
+    <li><pkg>rosqp</pkg> provides bindings to the 'OSQP' solver, the 
+    'Operator Splitting QP Solver' of the University of Oxford Control Group, 
+    which can solve sparse convex quadratic programming problems with optional 
+    equality and inequality constraints. [QP]</li>
+
+    <li><pkg>coneproj</pkg> contains routines for cone projection and
+    quadratic programming, estimation and inference for constrained parametric
+    regression, and shape-restricted regression problems. [QP]</li>
 
     <li><pkg>LowRankQP</pkg> primal/dual interior point method solving
-    quadratic programming problems [IPM, QP]</li>
+    quadratic programming problems (especially for semidefinite quadratic 
+    forms). [IPM, QP]</li>
+
+    <li>The COIN-OR project [qpOASES](https://projects.coin-or.org/qpOASES/) 
+    implements a reliable QP solver, even when tackling semi-definite or 
+    degenerated QP problems; it is particularly suited for model predictive 
+    control (MPC) applications; the ROI plugin <pkg>ROI.plugin.qpoases</pkg> 
+    makes it accessible for R users. [QP]</li>
 
     <li><pkg>limSolve</pkg> offers to solve linear or quadratic
     optimization functions, subject to equality and/or inequality
     constraints. [LP, QP]</li>
   </ul>
 
-  <h3>Optimization Test Functions</h3>
+
+  <h3><a name="optimization-test-functions">Optimization Test Functions</a></h3>
 
   <ul>
     <li> Objective functions for benchmarking the performance of global
@@ -253,13 +280,13 @@
     on real-parameter optimization at the IEEE CEC congresses on evolutionary
     computation.</li>
 
-    <li>Package
-    <a href="https://github.com/jlmelville/funconstrain/">funconstrain</a>
-    (on Github) implements 35 of the test functions by More, Garbow, and Hillstom,
-    useful for  testing unconstrained optimization methods.</li>
+    <li>Package <github>jlmelville/funconstrain</github> (on Github) 
+    implements 35 of the test functions by More, Garbow, and Hillstom, useful 
+    for testing unconstrained optimization methods.</li>
   </ul>
 
-  <h3>Least-Squares Problems</h3>
+
+  <h3><a name="least-squares-problems">Least-Squares Problems</a></h3>
 
   <p>Function <code>solve.qr()</code> (resp. <code>qr.solve()</code>) 
     handles over- and under-determined systems of linear equations, returning 
@@ -270,17 +297,23 @@
     starting parameters or getting stuck in local solutions.</p>
 
   <ul>
-    <li>Package <pkg>nlmrt</pkg> provides tools for minimizing nonlinear sums 
-    of squares. The function to be minimized can be provided as an R function 
-    or as an expression, similar to the way that nls() works.
-    <code>nlmrt::nlxb()</code> tries to compute analytic derivatives for the 
-    Jacobian used in a Levenberg-Marquardt. This allows for the solution of 
-    problems with poorly conditioned Jacobians and small residuals</li>
+    <li>Package <pkg>nlsr</pkg> provides tools for working with nonlinear 
+    least-squares problems. Functions <code>nlfb</code> and <code>nlxb</code> 
+    are intended to eventually supersede the 'nls()' function in Base R, by 
+    applying a variant of the Marquardt procedure for nonlinear least-squares, 
+    with bounds constraints and optionally Jacobian described as R functions.
+    (It is based on the now-deprecated package <pkg>nlmrt</pkg>.)</li>
 
     <li>Package <pkg>minpack.lm</pkg> provides a function <code>nls.lm()</code>
     for solving nonlinear least-squares problems by a modification of the
     Levenberg-Marquardt algorithm, with support for lower and upper parameter 
     bounds, as found in MINPACK.</li>
+
+    <li>Package <pkg>lsei</pkg> contains functions that solve least-squares 
+    linear regression problems under linear equality/inequality constraints. 
+    Functions for solving quadratic programming problems are also available, 
+    which transform such problems into least squares ones first. (Based on 
+    Fortran programs of Lawson and Hanson.)</li>
 
     <li>Package <pkg>nnls</pkg> interfaces the Lawson-Hanson implementation of 
     an algorithm for non-negative least-squares, allowing the combination of 
@@ -299,7 +332,9 @@
     from and offers a formula syntax similar to <code>lm()</code>.</li>
   </ul>
 
-  <h3>Semidefinite and Convex Solvers</h3>
+
+  <h3><a name="semidefinite-and-convex-solvers">Semidefinite and 
+  Convex Solvers</a></h3>
 
   <ul>
     <li>Package <pkg>ECOSolveR</pkg> provides an interface to the Embedded 
@@ -339,7 +374,9 @@
     issue on Optimization with R, see below.) [SDP, CP]</li>
   </ul>
 
-  <h3>Global and Stochastic Optimization</h3>
+
+  <h3><a name="global-and-stochastic-optimization">Global and Stochastic 
+  Optimization</a></h3>
 
   <ul>
     <li>Package <pkg>DEoptim</pkg> provides a global optimizer based on the 
@@ -387,17 +424,23 @@
     Swarm Optimization algorithm (SPSO-2011); it is parallel-capable, and 
     includes several fine-tuning options and post-processing functions.</li>
 
-    <li><pkg>ABCoptim</pkg> implements the Artificial Bee Colony (ABC) 
-    optimization.</li>
+    <li><github>floybix/hydromad</github> (on Github) contains the 
+    <code>SCEoptim</code> function for Shuffled Compex Evolution (SCE) 
+    optimization, an evolutionary algorithm, combined with a simplex 
+    method.</li>
 
-    <li>Package <pkg>metaheuristicOpt</pkg> contains implementations of several 
-    evolutionary optimization algorithms, such as particle swarm, dragonfly and 
-    firefly, sine cosine algorithms and many others.</li>
+    <li>Package <pkg>ABCoptim</pkg> implements the Artificial Bee Colony 
+    (ABC) optimization approach.</li>
 
-    <li><pkg>ecr</pkg> is a framework for building evolutionary algorithms for 
-    single- and multi-objective continuous or discrete optimization problems.</li>
+    <li>Package <pkg>metaheuristicOpt</pkg> contains implementations of 
+    several evolutionary optimization algorithms, such as particle swarm, 
+    dragonfly and firefly, sine cosine algorithms and many others.</li>
 
-    <li>CMA-ES by N. Hansen, a global optimization procedure using a covariance 
+    <li>Package <pkg>ecr</pkg> provides a framework for building evolutionary 
+    algorithms for single- and multi-objective continuous or discrete 
+    optimization problems.</li>
+
+    <li>CMA-ES by N. Hansen, global optimization procedure using a covariance 
     matrix adapting evolutionary strategy, is implemented in several packages:
     In packages <pkg>cmaes</pkg> and <pkg>cmaesr</pkg>, in <pkg>parma</pkg> as 
     <code>cmaes</code>, in <pkg>adagio</pkg> as <code>pureCMAES</code>, and in 
@@ -423,36 +466,35 @@
     work for discrete optimization problems, as does the implementation of a 
     genetic algorithm that is included in the package.</li>
 
-    <li><pkg>SACOBRA</pkg> is a package for numeric constrained optimization of 
-    expensive black-box functions under severely limited budgets; it implements 
-    an extension of the COBRA algorithm with initial design generation and 
-    self-adjusting random restarts.</li>
+    <li><pkg>SACOBRA</pkg> is a package for numeric constrained optimization 
+    of expensive black-box functions under severely limited budgets; 
+    it implements an extension of the COBRA algorithm with initial design 
+    generation and self-adjusting random restarts.</li>
 
     <li><pkg>RCEIM</pkg> implements a stochastic heuristic method for 
-    performing multidimensional function optimization.</li>
+    performing multi-dimensional function optimization.</li>
   </ul>
 
 
-  <h2><a name="MathematicalProgrammingSolvers">Mathematical Programming 
-  Solvers</a></h2>
+  <h2><a name="mathematical-programming-solvers">
+  Mathematical Programming Solvers</a></h2>
 
-  This section provides an overview of open source as well as commercial
+  <p>This section provides an overview of open source as well as commercial
   optimizers. Which type of mathematical programming problem can be solved
-  by a certain package or function can be seen from the abbreviations in square
-  brackets.
-  For a <a href="#ClassificationBySubject">classification by subject</a>
-  see the list at the end of this task view.
+  by a certain package or function can be seen from the abbreviations in 
+  square brackets.
+  For a <a href="#classification-according-to-subject">Classification 
+  According to Subject</a> see the list at the end of this task view.</p>
 
   <ul>
-	<li>Package <pkg>ompr</pkg> is an optimization modelling package to model and 
-	solve Mixed Integer Linear Programs in an algebraic way directly in R. The 
-	models are solver-independent and thus offer the possibility to solve models 
-	with different solvers. (Inspired by Julia's JuMP project.)</li>
+	<li>Package <pkg>ompr</pkg> is an optimization modeling package to model 
+	and solve Mixed Integer Linear Programs in an algebraic way directly in R. 
+	The models are solver-independent and thus offer the possibility to solve 
+	models with different solvers. (Inspired by Julia's JuMP project.)</li>
 
-    <li><pkg>linprog</pkg> solves linear programming problems using
-    the function <code>solveLP()</code> (the solver is based on
-    <pkg>lpSolve</pkg>) and can read model files in MPS
-    format. [LP]</li>
+    <li><pkg>linprog</pkg> solves linear programming problems using the 
+    function <code>solveLP()</code> (the solver is based on <pkg>lpSolve</pkg>)
+    and can read model files in MPS format. [LP]</li>
 
     <li>In the <pkg>boot</pkg> package there is a routine called
     <code>simplex()</code> which realizes the two-phase tableau simplex
@@ -460,8 +502,8 @@
 
     <li><pkg>rcdd</pkg> offers the function <code>lpcdd()</code>
     for solving linear programs with exact arithmetic using the
-    <a href="https://gmplib.org">GNU Multiple Precision (GMP)
-    </a> library. [LP]</li>
+    <a href="https://gmplib.org">GNU Multiple Precision (GMP)</a> 
+    library. [LP]</li>
   </ul>
 
   <ul>
@@ -480,7 +522,9 @@
 -->
   </ul>
 
-  <h3>Interfaces to Open Source Optimizers</h3>
+
+  <h3><a name="interfaces-to-open-source-optimizers">Interfaces to 
+  Open Source Optimizers</a></h3>
 
   <ul>
     <li>Package <pkg>clpAPI</pkg> provides high level access from R to
@@ -503,7 +547,6 @@
     <pkg>lpSolveAPI</pkg> supports reading linear programs from files in lp
     and MPS format. [BP, IP, LP, MILP, SPLP]</li>
 
-
     <li>Packages <pkg>glpkAPI</pkg> as well as
     package <pkg>Rglpk</pkg> provide an interface to the <a
     href="https://www.gnu.org/software/glpk/">GNU Linear Programming
@@ -517,8 +560,8 @@
     that interfaces the SYMPHONY solver for mixed-integer linear programs.
     (SYMPHONY is part of the <a href="http://www.coin-or.org/">Computational 
     Infrastructure for Operations Research</a> (COIN-OR) project.) 
-    Package <code>lsymphony</code> in Bioconductor provides a similar interface 
-    to SYMPHONY that is easier to install. [LP, IP, MILP]</li>
+    Package <code>lsymphony</code> in Bioconductor provides a similar 
+    interface to SYMPHONY that is easier to install. [LP, IP, MILP]</li>
 
     <li>The NOMAD solver is implemented in the <pkg>crs</pkg> package
     for solving mixed integer programming problems. This algorithm is
@@ -531,45 +574,41 @@
      <a href="http://www.coin-or.org/">COIN-OR</a> project. They are currently 
      being developed on R-Forge in project <rforge>rino</rforge>. [NLP] </li>
 -->
-
   </ul>
 
-  <h3>Interfaces to Commercial Optimizers</h3>
 
-  This section surveys interfaces to commercial solvers. Typically, the
-  corresponding libraries have to be installed separately.
+  <h3><a name="interfaces-to-commercial-optimizers">Interfaces to 
+  Commercial Optimizers</a></h3>
+
+  <p>This section surveys interfaces to commercial solvers. Typically, the
+  corresponding libraries have to be installed separately.</p>
 
   <ul>
-    <li>Packages <pkg>cplexAPI</pkg> and <pkg>Rcplex</pkg> provide an
-    interface to the CPLEX solver package from <a href="https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/">
-    IBM</a>. CPLEX
-    provides dual/primal simplex optimizers as well as a barrier
-    optimizer for solving large scale linear and quadratic
-    programs. Furthermore, it offers a mixed integer optimizer to
-    solve difficult mixed integer programs including (possibly
-    non-convex) MIQCP. Note that CPLEX is <b>not free</b> and you have
-    to get a license from <a
-    href="https://www.ibm.com/">IBM</a>. Academics will receive a free
-    licence upon request. [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
+    <li>Packages <pkg>cplexAPI</pkg> and <pkg>Rcplex</pkg> provide interfaces 
+    to the IBM <a href=
+    "https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/">
+    CPLEX Optimizer </a>.
+    CPLEX provides dual/primal simplex optimizers as well as a barrier
+    optimizer for solving large scale linear and quadratic programs. 
+    It offers a mixed integer optimizer to solve difficult mixed integer 
+    programs including (possibly non-convex) MIQCP. Note that CPLEX is 
+    <b>not free</b> and you have to get a license. Academics will receive a 
+    free licence upon request. [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
 
     <li>The API of the commercial solver LINDO can be accessed in R
-    via package <pkg>rLindo</pkg>. The <a
-    href="http://www.lindo.com/">LINDO API</a> allows for
-    solving linear, integer, quadratic, conic, general nonlinear,
-    global, and stochastic programming problems. [LP, IP, BP, QP,
-    MILP, MIQP, SP]</li>
+    via package <pkg>rLindo</pkg>. 
+    The <a href="http://www.lindo.com/">LINDO API</a> allows for solving 
+    linear, integer, quadratic, conic, general nonlinear, global and 
+    stochastic programming problems. [LP, IP, BP, QP,MILP, MIQP, SP]</li>
     
-    <li>Package <pkg>Rmosek</pkg> offers an interface to the
-    commercial optimizer from <a
-    href="https://www.mosek.com/">MOSEK</a>. It provides dual/primal
-    simplex optimizers as well as a barrier optimizer. In addition to
-    solving LP and QP problems this solver can handle SOCP and
-    quadratically constrained programming (QPQC) tasks. Furthermore,
-    it offers a mixed integer optimizer to solve difficult mixed
-    integer programs (MILP, MISOCP, etc.). Note that you have to get a
-    license from <a href="https://www.mosek.com/">MOSEK</a>. Academic
-    licenses are free of charge.  [LP, IP, BP, QP, MILP, MIQP,
-    IPM]</li>
+    <li>Package <pkg>Rmosek</pkg> offers an interface to the commercial 
+    optimizer from <a href="https://www.mosek.com/">MOSEK</a>. It provides 
+    dual/primal simplex optimizers as well as a barrier optimizer. 
+    In addition to solving LP and QP problems this solver can handle SOCP 
+    and quadratically constrained programming (QPQC) tasks. Furthermore,
+    it offers a mixed integer optimizer to solve difficult mixed integer 
+    programs (MILP, MISOCP, etc.). You have to get a license, but Academic 
+    licenses are free of charge.  [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
 
     <li>Gurobi Optimization ships an R binding since their 5.0 release
     that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models
@@ -578,27 +617,19 @@
     Gurobi</a> website for more details. [LP, QP, MILP, MIQP]</li>
 
     <li>The <pkg>localsolver</pkg> package provides an interface to the hybrid
-    mathematical programming software LocalSolver from Innovation 24.
+    mathematical programming software 
+    <a href="http://www.localsolver.com/">LocalSolver</a> from Innovation 24.
     LocalSolver is a commercial product, academic licenses are available on
     request. [LP, MIP, QP, NLP, HEUR]</li>
   </ul>
 
-  <!--
-      Matching: Multivariate and Propensity Score Matching with Balance 
-      Optimization
-      Provides functions for multivariate and propensity score matching and
-      for finding optimal balance based on a genetic search algorithm. A 
-      variety of univariate and multivariate metrics to determine if balance 
-      has been obtained are also provided.
-  -->
 
-  <h2><a name="SpecificApplications">Specific Applications in
-  Optimization</a></h2>
+  <h2><a name="discrete-optimization-and-graph-theory">
+  Discrete Optimization and Graph Theory</a></h2>
 
   <ul>
-    <li>Package <pkg>adagio</pkg> provides functions for single and
-    multiple knapsack problems and solves subset sum and assignment
-    tasks.</li>
+    <li>Package <pkg>adagio</pkg> provides functions for single and multiple 
+    knapsack problems and solves subset sum and assignment tasks.</li>
 
     <li>In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
     the user to solve the linear sum assignment problem (LSAP) using an
@@ -608,117 +639,114 @@
     applying a simulated annealing heuristics (other approaches will 
     follow).</li>
 
-    <li>Package <pkg>nleqslv</pkg> provides function <code>nleqslv()</code>,
-    implementing Newton and Broyden methods with line search and trust region 
-    global strategies for solving medium sized system of nonlinear equations.
-    </li>
-
-    <li> The data cloning algorithm is a global optimization approach
-    and a variant of simulated annealing which has been implemented
-    in package <pkg>dclone</pkg>. The package provides low level
-    functions for implementing maximum likelihood estimating
-    procedures for complex models using data cloning and Bayesian
-    Markov chain Monte Carlo methods.</li>
-
-    <li>Package <pkg>goalprog</pkg> provides some functions for
-    lexicographic linear goal
-    programming and optimization. Goal programming is a branch of
-    multi-objective, multi-criteria decision analysis. [MOP]</li>
-
     <li><pkg>igraph</pkg>, a package for graph and network analysis,
     uses the very fast igraph C library. It can be used to calculate
-    shortest paths, maximal network flows, minimum
-    spanning trees, etc. [GRAPH]</li>
+    shortest paths, maximal network flows, minimum spanning trees, etc. 
+    [GRAPH]</li>
 
-    <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
-    parameters of other optimization algorithms. This problem is called 
-    "(offline) algorithm configuration". [GO]</li>
+    <li><pkg>mknapsack</pkg> solves multiple knapsack problems, based on LP 
+    solvers such as 'lpSolve' or 'CBC'; will assign items to knapsacks in a 
+    way that the value of the top knapsacks is as large as possible.</li>
+
+    <li>Package 'knapsack' (see project <rforge>optimist</rforge> on R-Forge) 
+    provides routines from the book `Knapsack Problems' by Martello and Toth. 
+    There are functions for (multiple) knapsack, subsetsum and binpacking 
+    problems. (Use of Fortran codes is restricted to personal research and
+    academic purposes only.)</li>
 
     <li><pkg>matchingR</pkg> and <pkg>matchingMarkets</pkg> implement the 
     Gale-Shapley algorithm for the stable marriage and the college admissions 
     problem, the stable roommates and the house allocation problem.
     [COP, MM]</li>
 
+    <li>Package <pkg>TSP</pkg> provides basic infrastructure for handling 
+    and solving the traveling salesperson problem (TSP). The main routine
+    <code>solve_TSP()</code> solves the TSP through several heuristics. 
+    In addition, it provides an interface to the
+    <a href="http://www.tsp.gatech.edu/concorde/index.html">Concorde TSP
+    Solver</a>, which has to be downloaded separately. [SPLP]</li>
+  </ul>
+
+
+  <h2><a name="specific-applications-in-optimization">
+  Specific Applications in Optimization</a></h2>
+
+  <ul>
+    <li>Package <pkg>nleqslv</pkg> provides function <code>nleqslv()</code>,
+    implementing Newton and Broyden methods with line search and trust region 
+    global strategies for solving medium sized system of nonlinear equations.
+    </li>
+  
+    <li>Package <pkg>goalprog</pkg> provides some functions for
+    lexicographic linear goal programming and optimization. Goal programming is 
+    a branch of multi-objective, multi-criteria decision analysis. [MOP]</li>
+  
+    <li><pkg>mlrMBO</pkg> is a flexible and comprehensive R toolbox for 
+    model-based optimization ('MBO'), also known as Bayesian optimization. 
+    It is designed for both single- and multi-objective optimization with 
+    mixed continuous, categorical and conditional parameters. [MOP]</li>
+  
+    <li> The data cloning algorithm is a global optimization approach
+    and a variant of simulated annealing which has been implemented
+    in package <pkg>dclone</pkg>. The package provides low level
+    functions for implementing maximum likelihood estimating
+    procedures for complex models using data cloning and Bayesian
+    Markov chain Monte Carlo methods.</li>
+  
+    <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
+    parameters of other optimization algorithms. This problem is called 
+    "(offline) algorithm configuration". [GO]</li>
+  
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
     supplied objective function is minimized at that subset.</li>
-
+  
     <li><pkg>copulaedas</pkg> provides a platform where 'estimation of 
     distribution algorithms' (EDA) based on copulas can be implemented and 
     studied; the package offers various EDAs, and newly developed EDAs can be 
     integrated by extending an S4 class.</li>
-
+  
     <li><pkg>tabuSearch</pkg> implements a tabu search algorithm for optimizing 
     binary strings, maximizing a user defined target function, and returns the 
     best (i.e. maximizing) binary configuration found.</li>
-
+  
     <li>Besides functionality for solving general isotone regression problems,
     package <pkg>isotone</pkg> provides a framework of active set methods for
     isotone optimization problems with arbitrary order restrictions.</li>
-
-    <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number of
-    maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and 
-    Newton-Raphson among others. It includes summary and print methods which 
-    extract the standard errors based on the Hessian matrix and allows easy 
-    swapping of maximization algorithms. It also provides a function to check 
-    whether an analytic derivative is computed directly.</li>
-
-    <li>Multi-criteria optimization problems can be solved using
-    package <pkg>mco</pkg> which implements genetic
-    algorithms. [MOP]</li>
-
+  
+    <li>Multi-criteria optimization problems can be solved using package 
+    <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
+  
     <li>Package <pkg>optmatch</pkg> provides routines for solving
     matching problems by translating them into minimum-cost flow problems,
     which are in turn solved optimally by the RELAX-IV codes of
     Bertsekas and Tseng (free for research). [SPLP]</li>
-
-    <li>Package <pkg>quantreg</pkg> contains variations of simplex and
-    of interior point routines (<code>nlrq()</code>,
-    <code>crq()</code>). It provides an interface to L1 regression
-    in the R code of function <code>rq()</code>. [SPLP, LP, IPM]</li>
-
+  
     <li>The <pkg>desirability</pkg> package contains S3 classes for
     multivariate optimization using the desirability function approach
     of Harrington (1965) using functional forms described by
     Derringer and Suich (1980).</li>
-
+  
     <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
     which is the front-end to a series of heuristic routines for optimizing
     some bivariate graph statistic. [GRAPH]</li>
-
-    <li>Package <pkg>TSP</pkg> provides basic infrastructure for
-    handling and solving the
-    traveling salesperson problem (TSP). The main routine
-    <code>solve_TSP()</code> solves the TSP
-    through several heuristics. In addition, it provides an interface
-    to the
-    <a href="http://www.tsp.gatech.edu/concorde/index.html">Concorde TSP
-    Solver</a>, which has to be
-    downloaded separately.  [SPLP]
-    </li>
+  
+    <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number 
+    of maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and 
+    Newton-Raphson among others. It includes summary and print methods which 
+    extract the standard errors based on the Hessian matrix and allows easy 
+    swapping of maximization algorithms. It also provides a function to check 
+    whether an analytic derivative is computed directly.</li>
   </ul>
 
-<!--
-Not listed yet:
-<li><pkg>Bhat</pkg> provides the Davidon-Fletcher-Powell optimization
-algorithm in function <code>dfp()</code>. Furthermore the
-Newton-Raphson algorithm is implemented in function <code>newton()</code>.
-</li>
-<li><pkg>RFreak</pkg>R interface to a modified version of the Free
-Evolutionary Algorithm Kit <a
-href="http://sourceforge.net/projects/freak427/">FrEAK</a>.</li>
-<li><pkg>RankAggreg</pkg> performs aggregation of ordered lists based
-on the ranks using three different algorithms (cross-entropy Monte
-Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
--->
 
-  <h2><a name="ClassificationBySubject">Classification According to
-  Subject</a></h2>
+  <h2><a name="classification-according-to-subject">
+  Classification According to Subject</a></h2>
 
   <p>What follows is an attempt to provide a by-subject overview of
   packages.  The full name of the subject as well as the corresponding
-  <a
-  href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">
+  <a href=
+  "http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">
   MSC 2010</a> code (if available) are given in brackets.
   </p>
     <ul>
@@ -853,6 +881,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg priority="core">DEoptim</pkg>
   <pkg>DEoptimR</pkg>
   <pkg>desirability</pkg>
+  <pkg>Dykstra</pkg>
   <pkg>ECOSolveR</pkg>
   <pkg>ecr</pkg>
   <pkg>flacco</pkg>
@@ -878,6 +907,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>LowRankQP</pkg>
   <pkg>lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
+  <pkg>lsei</pkg>
   <pkg>ManifoldOptim</pkg>
   <pkg>matchingMarkets</pkg>
   <pkg>matchingR</pkg>
@@ -887,15 +917,18 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>metaheuristicOpt</pkg>
   <pkg>minpack.lm</pkg>
   <pkg>mize</pkg>
+  <pkg>mlrMBO</pkg>
   <pkg>nlmrt</pkg>
   <pkg>optmatch</pkg>
   <pkg>minqa</pkg>
+  <pkg>mknapsack</pkg>
   <pkg>n1qn1</pkg>
   <pkg>neldermead</pkg>
   <pkg>NlcOptim</pkg>
   <pkg>nleqslv</pkg>
   <pkg>nloptr</pkg>
   <pkg>nls2</pkg>
+  <pkg>nlsr</pkg>
   <pkg>NMOF</pkg>
   <pkg>nnls</pkg>
   <pkg>ompr</pkg>
@@ -917,6 +950,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>rCMA</pkg>
   <pkg>Rcplex</pkg>
   <pkg>RcppDE</pkg>
+  <pkg>RcppNumerical</pkg>
   <pkg>Rcsdp</pkg>
   <pkg>Rdsdp</pkg>
   <pkg>rgenoud</pkg>
@@ -926,6 +960,8 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
   <pkg>ROI</pkg>
+  <pkg>ROI.plugin.qpoases</pkg>
+  <pkg>rosqp</pkg>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
   <pkg>Rtnmin</pkg>
