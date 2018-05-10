@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-04-26</version>
+<version>2018-05-10</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -17,10 +17,8 @@
   among others. The focus of this task view is on 
   <a href="#optimization-infrastructure-packages">Optimization Infrastructure 
   Packages</a>, 
-  <a
-  href="#general-purpose-continuous-solvers">General Purpose Continuous 
-  Solvers</a>, 
-  <a href="#mathematical-programming-solvers">Mathematical 
+  <a href="#general-purpose-continuous-solvers">General Purpose Continuous 
+  Solvers</a>, <a href="#mathematical-programming-solvers">Mathematical 
   Programming Solvers</a>, and 
   <a href="#specific-applications-in-optimization">Specific Applications in
   Optimization</a>. Packages are categorized in these four sections.</p>
@@ -52,7 +50,9 @@
     constraints. Function <code>opm</code>, returning a dataframe, compares
     solvers for a selected optimization task. (Note that <pkg>optimx</pkg>
     will get deprecated.)</li>
+  </ul>
 
+  <ul>
     <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package 
     provides a framework for handling optimization problems in R. 
     It uses an object-oriented approach to define and solve various
@@ -61,15 +61,17 @@
     optimization transparent for the R user as the corresponding workflow 
     is completely abstracted from the underlying solver. The approach allows 
     for easy switching between solvers and thus enhances comparability.</li>
+  </ul>
 
+  <ul>
     <li>The package <pkg>CVXR</pkg> provides an object-oriented modeling 
     language for Disciplined Convex Programming (DCP). It allows the user 
     to formulate convex optimization problems in a natural way following 
     mathematical convention and DCP rules. The system analyzes the problem, 
     verifies its convexity, converts it into a canonical form, and hands it 
     off to an appropriate solver such as ECOS or SCS to obtain the solution.
-    (CVXR is derived from the well-known MATLAB toolbox CVX, developed at
-    Stanford University.)</li>
+    (CVXR is derived from the MATLAB toolbox CVX, developed at Stanford 
+    University, cf. <a href="https://cvxr.rbind.io">CVXR home page</a>.)</li>
   </ul>
 
 
@@ -247,15 +249,13 @@
     quadratic programming problems (especially for semidefinite quadratic 
     forms). [IPM, QP]</li>
 
-    <li>The COIN-OR project [qpOASES](https://projects.coin-or.org/qpOASES/) 
-    implements a reliable QP solver, even when tackling semi-definite or 
-    degenerated QP problems; it is particularly suited for model predictive 
-    control (MPC) applications; the ROI plugin <pkg>ROI.plugin.qpoases</pkg> 
-    makes it accessible for R users. [QP]</li>
+    <li>The COIN-OR project 'qpOASES' implements a reliable QP solver, even 
+    when tackling semi-definite or degenerated QP problems; it is particularly 
+    suited for model predictive control (MPC) applications; the ROI plugin 
+    <pkg>ROI.plugin.qpoases</pkg> makes it accessible for R users. [QP]</li>
 
-    <li><pkg>limSolve</pkg> offers to solve linear or quadratic
-    optimization functions, subject to equality and/or inequality
-    constraints. [LP, QP]</li>
+    <li><pkg>limSolve</pkg> offers to solve linear or quadratic optimization 
+    functions, subject to equality and/or inequality constraints. [LP, QP]</li>
   </ul>
 
 
@@ -624,12 +624,12 @@
   </ul>
 
 
-  <h2><a name="discrete-optimization-and-graph-theory">
-  Discrete Optimization and Graph Theory</a></h2>
+  <h2><a name="combinatorial-optimization">
+  Combinatorial Optimization</a></h2>
 
   <ul>
-    <li>Package <pkg>adagio</pkg> provides functions for single and multiple 
-    knapsack problems and solves subset sum and assignment tasks.</li>
+    <li>Package <pkg>adagio</pkg> provides R functions for single and multiple 
+    knapsack problems, and solves subset sum and assignment tasks.</li>
 
     <li>In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
     the user to solve the linear sum assignment problem (LSAP) using an
@@ -648,9 +648,9 @@
     solvers such as 'lpSolve' or 'CBC'; will assign items to knapsacks in a 
     way that the value of the top knapsacks is as large as possible.</li>
 
-    <li>Package 'knapsack' (see project <rforge>optimist</rforge> on R-Forge) 
+    <li>Package 'knapsack' (see R-Forge project <rforge>optimist</rforge>) 
     provides routines from the book `Knapsack Problems' by Martello and Toth. 
-    There are functions for (multiple) knapsack, subsetsum and binpacking 
+    There are functions for (multiple) knapsack, subset sum and binpacking 
     problems. (Use of Fortran codes is restricted to personal research and
     academic purposes only.)</li>
 
@@ -658,6 +658,11 @@
     Gale-Shapley algorithm for the stable marriage and the college admissions 
     problem, the stable roommates and the house allocation problem.
     [COP, MM]</li>
+
+    <li>Package <pkg>optmatch</pkg> provides routines for solving 
+    matching problems by translating them into minimum-cost flow problems 
+    and then solved optimaly by the RELAX-IV codes of Bertsekas and Tseng 
+    (free for research). [SPLP]</li>
 
     <li>Package <pkg>TSP</pkg> provides basic infrastructure for handling 
     and solving the traveling salesperson problem (TSP). The main routine
@@ -676,61 +681,57 @@
     implementing Newton and Broyden methods with line search and trust region 
     global strategies for solving medium sized system of nonlinear equations.
     </li>
-  
+
     <li>Package <pkg>goalprog</pkg> provides some functions for
     lexicographic linear goal programming and optimization. Goal programming is 
     a branch of multi-objective, multi-criteria decision analysis. [MOP]</li>
-  
-    <li><pkg>mlrMBO</pkg> is a flexible and comprehensive R toolbox for 
-    model-based optimization ('MBO'), also known as Bayesian optimization. 
-    It is designed for both single- and multi-objective optimization with 
-    mixed continuous, categorical and conditional parameters. [MOP]</li>
-  
+
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
     in package <pkg>dclone</pkg>. The package provides low level
     functions for implementing maximum likelihood estimating
     procedures for complex models using data cloning and Bayesian
     Markov chain Monte Carlo methods.</li>
-  
+
     <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
     parameters of other optimization algorithms. This problem is called 
     "(offline) algorithm configuration". [GO]</li>
-  
+
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
     supplied objective function is minimized at that subset.</li>
-  
+
     <li><pkg>copulaedas</pkg> provides a platform where 'estimation of 
     distribution algorithms' (EDA) based on copulas can be implemented and 
     studied; the package offers various EDAs, and newly developed EDAs can be 
     integrated by extending an S4 class.</li>
-  
+
     <li><pkg>tabuSearch</pkg> implements a tabu search algorithm for optimizing 
     binary strings, maximizing a user defined target function, and returns the 
     best (i.e. maximizing) binary configuration found.</li>
-  
+
     <li>Besides functionality for solving general isotone regression problems,
     package <pkg>isotone</pkg> provides a framework of active set methods for
     isotone optimization problems with arbitrary order restrictions.</li>
-  
+
+    <li><pkg>mlrMBO</pkg> is a flexible and comprehensive R toolbox for 
+    model-based optimization ('MBO'), also known as Bayesian optimization. 
+    And <pkg>rBayesianOptimization</pkg> is an implementation of Bayesian 
+    global optimization with Gaussian Processes, for parameter tuning and 
+    optimization of hyperparameters.</li>
+
     <li>Multi-criteria optimization problems can be solved using package 
     <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
-  
-    <li>Package <pkg>optmatch</pkg> provides routines for solving
-    matching problems by translating them into minimum-cost flow problems,
-    which are in turn solved optimally by the RELAX-IV codes of
-    Bertsekas and Tseng (free for research). [SPLP]</li>
-  
+
     <li>The <pkg>desirability</pkg> package contains S3 classes for
     multivariate optimization using the desirability function approach
     of Harrington (1965) using functional forms described by
     Derringer and Suich (1980).</li>
-  
+
     <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
     which is the front-end to a series of heuristic routines for optimizing
     some bivariate graph statistic. [GRAPH]</li>
-  
+
     <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number 
     of maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and 
     Newton-Raphson among others. It includes summary and print methods which 
@@ -944,6 +945,7 @@
   <pkg priority="core">quadprog</pkg>
   <pkg>quadprogXT</pkg>
   <pkg>quantreg</pkg>
+  <pkg>rBayesianOptimization</pkg>
   <pkg>rcdd</pkg>
   <pkg>RCEIM</pkg>
   <pkg>Rcgmin</pkg>
