@@ -145,7 +145,8 @@ This section provides an overview of open source as well as commercial optimizer
 -   Package [lpSolve](https://cran.r-project.org/package=lpSolve/index.html) contains the routine `lp()` to solve LPs and MILPs by calling the freely available solver [lp\_solve](http://lpsolve.sourceforge.net). This solver is based on the revised simplex method and a branch-and-bound (B&B) approach. It supports semi-continuous variables and Special Ordered Sets (SOS). Furthermore `lp.assign()` and `lp.transport()` are aimed at solving assignment problems and transportation problems, respectively. Additionally, there is the package [lpSolveAPI](../packages/lpSolveAPI/index.html) which provides an R interface to the low level API routines of lp\_solve (see also project [<span class="Rforge">lpsolve</span>](https://R-Forge.R-project.org/projects/lpsolve/) on R-Forge). [lpSolveAPI](../packages/lpSolveAPI) supports reading linear programs from files in lp and MPS format. \[BP, IP, LP, MILP, SPLP\]
 -   Packages [glpkAPI](https://cran.r-project.org/package=glpkAPI/index.html) as well as package [Rglpk](../packages/Rglpk) provide an interface to the [GNU Linear Programming Kit](https://www.gnu.org/software/glpk/) (GLPK). Whereas the former provides high level access to low level routines the latter offers a high level routine `Rglpk_solve_LP()` to solve MILPs using GLPK. Both packages offer the possibility to use models formulated in the MPS format. \[BP, IP, IPM, LP, MILP\]
 -   [Rsymphony](https://cran.r-project.org/package=Rsymphony) has the routine `Rsymphony_solve_LP()` that interfaces the SYMPHONY solver for mixed-integer linear programs. (SYMPHONY is part of the [Computational Infrastructure for Operations Research](http://www.coin-or.org/) (COIN-OR) project.) Package `lsymphony` in Bioconductor provides a similar interface to SYMPHONY that is easier to install. \[LP, IP, MILP\]
--   The NOMAD solver is implemented in the [crs](https://cran.r-project.org/package=crs) package for solving mixed integer programming problems. This algorithm is accessible via the `snomadr()` function and is primarily designed for constrained optimization of blackbox functions.
+-   The NOMAD solver is implemented in the [crs](https://cran.r-project.org/package=crs) package for solving mixed integer programming problems. This algorithm is accessible via the `snomadr()` function and is primarily designed for constrained optimization of blackbox functions. \[MILP\]
+-   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite. 'Clp' solves linear programs with continuous objective variables and is available through [ROI.plugin.clp](https://cran.r-project.org/package=ROI.plugin.clp). 'Cbc' is a powerful mixed integer linear programming solver (based on 'Clp'); package 'rcbc' can be installed from [<span class="GitHub">rcbc</span>](https://github.com/dirkschumacher/rcbc/) (on Github). \[LP, MILP\]
 
 ### <span id="interfaces-to-commercial-optimizers">Interfaces to Commercial Optimizers</span>
 
@@ -320,6 +321,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [Rmosek](https://cran.r-project.org/package=Rmosek)
 -   [rneos](https://cran.r-project.org/package=rneos)
 -   [ROI](https://cran.r-project.org/package=ROI)
+-   [ROI.plugin.clp](https://cran.r-project.org/package=ROI.plugin.clp)
 -   [ROI.plugin.qpoases](https://cran.r-project.org/package=ROI.plugin.qpoases)
 -   [rosqp](https://cran.r-project.org/package=rosqp)
 -   [Rsolnp](https://cran.r-project.org/package=Rsolnp)
