@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------|
 | **Maintainer:** | Stefan Theussl and Hans W. Borchers            |
 | **Contact:**    | R-optimization at mailbox.org                  |
-| **Version:**    | 2018-05-18                                     |
+| **Version:**    | 2018-08-12                                     |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization> |
 
 This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#optimization-infrastructure-packages), [General Purpose Continuous Solvers](#general-purpose-continuous-solvers), [Mathematical Programming Solvers](#mathematical-programming-solvers), and [Specific Applications in Optimization](#specific-applications-in-optimization). Packages are categorized in these sections.
@@ -167,6 +167,7 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 -   [igraph](https://cran.r-project.org/package=igraph), a package for graph and network analysis, uses the very fast igraph C library. It can be used to calculate shortest paths, maximal network flows, minimum spanning trees, etc. \[GRAPH\]
 -   [mknapsack](https://cran.r-project.org/package=mknapsack) solves multiple knapsack problems, based on LP solvers such as 'lpSolve' or 'CBC'; will assign items to knapsacks in a way that the value of the top knapsacks is as large as possible.
 -   Package 'knapsack' (see R-Forge project [<span class="Rforge">optimist</span>](https://R-Forge.R-project.org/projects/optimist/)) provides routines from the book \`Knapsack Problems' by Martello and Toth. There are functions for (multiple) knapsack, subset sum and binpacking problems. (Use of Fortran codes is restricted to personal research and academic purposes only.)
+-   [nilde](https://cran.r-project.org/package=nilde) provides routines for enumerating all integer solutions of linear Diophantine equations, resp. all solutions of knapsack, subset sum, and additive partitioning problems (based on a generating functions approach).
 -   [matchingR](https://cran.r-project.org/package=matchingR/index.html) and [matchingMarkets](../packages/matchingMarkets) implement the Gale-Shapley algorithm for the stable marriage and the college admissions problem, the stable roommates and the house allocation problem. \[COP, MM\]
 -   Package [optmatch](https://cran.r-project.org/package=optmatch) provides routines for solving matching problems by translating them into minimum-cost flow problems and then solved optimaly by the RELAX-IV codes of Bertsekas and Tseng (free for research). \[SPLP\]
 -   Package [TSP](https://cran.r-project.org/package=TSP/index.html) provides basic infrastructure for handling and solving the traveling salesperson problem (TSP). The main routine `solve_TSP()` solves the TSP through several heuristics. In addition, it provides an interface to the [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde), which has to be downloaded separately. \[SPLP\]
@@ -282,6 +283,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [mlrMBO](https://cran.r-project.org/package=mlrMBO)
 -   [n1qn1](https://cran.r-project.org/package=n1qn1)
 -   [neldermead](https://cran.r-project.org/package=neldermead)
+-   [nilde](https://cran.r-project.org/package=nilde)
 -   [NlcOptim](https://cran.r-project.org/package=NlcOptim)
 -   [nleqslv](https://cran.r-project.org/package=nleqslv)
 -   [nlmrt](https://cran.r-project.org/package=nlmrt)
@@ -346,6 +348,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
 -   [Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
 -   [Modern Optimization With R -- Paulo Cortez (Springer UseR Series)](https://www.springer.com/mathematics/book/978-3-319-08262-2)
+-   [Yet Another Math Programming Consultant](http://yetanothermathprogrammingconsultant.blogspot.com)
 -   [COIN-OR Project](http://www.coin-or.org/)
 -   [NEOS Optimization Guide](http://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
