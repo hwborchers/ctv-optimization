@@ -1,12 +1,12 @@
 CRAN Task View: Optimization and Mathematical Programming
 ---------------------------------------------------------
 
-|                 |                                                |
-|-----------------|------------------------------------------------|
-| **Maintainer:** | Stefan Theussl and Hans W. Borchers            |
-| **Contact:**    | R-optimization at mailbox.org                  |
-| **Version:**    | 2018-09-27                                     |
-| **URL:**        | <https://CRAN.R-project.org/view=Optimization> |
+|                 |                                                            |
+|-----------------|------------------------------------------------------------|
+| **Maintainer:** | Stefan Theussl, Florian Schwendinger, and Hans W. Borchers |
+| **Contact:**    | R-optimization at mailbox.org                              |
+| **Version:**    | 2018-10-15                                                 |
+| **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#optimization-infrastructure-packages), [General Purpose Continuous Solvers](#general-purpose-continuous-solvers), [Mathematical Programming Solvers](#mathematical-programming-solvers), and [Specific Applications in Optimization](#specific-applications-in-optimization). Packages are categorized in these sections.
 
@@ -64,7 +64,7 @@ Additionally, for minimizing a function subject to linear inequality constraints
 -   In package [quadprog](https://cran.r-project.org/package=quadprog/index.html) `solve.QP()` solves quadratic programming problems with linear equality and inequality constraints. (The matrix has to be positive definite.) [quadprogXT](../packages/quadprogXT) extends this with absolute value constraints and absolute values in the objective function. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function `ipop` for solving quadratic programming problems using interior point methods. (The matrix can be positive semidefinite.) \[IPM, QP\]
 -   [Dykstra](https://cran.r-project.org/package=Dykstra) solves quadratic programming problems using R. L. Dykstra's cyclic projection algorithm for positive definite and semidefinite matrices. The routine allows for a combination of equality and inequality constraints. \[QP\]
--   [osqp](https://cran.r-project.org/package=osqp) (preferred) and [rosqp](https://cran.r-project.org/package=rosqp) both provide bindings to [OSQP](https://osqp.org), the 'Operator Splitting QP' solver from the University of Oxford Control Group; it solves sparse convex quadratic programming problems with optional equality and inequality constraints very efficiently. \[QP\]
+-   [osqp](https://cran.r-project.org/package=osqp/index.html) and [rosqp](../packages/rosqp) both provide bindings to [OSQP](https://osqp.org), the 'Operator Splitting QP' solver from the University of Oxford Control Group; it solves sparse convex quadratic programming problems with optional equality and inequality constraints efficiently. \[QP\]
 -   [coneproj](https://cran.r-project.org/package=coneproj) contains routines for cone projection and quadratic programming, estimation and inference for constrained parametric regression, and shape-restricted regression problems. \[QP\]
 -   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior point method solving quadratic programming problems (especially for semidefinite quadratic forms). \[IPM, QP\]
 -   The COIN-OR project 'qpOASES' implements a reliable QP solver, even when tackling semi-definite or degenerated QP problems; it is particularly suited for model predictive control (MPC) applications; the ROI plugin [ROI.plugin.qpoases](https://cran.r-project.org/package=ROI.plugin.qpoases) makes it accessible for R users. \[QP\]
@@ -146,7 +146,7 @@ This section provides an overview of open source as well as commercial optimizer
 -   Packages [glpkAPI](https://cran.r-project.org/package=glpkAPI/index.html) as well as package [Rglpk](../packages/Rglpk) provide an interface to the [GNU Linear Programming Kit](https://www.gnu.org/software/glpk/) (GLPK). Whereas the former provides high level access to low level routines the latter offers a high level routine `Rglpk_solve_LP()` to solve MILPs using GLPK. Both packages offer the possibility to use models formulated in the MPS format. \[BP, IP, IPM, LP, MILP\]
 -   [Rsymphony](https://cran.r-project.org/package=Rsymphony) has the routine `Rsymphony_solve_LP()` that interfaces the SYMPHONY solver for mixed-integer linear programs. (SYMPHONY is part of the [Computational Infrastructure for Operations Research](http://www.coin-or.org/) (COIN-OR) project.) Package `lsymphony` in Bioconductor provides a similar interface to SYMPHONY that is easier to install. \[LP, IP, MILP\]
 -   The NOMAD solver is implemented in the [crs](https://cran.r-project.org/package=crs) package for solving mixed integer programming problems. This algorithm is accessible via the `snomadr()` function and is primarily designed for constrained optimization of blackbox functions. \[MILP\]
--   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite. 'Clp' solves linear programs with continuous objective variables and is available through [ROI.plugin.clp](https://cran.r-project.org/package=ROI.plugin.clp). 'Cbc' is a powerful mixed integer linear programming solver (based on 'Clp'); package 'rcbc' can be installed from [<span class="GitHub">rcbc</span>](https://github.com/dirkschumacher/rcbc/) (on Github). \[LP, MILP\]
+-   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite. 'Clp' solves linear programs with continuous objective variables and is available through [ROI.plugin.clp](https://cran.r-project.org/package=ROI.plugin.clp). 'Cbc' is a powerful mixed integer linear programming solver (based on 'Clp'); package 'rcbc' can be installed from: [<span class="GitHub">rcbc</span>](https://github.com/dirkschumacher/rcbc/) (on Github). \[LP, MILP\]
 
 ### <span id="interfaces-to-commercial-optimizers">Interfaces to Commercial Optimizers</span>
 
@@ -175,8 +175,9 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 <span id="specific-applications-in-optimization">Specific Applications in Optimization</span>
 ---------------------------------------------------------------------------------------------
 
--   Package [nleqslv](https://cran.r-project.org/package=nleqslv) provides function `nleqslv()`, implementing Newton and Broyden methods with line search and trust region global strategies for solving medium sized system of nonlinear equations.
--   Package [goalprog](https://cran.r-project.org/package=goalprog) provides some functions for lexicographic linear goal programming and optimization. Goal programming is a branch of multi-objective, multi-criteria decision analysis. \[MOP\]
+-   Package [goalprog](https://cran.r-project.org/package=goalprog) provides functions for lexicographic linear goal programming and optimization. Goal programming is a branch of multi-objective, multi-criteria decision analysis. \[MOP\]
+-   Function `caRamel` in package [caRamel](https://cran.r-project.org/package=caRamel) is a multi-objective optimizer, applying a combination of the multiobjective evolutionary annealing-simplex (MEAS) method and the non-dominated sorting genetic algorithm (NGSA-II); it was initially developed for the calibration of hydrological models.
+-   Multi-criteria optimization problems can be solved using package [mco](https://cran.r-project.org/package=mco) which implements genetic algorithms. \[MOP\]
 -   The data cloning algorithm is a global optimization approach and a variant of simulated annealing which has been implemented in package [dclone](https://cran.r-project.org/package=dclone). The package provides low level functions for implementing maximum likelihood estimating procedures for complex models using data cloning and Bayesian Markov chain Monte Carlo methods.
 -   [irace](https://cran.r-project.org/package=irace) contains an optimization algorithm for optimizing the parameters of other optimization algorithms. This problem is called "(offline) algorithm configuration". \[GO\]
 -   Package [kofnGA](https://cran.r-project.org/package=kofnGA) uses a genetic algorithm to choose a subset of a fixed size k from the integers 1:n, such that a user- supplied objective function is minimized at that subset.
@@ -184,7 +185,6 @@ This section surveys interfaces to commercial solvers. Typically, the correspond
 -   [tabuSearch](https://cran.r-project.org/package=tabuSearch) implements a tabu search algorithm for optimizing binary strings, maximizing a user defined target function, and returns the best (i.e. maximizing) binary configuration found.
 -   Besides functionality for solving general isotone regression problems, package [isotone](https://cran.r-project.org/package=isotone) provides a framework of active set methods for isotone optimization problems with arbitrary order restrictions.
 -   [mlrMBO](https://cran.r-project.org/package=mlrMBO/index.html) is a flexible and comprehensive R toolbox for model-based optimization ('MBO'), also known as Bayesian optimization. And [rBayesianOptimization](../packages/rBayesianOptimization) is an implementation of Bayesian global optimization with Gaussian Processes, for parameter tuning and optimization of hyperparameters.
--   Multi-criteria optimization problems can be solved using package [mco](https://cran.r-project.org/package=mco) which implements genetic algorithms. \[MOP\]
 -   The [desirability](https://cran.r-project.org/package=desirability) package contains S3 classes for multivariate optimization using the desirability function approach of Harrington (1965) using functional forms described by Derringer and Suich (1980).
 -   Package [sna](https://cran.r-project.org/package=sna) contains the function `lab.optim()` which is the front-end to a series of heuristic routines for optimizing some bivariate graph statistic. \[GRAPH\]
 -   [maxLik](https://cran.r-project.org/package=maxLik) adds a likelihood-specific layer on top of a number of maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It includes summary and print methods which extract the standard errors based on the Hessian matrix and allows easy swapping of maximization algorithms. It also provides a function to check whether an analytic derivative is computed directly.
@@ -222,6 +222,7 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [BB](https://cran.r-project.org/package=BB)
 -   [boot](https://cran.r-project.org/package=boot)
 -   [bvls](https://cran.r-project.org/package=bvls)
+-   [caRamel](https://cran.r-project.org/package=caRamel)
 -   [cccp](https://cran.r-project.org/package=cccp)
 -   [cec2005benchmark](https://cran.r-project.org/package=cec2005benchmark)
 -   [cec2013](https://cran.r-project.org/package=cec2013)
@@ -285,7 +286,6 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [neldermead](https://cran.r-project.org/package=neldermead)
 -   [nilde](https://cran.r-project.org/package=nilde)
 -   [NlcOptim](https://cran.r-project.org/package=NlcOptim)
--   [nleqslv](https://cran.r-project.org/package=nleqslv)
 -   [nlmrt](https://cran.r-project.org/package=nlmrt)
 -   [nloptr](https://cran.r-project.org/package=nloptr)
 -   [nls2](https://cran.r-project.org/package=nls2)
