@@ -17,7 +17,7 @@ If you think that some package is missing from the list, please let us know.
 <span id="optimization-infrastructure-packages">Optimization Infrastructure Packages</span>
 -------------------------------------------------------------------------------------------
 
--   Trying to unify optimization algorithms via a single wrapper function, [optimr](https://cran.r-project.org/package=optimr/index.html) (and 'optimrx' on R-Forge) helps to proper specify (nonlinear) optimization problems, including objective function, gradient function, and scaling. It supports the (local) optimization of smooth, nonlinear functions with at most box/bound constraints. Function `opm`, returning a dataframe, compares solvers for a selected optimization task. (Note that [optimx](../packages/optimx) will get deprecated.)
+-   The [optimx](https://cran.r-project.org/package=optimx) package provides a replacement and extension of the `optim()` function in Base R with a call to several function minimization codes in R in a single statement. These methods handle smooth, possibly box constrained functions of several or many parameters. Function `optimx()` in this package applies several solvers to a selected optimization task and returns a dataframe of results for easy comparison. Also implements some utility codes and some extra solvers, including safeguarded Newton methods. 
 
 <!-- -->
 
@@ -294,7 +294,6 @@ What follows is an attempt to provide a by-subject overview of packages. The ful
 -   [nnls](https://cran.r-project.org/package=nnls)
 -   [ompr](https://cran.r-project.org/package=ompr)
 -   [onls](https://cran.r-project.org/package=onls)
--   [optimr](https://cran.r-project.org/package=optimr)
 -   [optimsimplex](https://cran.r-project.org/package=optimsimplex)
 -   [optimx](https://cran.r-project.org/package=optimx)
 -   [optmatch](https://cran.r-project.org/package=optmatch)
