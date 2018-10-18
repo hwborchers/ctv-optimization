@@ -17,7 +17,7 @@ If you think that some package is missing from the list, please let us know.
 <span id="optimization-infrastructure-packages">Optimization Infrastructure Packages</span>
 -------------------------------------------------------------------------------------------
 
--   The [optimx](https://cran.r-project.org/package=optimx) package provides a replacement and extension of the `optim()` function in Base R with a call to several function minimization codes in R in a single statement. These methods handle smooth, possibly box constrained functions of several or many parameters. Function `optimx()` in this package applies several solvers to a selected optimization task and returns a dataframe of results for easy comparison. Also implements some utility codes and some extra solvers, including safeguarded Newton methods. 
+-   The [optimx](https://cran.r-project.org/package=optimx) package provides a replacement and extension of the `optim()` function in Base R with a call to several function minimization codes in R in a single statement. These methods handle smooth, possibly box constrained functions of several or many parameters. Function `optimr()` in this package extends the `optim()`  function with the same syntax but more 'method' choices. Function `opm()` applies several solvers to a selected optimization task and returns a dataframe of results for easy comparison. The earlier `optimx()` function which has similar functionality but a slightly different syntax and output is included for compatibility. Also implements some utility codes and extra solvers, including safeguarded Newton methods.
 
 <!-- -->
 
