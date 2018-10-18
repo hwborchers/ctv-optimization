@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, and Hans W. Borchers |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2018-10-15                                                 |
+| **Version:**    | 2018-10-18                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities for solving optimization problems. Although every regression model in statistics solves an optimization problem they are not part of this view. If you are looking for regression methods, the following views will contain useful starting points: [Multivariate](https://cran.r-project.org/web/views/Multivariate.html), [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html), [Robust](https://cran.r-project.org/web/views/Robust.html) among others. The focus of this task view is on [Optimization Infrastructure Packages](#optimization-infrastructure-packages), [General Purpose Continuous Solvers](#general-purpose-continuous-solvers), [Mathematical Programming Solvers](#mathematical-programming-solvers), and [Specific Applications in Optimization](#specific-applications-in-optimization). Packages are categorized in these sections.
@@ -21,7 +21,7 @@ If you think that some package is missing from the list, please let us know.
 
 <!-- -->
 
--   The R Optimization Infrastructure ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework for handling optimization problems in R. It uses an object-oriented approach to define and solve various optimization tasks in R which can be from different problem classes (e.g., linear, quadratic, non-linear programming problems). This makes optimization transparent for the R user as the corresponding workflow is completely abstracted from the underlying solver. The approach allows for easy switching between solvers and thus enhances comparability.
+-   The R Optimization Infrastructure ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework for handling optimization problems in R. It uses an object-oriented approach to define and solve various optimization tasks in R which can be from different problem classes (e.g., linear, quadratic, non-linear, or mixed-integer programming problems). This makes optimization transparent for the R user as the corresponding workflow is completely abstracted from the underlying solver. The approach allows for easy switching between solvers and thus enhances comparability.
 
 <!-- -->
 
