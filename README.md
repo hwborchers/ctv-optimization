@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, and Hans W. Borchers |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2018-11-22                                                 |
+| **Version:**    | 2019-01-14                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -49,9 +49,7 @@ know.
     selected optimization task and returns a dataframe of results for
     easy comparison. The earlier `optimx()` function which has similar
     functionality but a slightly different syntax and output is included
-    for compatibility. Also implements some utility codes and extra
-    solvers, including safeguarded Newton methods.
-
+    for compatibility.
 <!-- -->
 
 -   The R Optimization Infrastructure
@@ -63,7 +61,8 @@ know.
     transparent for the R user as the corresponding workflow is
     completely abstracted from the underlying solver. The approach
     allows for easy switching between solvers and thus enhances
-    comparability.
+    comparability. (More information can be found at the [ROI home
+    page](http://roi.r-forge.r-project.org/).)
 
 <!-- -->
 
@@ -579,6 +578,12 @@ corresponding libraries have to be installed separately.
     enables the user to solve the linear sum assignment problem (LSAP)
     using an efficient C implementation of the Hungarian algorithm.
     \[SPLP\]
+-   [FLSSS](https://cran.r-project.org/package=FLSSS) provides multi-threaded
+    solvers for fixed-size single and multi dimensional subset sum
+    problems with optional constraints on target sum and element range,
+    fixed-size single and multi dimensional knapsack problems, binary
+    knapsack problems and generalized assignment problems via exact
+    algorithms or metaheuristics.
 -   Package [qap](https://cran.r-project.org/package=qap) solves Quadratic
     Assignment Problems (QAP) applying a simulated annealing heuristics
     (other approaches will follow).
@@ -829,6 +834,7 @@ code (if available) are given in brackets.
 -   [ECOSolveR](https://cran.r-project.org/package=ECOSolveR)
 -   [ecr](https://cran.r-project.org/package=ecr)
 -   [flacco](https://cran.r-project.org/package=flacco)
+-   [FLSSS](https://cran.r-project.org/package=FLSSS)
 -   [GA](https://cran.r-project.org/package=GA)
 -   [genalg](https://cran.r-project.org/package=genalg)
 -   [GenSA](https://cran.r-project.org/package=GenSA)
