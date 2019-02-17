@@ -3,9 +3,9 @@ CRAN Task View: Optimization and Mathematical Programming
 
 |                 |                                                            |
 |-----------------|------------------------------------------------------------|
-| **Maintainer:** | Stefan Theussl, Florian Schwendinger, and Hans W. Borchers |
+| **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2019-01-14                                                 |
+| **Version:**    | 2019-02-17                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -624,10 +624,6 @@ corresponding libraries have to be installed separately.
 <span id="specific-applications-in-optimization">Specific Applications in Optimization</span>
 ---------------------------------------------------------------------------------------------
 
--   Package [goalprog](https://cran.r-project.org/package=goalprog) provides
-    functions for lexicographic linear goal programming and
-    optimization. Goal programming is a branch of multi-objective,
-    multi-criteria decision analysis. \[MOP\]
 -   Function `caRamel` in package
     [caRamel](https://cran.r-project.org/package=caRamel) is a multi-objective
     optimizer, applying a combination of the multiobjective evolutionary
@@ -769,7 +765,6 @@ code (if available) are given in brackets.
     [TSP](https://cran.r-project.org/package=TSP),
     [matchingR](https://cran.r-project.org/package=matchingR)
 -   MOP (Multi-objective and goal programming, 90C29):
-    [goalprog](https://cran.r-project.org/package=goalprog),
     [mco](https://cran.r-project.org/package=mco)
 -   NLP (Nonlinear programming, 90C30):
     [nloptr](https://cran.r-project.org/package=nloptr),
@@ -840,7 +835,6 @@ code (if available) are given in brackets.
 -   [GenSA](https://cran.r-project.org/package=GenSA)
 -   [globalOptTests](https://cran.r-project.org/package=globalOptTests)
 -   [glpkAPI](https://cran.r-project.org/package=glpkAPI)
--   [goalprog](https://cran.r-project.org/package=goalprog)
 -   [GrassmannOptim](https://cran.r-project.org/package=GrassmannOptim)
 -   [gsl](https://cran.r-project.org/package=gsl)
 -   [hydroPSO](https://cran.r-project.org/package=hydroPSO)
