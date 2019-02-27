@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2019-02-17                                                 |
+| **Version:**    | 2019-02-27                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -512,7 +512,7 @@ of this task view.
     mixed-integer linear programs. (SYMPHONY is part of the
     [Computational Infrastructure for Operations
     Research](http://www.coin-or.org/) (COIN-OR) project.) Package
-    `lsymphony` in Bioconductor provides a similar interface to SYMPHONY
+    `lpsymphony` in Bioconductor provides a similar interface to SYMPHONY
     that is easier to install. \[LP, IP, MILP\]
 -   The NOMAD solver is implemented in the
     [crs](https://cran.r-project.org/package=crs) package for solving mixed integer
