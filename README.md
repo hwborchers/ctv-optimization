@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2019-02-27                                                 |
+| **Version:**    | 2019-04-20                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -47,9 +47,7 @@ know.
     package extends the `optim()` function with the same syntax but more
     'method' choices. Function `opm()` applies several solvers to a
     selected optimization task and returns a dataframe of results for
-    easy comparison. The earlier `optimx()` function which has similar
-    functionality but a slightly different syntax and output is included
-    for compatibility.
+    easy comparison.
 <!-- -->
 
 -   The R Optimization Infrastructure
@@ -195,9 +193,6 @@ routines. \[RGA, QN\]
     of many variables by a trust region method that forms quadratic
     models by interpolation. `bobyqa()` additionally permits box
     constraints (bounds) on the parameters. \[DF\]
--   Package [powell](https://cran.r-project.org/package=powell) optimizes functions
-    using Powell's UObyQA algorithm (Unconstrained Optimization by
-    Quadratic Approximation).
 -   [subplex](https://cran.r-project.org/package=subplex) provides unconstrained
     function optimization based on a subspace searching simplex method.
 -   In package [trust](https://cran.r-project.org/package=trust), a routine with the
@@ -882,7 +877,6 @@ code (if available) are given in brackets.
 -   [optmatch](https://cran.r-project.org/package=optmatch)
 -   [osqp](https://cran.r-project.org/package=osqp)
 -   [parma](https://cran.r-project.org/package=parma)
--   [powell](https://cran.r-project.org/package=powell)
 -   [pso](https://cran.r-project.org/package=pso)
 -   [psoptim](https://cran.r-project.org/package=psoptim)
 -   [qap](https://cran.r-project.org/package=qap)
