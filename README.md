@@ -222,14 +222,12 @@ routines. \[RGA, QN\]
     constraints efficiently. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function
     `ipop` for solving quadratic programming problems using interior
-    point methods. (The matrix can be positive semidefinite.) \[IPM,
-    QP\]
+    point methods. (The matrix can be positive semidefinite.) \[IPM, QP\]
 -   [Dykstra](https://cran.r-project.org/package=Dykstra) solves quadratic
     programming problems using R. L. Dykstra's cyclic projection
     algorithm for positive definite and semidefinite matrices. The
     routine allows for a combination of equality and inequality
     constraints. \[QP\]
-
 -   [coneproj](https://cran.r-project.org/package=coneproj) contains routines for
     cone projection and quadratic programming, estimation and inference
     for constrained parametric regression, and shape-restricted
