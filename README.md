@@ -103,6 +103,9 @@ routines. \[RGA, QN\]
     minimizer, allowing bound constraints and being applicable to
     higher-dimensional problems. ('lbfgsb3c' has an 'optim'-like
     interface based on 'Rcpp'.)
+-   [optimParallel](https://cran.r-project.org/package=optimParallel)
+    provides a parallel version of the L-BFGS-B method of `optim()`;
+    using `optimParallel()` can significantly reduce the optimization time.
 -   [RcppNumerical](https://cran.r-project.org/package=RcppNumerical) is a
     collection of open source libraries for numerical computing and
     their integration with 'Rcpp'. It provides a wrapper for the L-BFGS
@@ -869,6 +872,7 @@ code (if available) are given in brackets.
 -   [nnls](https://cran.r-project.org/package=nnls)
 -   [ompr](https://cran.r-project.org/package=ompr)
 -   [onls](https://cran.r-project.org/package=onls)
+-   [optimParallel](https://cran.r-project.org/package=optimParallel)
 -   [optimsimplex](https://cran.r-project.org/package=optimsimplex)
 -   [optimx](https://cran.r-project.org/package=optimx)
 -   [optmatch](https://cran.r-project.org/package=optmatch)
