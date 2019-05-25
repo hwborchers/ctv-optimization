@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2019-04-20                                                 |
+| **Version:**    | 2019-05-25                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -51,16 +51,15 @@ know.
 <!-- -->
 
 -   The R Optimization Infrastructure
-    ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework for
-    handling optimization problems in R. It uses an object-oriented
-    approach to define and solve various optimization tasks in R which
-    can be from different problem classes (e.g., linear, quadratic,
-    non-linear programming problems). This makes optimization
-    transparent for the R user as the corresponding workflow is
-    completely abstracted from the underlying solver. The approach
-    allows for easy switching between solvers and thus enhances
-    comparability. (More information can be found at the [ROI home
-    page](http://roi.r-forge.r-project.org/).)
+    ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework 
+    for handling optimization problems in R. It uses an object-oriented
+    approach to define and solve various optimization tasks from
+    different problem classes (e.g., linear, quadratic, non-linear
+    programming problems). This makes optimizationt transparent for the user
+    as the corresponding workflow is abstracted from the underlying solver.
+    The approach allows for easy switching between solvers and thus enhances
+    comparability.
+    For more information see the [ROI home page](http://roi.r-forge.r-project.org/).
 
 <!-- -->
 
@@ -161,10 +160,7 @@ routines. \[RGA, QN\]
 -   [BB](https://cran.r-project.org/package=BB) contains the function `spg()`
     providing a spectral projected gradient method for large scale
     optimization with simple constraints. It takes a nonlinear objective
-    function as an argument as well as basic constraints. Furthermore,
-    [BB](https://cran.r-project.org/package=BB) contains two functions ( `dfsane()`
-    and `sane()`) for using the spectral gradient method for solving a
-    nonlinear system of equations.
+    function as an argument as well as basic constraints.
 -   [GrassmannOptim](https://cran.r-project.org/package=GrassmannOptim) is a package
     for Grassmann manifold optimization. The implementation uses
     gradient-based algorithms and embeds a stochastic gradient method
@@ -216,6 +212,11 @@ routines. \[RGA, QN\]
     [quadprogXT](https://cran.r-project.org/package=quadprogXT) extends this with
     absolute value constraints and absolute values in the objective
     function. \[QP\]
+-   [osqp](https://cran.r-project.org/package=osqp) provides bindings to
+    [OSQP](https://osqp.org) , the 'Operator Splitting QP' solver from
+    the University of Oxford Control Group; it solves sparse convex
+    quadratic programming problems with optional equality and inequality
+    constraints efficiently. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function
     `ipop` for solving quadratic programming problems using interior
     point methods. (The matrix can be positive semidefinite.) \[IPM,
@@ -225,11 +226,7 @@ routines. \[RGA, QN\]
     algorithm for positive definite and semidefinite matrices. The
     routine allows for a combination of equality and inequality
     constraints. \[QP\]
--   [osqp](https://cran.r-project.org/package=osqp) provides bindings to
-    [OSQP](https://osqp.org) , the 'Operator Splitting QP' solver from
-    the University of Oxford Control Group; it solves sparse convex
-    quadratic programming problems with optional equality and inequality
-    constraints efficiently. \[QP\]
+
 -   [coneproj](https://cran.r-project.org/package=coneproj) contains routines for
     cone projection and quadratic programming, estimation and inference
     for constrained parametric regression, and shape-restricted
