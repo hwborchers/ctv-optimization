@@ -2,9 +2,10 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, and Hans W. Borchers
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
+	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2018-10-15</version>
+<version>2019-05-25</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -41,25 +42,28 @@
   Optimization Infrastructure Packages</a></h2>
 
   <ul>
-    <li>Trying to unify optimization algorithms via a single wrapper 
-    function, <pkg>optimr</pkg> (and 'optimrx' on R-Forge) helps to proper 
-    specify (nonlinear) optimization problems, including objective 
-    function, gradient function, and scaling. It supports the (local) 
-    optimization of smooth, nonlinear functions with at most box/bound
-    constraints. Function <code>opm</code>, returning a dataframe, compares
-    solvers for a selected optimization task. (Note that <pkg>optimx</pkg>
-    will get deprecated.)</li>
+    <li>The <pkg>optimx</pkg> package provides a replacement and extension of 
+    the <code>optim()</code> function in Base R with a call to several 
+    function minimization codes in R in a single statement. These methods 
+    handle smooth, possibly box constrained functions of several or many 
+    parameters. Function <code>optimr()</code> in this package extends the 
+    <code>optim()</code> function with the same syntax but more 'method' 
+    choices. Function <code>opm()</code> applies several solvers to a selected 
+    optimization task and returns a dataframe of results for easy comparison. 
+    </li>
   </ul>
 
   <ul>
     <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package 
     provides a framework for handling optimization problems in R. 
     It uses an object-oriented approach to define and solve various
-    optimization tasks in R which can be from different problem classes
-    (e.g., linear, quadratic, non-linear programming problems). This makes 
-    optimization transparent for the R user as the corresponding workflow 
-    is completely abstracted from the underlying solver. The approach allows 
-    for easy switching between solvers and thus enhances comparability.</li>
+    optimization tasks from different problem classes (e.g., linear, quadratic, 
+    non-linear programming problems). This makes optimization transparent 
+    for the user as the corresponding workflow is abstracted from the 
+    underlying solver. The approach allows for easy switching between 
+    solvers and thus enhances comparability. For more information see the 
+    <a href="http://roi.r-forge.r-project.org/">ROI home page</a>.
+    </li>
   </ul>
 
   <ul>
@@ -96,35 +100,45 @@
 	PORT routines. [RGA, QN]</p>
 
   <ul>
-    <li><pkg>lbfgsb3</pkg> interfaces the J.Nocedal et al. L-BFGS-B 3.0
-    Fortran code, a limited memory BFGS solver, allowing bound constraints
-    and being applicable to higher-dimensional problems. [QN]</li>
+    <li>Package <pkg>lbfgs</pkg> wraps the libBFGS C library by Okazaki and
+    Morales (converted from Nocedal's L-BFGS-B 3.0 Fortran code), interfacing 
+    both the L-BFGS and the OWL-QN algorithm, the latter being particularly 
+    suited for higher-dimensional problems.</li>
 
-    <li>And <pkg>lbfgs</pkg> wraps the libBFGS library by N. Okazaki
-    (converted from Nocedal's library), interfacing both the L-BFGS and
-    the OWL-QN algorithm, the latter being particularly suited for
-    higher-dimensional problems. [QN]</li>
+    <li><pkg>lbfgsb3</pkg> and <pkg>lbfgsb3c</pkg> both interface J.Nocedal's
+    L-BFGS-B 3.0 Fortran code, a limited memory BFGS minimizer, allowing bound 
+    constraints and being applicable to higher-dimensional problems. 
+    ('lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.)</li>
+
+    <li><pkg>optimParallel</pkg> provides a parallel version of the L-BFGS-B 
+    method of optim(); using <code>optimParallel()</code> can significantly 
+    reduce the optimization time.</li>
 
     <li><pkg>RcppNumerical</pkg> is a collection of open source libraries 
     for numerical computing and their integration with 'Rcpp'. It provides 
     a wrapper for the L-BFGS algorithm, based on the LBFGS++ library 
     (based on code of N. Okazaki).</li>
 
-    <li>The following packages implement optimization routines in pure R, 
-    for nonlinear functions with bounds constraints.
-    <pkg>Rcgmin</pkg>: gradient function minimization similar to GC;
-    <pkg>Rvmmin</pkg>: variable metric function minimization;
-    <pkg>Rtnmin</pkg>: truncated Newton function minimization.</li>
-
     <li>Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newton 
     type for nonlinear unconstrained optimization, combining a trust region
     with line search approaches. The interface of <code>ucminf()</code> is 
     designed for easy interchange with <code>optim()</code>.[QN]</li>
 
+    <li>The following packages implement optimization routines in pure R, 
+    for nonlinear functions with bounds constraints:
+    <pkg>Rcgmin</pkg>: gradient function minimization similar to GC;
+    <pkg>Rvmmin</pkg>: variable metric function minimization;
+    <pkg>Rtnmin</pkg>: truncated Newton function minimization.</li>
+
     <li><pkg>mize</pkg> implements optimization algorithms in pure R,
     including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
     and limited memory BFGS (L-BFGS) methods. Most internal parameters
     can be set through the calling interface.</li>
+
+    <li>Package <pkg>dfoptim</pkg>, for derivative-free optimization
+    procedures, contains quite efficient R implementations of the
+    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and with
+    bounds constraints). [DF]</li>
 
     <li>Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL licensed 
     library of various nonlinear optimization algorithms. It includes local 
@@ -132,19 +146,19 @@
     (e.g., BFGS) methods, and also the augmented Lagrangian approach for 
     nonlinear constraints. [DF, GO, QN]</li>
 
-    <li>Package <pkg>dfoptim</pkg>, derivative-free optimization
-    procedures, contains quite efficient R implementations of the
-    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
-    bounds-constrained). [DF]</li>
+    <li>Package <pkg>alabama</pkg> provides an implementations of the
+    Augmented Lagrange Barrier minimization algorithm for optimizing smooth
+    nonlinear objective functions with (nonlinear) equality and inequality
+    constraints.</li>
 
-    <li>Implementations of the augmented Lagrange barrier minimization 
-    algorithm for optimizing smooth nonlinear objective functions (with 
-    equality and inequality constraints) can be found in packages 
-    <pkg>alabama</pkg> and <pkg>Rsolnp</pkg>.</li>
+    <li>Package <pkg>Rsolnp</pkg> provides an implementation of the Augmented
+    Lagrange Multiplier method for solving nonlinear optimization problems
+    with equality and inequality constraints (based on code by Y. Ye).</li>
 
-    <li><pkg>NlcOptim</pkg> solves nonlinear optimization problems with 
-    linear and nonlinear equality and inequality constraints, implementing 
-    a Sequential Quadratic Programming (SQP) method.</li>
+    <li><pkg>NlcOptim</pkg> solves nonlinear optimization problems with
+    linear and nonlinear equality and inequality constraints, implementing
+    a Sequential Quadratic Programming (SQP) method; accepts the input
+    parameters as a constrained matrix.</li>
 
     <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
     function<code>donlp2()</code> , a wrapper for the DONLP2
@@ -156,13 +170,10 @@
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).</li>
 
-    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
-    spectral projected gradient method for large scale optimization with
+    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing 
+    a spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
-    argument as well as basic constraints. Furthermore, <pkg>BB</pkg>
-    contains two functions (<code>dfsane()</code>
-    and <code>sane()</code>) for using the spectral gradient method
-    for solving a nonlinear system of equations.</li>
+    argument as well as basic constraints.</li>
 
     <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
     optimization. The implementation uses gradient-based algorithms
@@ -195,10 +206,6 @@
     models by interpolation. <code>bobyqa()</code> additionally permits box 
     constraints (bounds) on the parameters. [DF]</li>
 
-    <li>Package <pkg>powell</pkg> optimizes functions using Powell's
-    UObyQA algorithm (Unconstrained Optimization by Quadratic
-    Approximation).</li>
-
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.</li>
 
@@ -226,6 +233,12 @@
     <pkg>quadprogXT</pkg> extends this with absolute value constraints and 
     absolute values in the objective function. [QP]</li>
 
+    <li><pkg>osqp</pkg> provides bindings to 
+    <a href="https://osqp.org">OSQP</a>, the 'Operator Splitting QP' solver
+    from the University of Oxford Control Group; it solves sparse convex 
+    quadratic programming problems with optional equality and inequality 
+    constraints efficiently. [QP]</li>
+
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
     methods. (The matrix can be positive semidefinite.) [IPM, QP]</li>
@@ -234,12 +247,6 @@
     R. L. Dykstra's cyclic projection algorithm for positive definite and 
     semidefinite matrices. The routine allows for a combination of equality 
     and inequality constraints. [QP]</li>
-
-    <li><pkg>osqp</pkg> and <pkg>rosqp</pkg> both provide bindings to 
-    <a href="https://osqp.org">OSQP</a>, the 'Operator Splitting QP' solver
-    from the University of Oxford Control Group; it solves sparse convex 
-    quadratic programming problems with optional equality and inequality 
-    constraints efficiently. [QP]</li>
 
     <li><pkg>coneproj</pkg> contains routines for cone projection and
     quadratic programming, estimation and inference for constrained parametric
@@ -338,22 +345,25 @@
 
   <ul>
     <li>Package <pkg>ECOSolveR</pkg> provides an interface to the Embedded 
-	COnic Solver (ECOS), a well-known, efficient, and robust C library for 
-	convex problems. Conic and equality constraints can be specified in 
-	addition to integer and boolean variable constraints for mixed-integer 
-	problems.</li>
+    COnic Solver (ECOS), a well-known, efficient, and robust C library for 
+    convex problems. Conic and equality constraints can be specified in 
+    addition to integer and boolean variable constraints for mixed-integer 
+    problems.</li>
 	
-	<li>Package <pkg>scs</pkg> applies operator splitting to solve linear 
-	programs, cone programs (SOCP), and semidefinite programs; cones can be 
-	second-order, exponential, power cones, or any combination of these.</li>
+    <li>Package <pkg>scs</pkg> applies operator splitting to solve linear 
+    programs (LPs), second-order cone programs (SOCP), semidefinite programs, 
+    (SDPs), exponential cone programs (ECPs), and power cone programs (PCPs), 
+    or problems with any combination of those cones.</li>
+
+    <li><pkg>sdpt3r</pkg> solves general semidefinite Linear Programming  
+    problems, using an R implementation of the MATLAB toolbox SDPT3. Includes 
+    problems such as the nearest correlation matrix, D-optimal experimental 
+    design, Distance Weighted Discrimination, or the maximum cut problem.</li>
 
     <li><pkg>cccp</pkg> contains routines for solving cone constrained
-    convex problems by means of interior-point methods (partially ported
-    from Python's CVXOPT).</li>
-
-    <li><pkg>sdpt3r</pkg> solves general semidefinite Linear Programming 
-    (LP) problems, using an R implementation of SDPT3, a MATLAB software for 
-    semidefinite quadratic-linear programming. </li>
+    convex problems by means of interior-point methods. The implemented 
+    algorithms are partially ported from CVXOPT, a Python module for convex 
+    optimization</li>
 
     <li>The <pkg>CLSOCP</pkg> package provides an implementation of a one-step
     smoothing Newton method for the solution of second order cone programming
@@ -409,6 +419,10 @@
     which is capable of solving complex function minimization/maximization 
     problems by combining evolutionary algorithms with a derivative-based 
     (quasi-Newtonian) approach.</li>
+
+    <li>The <pkg>Jaya</pkg> package provides a implementation Jaya algorithm,
+    a population based heuristic algorithm which repeatedly modifies a population 
+    of individual solutions.</li>
 
     <li>Machine coded genetic algorithm (MCGA) provided by package
     <pkg>mcga</pkg> is a tool which solves optimization problems based
@@ -466,6 +480,9 @@
     work for discrete optimization problems, as does the implementation of a 
     genetic algorithm that is included in the package.</li>
 
+    <li><pkg>OOR</pkg> implements optimistic optimization methods for global 
+    optimization of deterministic or stochastic functions.</li>
+
     <li><pkg>SACOBRA</pkg> is a package for numeric constrained optimization 
     of expensive black-box functions under severely limited budgets; 
     it implements an extension of the COBRA algorithm with initial design 
@@ -509,9 +526,9 @@
   <ul>
     <li> The <a href="https://www.neos-server.org/neos/">NEOS Server
     for Optimization</a> provides online access to state-of-the-art
-    optimization problem solvers. Package <pkg>rneos</pkg> enables the
-    user to pass optimization problems to NEOS and retrieve results
-    within R.
+    optimization problem solvers. The packages <pkg>rneos</pkg> and 
+    <pkg>ROI.plugin.neos</pkg> enable the user to pass optimization 
+    problems to NEOS and retrieve results within R.
     </li>
 <!--
     <li> An interface to Ipopt from the <a
@@ -560,7 +577,7 @@
     that interfaces the SYMPHONY solver for mixed-integer linear programs.
     (SYMPHONY is part of the <a href="http://www.coin-or.org/">Computational 
     Infrastructure for Operations Research</a> (COIN-OR) project.) 
-    Package <code>lsymphony</code> in Bioconductor provides a similar 
+    Package <code>lpsymphony</code> in Bioconductor provides a similar 
     interface to SYMPHONY that is easier to install. [LP, IP, MILP]</li>
 
     <li>The NOMAD solver is implemented in the <pkg>crs</pkg> package
@@ -642,6 +659,13 @@
     the user to solve the linear sum assignment problem (LSAP) using an
     efficient C implementation of the Hungarian algorithm. [SPLP]</li>
 
+    <li><pkg>FLSSS</pkg> provides multi-threaded solvers for 
+    fixed-size single and multi dimensional subset sum problems with optional 
+    constraints on target sum and element range, 
+    fixed-size single and multi dimensional knapsack problems, 
+    binary knapsack problems and generalized assignment problems via exact 
+    algorithms or metaheuristics.</li>
+
     <li>Package <pkg>qap</pkg> solves Quadratic Assignment Problems (QAP) 
     applying a simulated annealing heuristics (other approaches will 
     follow).</li>
@@ -685,22 +709,28 @@
   </ul>
 
 
-  <h2><a name="specific-applications-in-optimization">
-  Specific Applications in Optimization</a></h2>
+  <h2><a name="multi-objective-optimization">Multi Objective Optimization</a></h2>
 
   <ul>
-    <li>Package <pkg>goalprog</pkg> provides functions for lexicographic 
-    linear goal programming and optimization. Goal programming is a branch of 
-    multi-objective, multi-criteria decision analysis. [MOP]</li>
-
-    <li>Function <code>caRamel</code> in package <pkg>caRamel</pkg> is a 
-    multi-objective optimizer, applying a combination of the multiobjective 
+  	<li>Function <code>caRamel</code> in package <pkg>caRamel</pkg> is a 
+    multi-objective optimizer, applying a combination of the multi-objective 
     evolutionary annealing-simplex (MEAS) method and the non-dominated sorting 
     genetic algorithm (NGSA-II); it was initially developed for the 
     calibration of hydrological models.</li>
 
     <li>Multi-criteria optimization problems can be solved using package 
     <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
+
+    <li><pkg>GPareto</pkg> provides multi-objective optimization algorithms 
+    for expensive black-box functions and uncertainty quantification methods.</li>
+
+  </ul>
+
+
+  <h2><a name="specific-applications-in-optimization">
+  Specific Applications in Optimization</a></h2>
+
+  <ul>
 
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
@@ -776,7 +806,8 @@
 -->
       <li> GO (Global Optimization): <pkg>DEoptim</pkg>, <pkg>DEoptimR</pkg>,
       <pkg>GenSA</pkg>, <pkg>GA</pkg>, <pkg>pso</pkg>, <pkg>hydroPSO</pkg>,
-      <pkg>cmaes</pkg>, <pkg>nloptr</pkg>, <pkg>NMOF</pkg></li>
+      <pkg>Jaya</pkg>, <pkg>rgenoud</pkg>,
+      <pkg>cmaes</pkg>, <pkg>nloptr</pkg>, <pkg>NMOF</pkg>, <pkg>OOR</pkg></li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
@@ -817,7 +848,7 @@
       <pkg>CEoptim</pkg>, <pkg>TSP</pkg>, <pkg>matchingR</pkg></li>
 
       <li>MOP (Multi-objective and goal programming, 90C29):
-      <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
+      <pkg>caRamel</pkg>, <pkg>GPareto</pkg>, <pkg>mco</pkg></li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
       <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2, <pkg>rLindo</pkg></li>
@@ -847,7 +878,8 @@
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
       (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>lbfgs</pkg>,
-      <pkg>lbfgsb3</pkg>, <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
+      <pkg>lbfgsb3</pkg>, <pkg>nloptr</pkg>, <pkg>optimParallel</pkg>, 
+      <pkg>ucminf</pkg></li>
 
       <li>DF (Derivative-free methods, 90C56): <pkg>dfoptim</pkg>,
       <pkg>minqa</pkg>, <pkg>nloptr</pkg></li>
@@ -900,22 +932,25 @@
   <pkg>ECOSolveR</pkg>
   <pkg>ecr</pkg>
   <pkg>flacco</pkg>
+  <pkg>FLSSS</pkg>
   <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
+  <pkg>GPareto</pkg>
   <pkg>globalOptTests</pkg>
   <pkg>glpkAPI</pkg>
-  <pkg>goalprog</pkg>
   <pkg>GrassmannOptim</pkg>
   <pkg>gsl</pkg>
   <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
   <pkg>irace</pkg>
+  <pkg>Jaya</pkg>
   <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
   <pkg>kofnGA</pkg>
   <pkg>lbfgs</pkg>
   <pkg>lbfgsb3</pkg>
+  <pkg>lbfgsb3c</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
   <pkg>localsolver</pkg>
@@ -947,13 +982,13 @@
   <pkg>nnls</pkg>
   <pkg>ompr</pkg>
   <pkg>onls</pkg>
+  <pkg>optimParallel</pkg>
   <pkg>optimsimplex</pkg>
-  <pkg>optimr</pkg>
   <pkg>optimx</pkg>
   <pkg>optmatch</pkg>
+  <pkg>OOR</pkg>
   <pkg>osqp</pkg>
   <pkg>parma</pkg>
-  <pkg>powell</pkg>
   <pkg>pso</pkg>
   <pkg>psoptim</pkg>
   <pkg>qap</pkg>
@@ -978,8 +1013,8 @@
   <pkg>rneos</pkg>
   <pkg>ROI</pkg>
   <pkg>ROI.plugin.clp</pkg>
+  <pkg>ROI.plugin.neos</pkg>
   <pkg>ROI.plugin.qpoases</pkg>
-  <pkg>rosqp</pkg>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
   <pkg>Rtnmin</pkg>
