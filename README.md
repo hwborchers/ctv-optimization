@@ -44,7 +44,6 @@ If you think that packages are missing from the list, please let us know.
     'method' choices. Function `opm()` applies several solvers to a
     selected optimization task and returns a dataframe of results for
     easy comparison.
-<!-- -->
 
 -   The R Optimization Infrastructure
     ([ROI](https://cran.r-project.org/package=ROI)) package provides a framework 
@@ -56,8 +55,6 @@ If you think that packages are missing from the list, please let us know.
     The approach allows for easy switching between solvers and thus enhances
     comparability.
     For more information see the [ROI home page](http://roi.r-forge.r-project.org/).
-
-<!-- -->
 
 -   The package [CVXR](https://cran.r-project.org/package=CVXR) provides an
     object-oriented modeling language for Disciplined Convex Programming
@@ -111,7 +108,7 @@ routines. \[RGA, QN\]
     algorithm of quasi-Newton type for nonlinear unconstrained
     optimization, combining a trust region with line search approaches.
     The interface of `ucminf()` is designed for easy interchange with
-    `optim()`.\[QN\]
+    `optim()`.
 -   The following packages implement optimization routines in pure R,
     for nonlinear functions with bounds constraints:
     [Rcgmin](https://cran.r-project.org/package=Rcgmin): gradient function
@@ -127,13 +124,12 @@ routines. \[RGA, QN\]
 -   Package [dfoptim](https://cran.r-project.org/package=dfoptim), for
     derivative-free optimization procedures, contains quite efficient R
     implementations of the Nelder-Mead and Hooke-Jeeves algorithms
-    (unconstrained and with bounds constraints). \[DF\]
+    (unconstrained and with bounds constraints).
 -   Package [nloptr](https://cran.r-project.org/package=nloptr) provides access to
     NLopt, an LGPL licensed library of various nonlinear optimization
     algorithms. It includes local derivative-free (COBYLA, Nelder-Mead,
     Subplex) and gradient-based (e.g., BFGS) methods, and also the
-    augmented Lagrangian approach for nonlinear constraints. \[DF, GO,
-    QN\]
+    augmented Lagrangian approach for nonlinear constraints.
 -   Package [alabama](https://cran.r-project.org/package=alabama) provides an
     implementations of the Augmented Lagrange Barrier minimization
     algorithm for optimizing smooth nonlinear objective functions with
@@ -152,7 +148,7 @@ routines. \[RGA, QN\]
     project) function `donlp2()`, a wrapper for the DONLP2 solver,
     offers the minimization of smooth nonlinear functions and
     constraints. DONLP2 can be used freely for any kind of research
-    purposes, otherwise it requires licensing. \[GO, NLP\]
+    purposes, otherwise it requires licensing.
 -   [clue](https://cran.r-project.org/package=clue) contains the function `sumt()`
     for solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).
@@ -171,7 +167,7 @@ routines. \[RGA, QN\]
 -   Package [gsl](https://cran.r-project.org/package=gsl) provides BFGS, conjugate
     gradient, steepest descent, and Nelder-Mead algorithms. It uses a
     "line search" approach via the function `multimin()`. It is based on
-    the GNU Scientific Library (GSL). \[RGA, QN\]
+    the GNU Scientific Library (GSL).
 -   An R port of the Scilab neldermead module is packaged in
     [neldermead](https://cran.r-project.org/package=neldermead) offering several
     direct search algorithms based on the simplex approach. And
@@ -187,7 +183,7 @@ routines. \[RGA, QN\]
     `bobyqa()`, `newuoa()`, and `uobyqa()` allow to minimize a function
     of many variables by a trust region method that forms quadratic
     models by interpolation. `bobyqa()` additionally permits box
-    constraints (bounds) on the parameters. \[DF\]
+    constraints (bounds) on the parameters.
 -   [subplex](https://cran.r-project.org/package=subplex) provides unconstrained
     function optimization based on a subspace searching simplex method.
 -   In package [trust](https://cran.r-project.org/package=trust), a routine with the
@@ -201,7 +197,7 @@ routines. \[RGA, QN\]
 -   Package [quantreg](https://cran.r-project.org/package=quantreg) contains
     variations of simplex and of interior point routines ( `nlrq()`,
     `crq()`). It provides an interface to L1 regression in the R code of
-    function `rq()`. \[SPLP, LP, IPM\]
+    function `rq()`.
 
 ### <span id="quadratic-optimization">Quadratic Optimization</span>
 
@@ -210,36 +206,36 @@ routines. \[RGA, QN\]
     inequality constraints. (The matrix has to be positive definite.)
     [quadprogXT](https://cran.r-project.org/package=quadprogXT) extends this with
     absolute value constraints and absolute values in the objective
-    function. \[QP\]
+    function.
 -   [osqp](https://cran.r-project.org/package=osqp) provides bindings to
     [OSQP](https://osqp.org) , the 'Operator Splitting QP' solver from
     the University of Oxford Control Group; it solves sparse convex
     quadratic programming problems with optional equality and inequality
-    constraints efficiently. \[QP\]
+    constraints efficiently.
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function
     `ipop` for solving quadratic programming problems using interior
-    point methods. (The matrix can be positive semidefinite.) \[IPM, QP\]
+    point methods. (The matrix can be positive semidefinite.)
 -   [Dykstra](https://cran.r-project.org/package=Dykstra) solves quadratic
     programming problems using R. L. Dykstra's cyclic projection
     algorithm for positive definite and semidefinite matrices. The
     routine allows for a combination of equality and inequality
-    constraints. \[QP\]
+    constraints.
 -   [coneproj](https://cran.r-project.org/package=coneproj) contains routines for
     cone projection and quadratic programming, estimation and inference
     for constrained parametric regression, and shape-restricted
-    regression problems. \[QP\]
+    regression problems.
 -   [LowRankQP](https://cran.r-project.org/package=LowRankQP) primal/dual interior
     point method solving quadratic programming problems (especially for
-    semidefinite quadratic forms). \[IPM, QP\]
+    semidefinite quadratic forms).
 -   The COIN-OR project 'qpOASES' implements a reliable QP solver, even
     when tackling semi-definite or degenerated QP problems; it is
     particularly suited for model predictive control (MPC) applications;
     the ROI plugin
     [ROI.plugin.qpoases](https://cran.r-project.org/package=ROI.plugin.qpoases)
-    makes it accessible for R users. \[QP\]
+    makes it accessible for R users.
 -   [limSolve](https://cran.r-project.org/package=limSolve) offers to solve linear
     or quadratic optimization functions, subject to equality and/or
-    inequality constraints. \[LP, QP\]
+    inequality constraints.
 
 ### <span id="optimization-test-functions">Optimization Test Functions</span>
 
@@ -325,24 +321,22 @@ parameters or getting stuck in local solutions.
     (partially ported from Python's CVXOPT).
 -   [sdpt3r](https://cran.r-project.org/package=sdpt3r) solves general semidefinite
     Linear Programming (LP) problems, using an R implementation of
-    SDPT3, a MATLAB software for semidefinite quadratic-linear
-    programming.
+    SDPT3, a MATLAB software for semidefinite quadratic-linear programming.
 -   The [CLSOCP](https://cran.r-project.org/package=CLSOCP) package provides an
     implementation of a one-step smoothing Newton method for the
     solution of second order cone programming (SOCP) problems.
 -   CSDP is a library of routines that implements a primal-dual barrier
     method for solving semidefinite programming problems; it is
     interfaced in the [Rcsdp](https://cran.r-project.org/package=Rcsdp) package.
-    \[SDP\]
 -   The DSDP library implements an interior-point method for
     semidefinite programming with primal and dual solutions; it is
-    interfaced in package [Rdsdp](https://cran.r-project.org/package=Rdsdp). \[SDP\]
+    interfaced in package [Rdsdp](https://cran.r-project.org/package=Rdsdp).
 -   Package [Rmosek](https://cran.r-project.org/package=Rmosek) provides an
     interface to the (commercial) MOSEK optimization library for
     large-scale LP, QP, and MIP problems, with emphasis on (nonlinear)
     conic, semidefinite, and convex tasks; academic licenses are
     available. (An article on Rmosek appeared in the JSS special issue
-    on Optimization with R, see below.) \[SDP, CP\]
+    on Optimization with R, see below.)
 
 ### <span id="global-and-stochastic-optimization">Global and Stochastic Optimization</span>
 
@@ -357,7 +351,6 @@ parameters or getting stuck in local solutions.
 -   The [CEoptim](https://cran.r-project.org/package=CEoptim) package implements a
     cross-entropy optimization technique that can be applied to
     continuous, discrete, mixed, and constrained optimization problems.
-    \[COP\]
 -   [GenSA](https://cran.r-project.org/package=GenSA) is a package providing a
     function for generalized Simulated Annealing which can be used to
     search for the global minimum of a quite complex non-linear
@@ -388,8 +381,7 @@ parameters or getting stuck in local solutions.
     latest Standard Particle Swarm Optimization algorithm (SPSO-2011);
     it is parallel-capable, and includes several fine-tuning options and
     post-processing functions.
--   [<span
-    class="GitHub">hydromad</span>](https://github.com/floybix/hydromad/)
+-   [<span class="GitHub">hydromad</span>](https://github.com/floybix/hydromad/)
     (on Github) contains the `SCEoptim` function for Shuffled Compex
     Evolution (SCE) optimization, an evolutionary algorithm, combined
     with a simplex method.
@@ -415,8 +407,7 @@ parameters or getting stuck in local solutions.
     algorithms with local search chains (MA-LS-Chains).
 -   An R implementation of the Self-Organising Migrating Algorithm
     (SOMA) is available in package [soma](https://cran.r-project.org/package=soma).
-    This stochastic optimization method is somewhat similar to genetic
-    algorithms.
+    This stochastic optimization method is somewhat similar to genetic algorithms.
 -   [nloptr](https://cran.r-project.org/package=nloptr) supports several global
     optimization routines, such as DIRECT, controlled random search
     (CRS), multi-level single-linkage (MLSL), improved stochastic
@@ -430,11 +421,9 @@ parameters or getting stuck in local solutions.
 -   [SACOBRA](https://cran.r-project.org/package=SACOBRA) is a package for numeric
     constrained optimization of expensive black-box functions under
     severely limited budgets; it implements an extension of the COBRA
-    algorithm with initial design generation and self-adjusting random
-    restarts.
+    algorithm with initial design generation and self-adjusting random restarts.
 -   [RCEIM](https://cran.r-project.org/package=RCEIM) implements a stochastic
-    heuristic method for performing multi-dimensional function
-    optimization.
+    heuristic method for performing multi-dimensional function optimization.
 
 <span id="mathematical-programming-solvers">Mathematical Programming Solvers</span>
 -----------------------------------------------------------------------------------
@@ -454,14 +443,13 @@ of this task view.
 -   [linprog](https://cran.r-project.org/package=linprog) solves linear programming
     problems using the function `solveLP()` (the solver is based on
     [lpSolve](https://cran.r-project.org/package=lpSolve)) and can read model files
-    in MPS format. \[LP\]
+    in MPS format.
 -   In the [boot](https://cran.r-project.org/package=boot) package there is a
     routine called `simplex()` which realizes the two-phase tableau
     simplex method for (relatively small) linear programming problems.
-    \[LP\]
 -   [rcdd](https://cran.r-project.org/package=rcdd) offers the function `lpcdd()`
     for solving linear programs with exact arithmetic using the [GNU
-    Multiple Precision (GMP)](https://gmplib.org) library. \[LP\]
+    Multiple Precision (GMP)](https://gmplib.org) library.
 
 <!-- -->
 
@@ -475,7 +463,7 @@ of this task view.
 
 -   Package [clpAPI](https://cran.r-project.org/package=clpAPI) provides high level
     access from R to low-level API routines of the [COIN OR
-    Clp](https://projects.coin-or.org/Clp) solver library. \[LP\]
+    Clp](https://projects.coin-or.org/Clp) solver library.
 -   Package [lpSolve](https://cran.r-project.org/package=lpSolve) contains the
     routine `lp()` to solve LPs and MILPs by calling the freely
     available solver [lp\_solve](http://lpsolve.sourceforge.net) . This
@@ -490,7 +478,6 @@ of this task view.
     class="Rforge">lpsolve</span>](https://R-Forge.R-project.org/projects/lpsolve/)
     on R-Forge). [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI)
     supports reading linear programs from files in lp and MPS format.
-    \[BP, IP, LP, MILP, SPLP\]
 -   Packages [glpkAPI](https://cran.r-project.org/package=glpkAPI) as well as
     package [Rglpk](https://cran.r-project.org/package=Rglpk) provide an interface
     to the [GNU Linear Programming
@@ -498,19 +485,19 @@ of this task view.
     provides high level access to low level routines the latter offers a
     high level routine `Rglpk_solve_LP()` to solve MILPs using GLPK.
     Both packages offer the possibility to use models formulated in the
-    MPS format. \[BP, IP, IPM, LP, MILP\]
+    MPS format.
 -   [Rsymphony](https://cran.r-project.org/package=Rsymphony) has the routine
     `Rsymphony_solve_LP()` that interfaces the SYMPHONY solver for
     mixed-integer linear programs. (SYMPHONY is part of the
     [Computational Infrastructure for Operations
     Research](http://www.coin-or.org/) (COIN-OR) project.) Package
     `lpsymphony` in Bioconductor provides a similar interface to SYMPHONY
-    that is easier to install. \[LP, IP, MILP\]
+    that is easier to install.
 -   The NOMAD solver is implemented in the
     [crs](https://cran.r-project.org/package=crs) package for solving mixed integer
     programming problems. This algorithm is accessible via the
     `snomadr()` function and is primarily designed for constrained
-    optimization of blackbox functions. \[MILP\]
+    optimization of blackbox functions.
 -   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite.
     'Clp' solves linear programs with continuous objective variables and
     is available through
@@ -518,7 +505,7 @@ of this task view.
     powerful mixed integer linear programming solver (based on 'Clp');
     package 'rcbc' can be installed from: [<span
     class="GitHub">rcbc</span>](https://github.com/dirkschumacher/rcbc/)
-    (on Github). \[LP, MILP\]
+    (on Github).
 
 ### <span id="interfaces-to-commercial-optimizers">Interfaces to Commercial Optimizers</span>
 
@@ -534,12 +521,12 @@ corresponding libraries have to be installed separately.
     offers a mixed integer optimizer to solve difficult mixed integer
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
     **not free** and you have to get a license. Academics will receive a
-    free licence upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
+    free licence upon request.
 -   The API of the commercial solver LINDO can be accessed in R via
     package [rLindo](https://cran.r-project.org/package=rLindo). The [LINDO
     API](http://www.lindo.com/) allows for solving linear, integer,
     quadratic, conic, general nonlinear, global and stochastic
-    programming problems. \[LP, IP, BP, QP,MILP, MIQP, SP\]
+    programming problems.
 -   Package [Rmosek](https://cran.r-project.org/package=Rmosek) offers an interface
     to the commercial optimizer from [MOSEK](https://www.mosek.com/) .
     It provides dual/primal simplex optimizers as well as a barrier
@@ -547,18 +534,17 @@ corresponding libraries have to be installed separately.
     handle SOCP and quadratically constrained programming (QPQC) tasks.
     Furthermore, it offers a mixed integer optimizer to solve difficult
     mixed integer programs (MILP, MISOCP, etc.). You have to get a
-    license, but Academic licenses are free of charge. \[LP, IP, BP, QP,
-    MILP, MIQP, IPM\]
+    license, but Academic licenses are free of charge.
 -   Gurobi Optimization ships an R binding since their 5.0 release that
     allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models from
     within R. See the [R with
     Gurobi](https://www.gurobi.com/products/modeling-languages/r)
-    website for more details. \[LP, QP, MILP, MIQP\]
+    website for more details.
 -   The [localsolver](https://cran.r-project.org/package=localsolver) package
     provides an interface to the hybrid mathematical programming
     software [LocalSolver](http://www.localsolver.com/) from Innovation
     24. LocalSolver is a commercial product, academic licenses are
-    available on request. \[LP, MIP, QP, NLP, HEUR\]
+    available on request.
 
 <span id="combinatorial-optimization">Combinatorial Optimization</span>
 -----------------------------------------------------------------------
@@ -569,7 +555,6 @@ corresponding libraries have to be installed separately.
 -   In package [clue](https://cran.r-project.org/package=clue) `solve_LSAP()`
     enables the user to solve the linear sum assignment problem (LSAP)
     using an efficient C implementation of the Hungarian algorithm.
-    \[SPLP\]
 -   [FLSSS](https://cran.r-project.org/package=FLSSS) provides multi-threaded
     solvers for fixed-size single and multi dimensional subset sum
     problems with optional constraints on target sum and element range,
@@ -582,7 +567,7 @@ corresponding libraries have to be installed separately.
 -   [igraph](https://cran.r-project.org/package=igraph), a package for graph and
     network analysis, uses the very fast igraph C library. It can be
     used to calculate shortest paths, maximal network flows, minimum
-    spanning trees, etc. \[GRAPH\]
+    spanning trees, etc.
 -   [mknapsack](https://cran.r-project.org/package=mknapsack) solves multiple
     knapsack problems, based on LP solvers such as 'lpSolve' or 'CBC';
     will assign items to knapsacks in a way that the value of the top
@@ -601,17 +586,17 @@ corresponding libraries have to be installed separately.
     [matchingMarkets](https://cran.r-project.org/package=matchingMarkets) implement
     the Gale-Shapley algorithm for the stable marriage and the college
     admissions problem, the stable roommates and the house allocation
-    problem. \[COP, MM\]
+    problem.
 -   Package [optmatch](https://cran.r-project.org/package=optmatch) provides
     routines for solving matching problems by translating them into
     minimum-cost flow problems and then solved optimaly by the RELAX-IV
-    codes of Bertsekas and Tseng (free for research). \[SPLP\]
+    codes of Bertsekas and Tseng (free for research).
 -   Package [TSP](https://cran.r-project.org/package=TSP) provides basic
     infrastructure for handling and solving the traveling salesperson
     problem (TSP). The main routine `solve_TSP()` solves the TSP through
     several heuristics. In addition, it provides an interface to the
     [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde/index.html),
-    which has to be downloaded separately. \[SPLP\]
+    which has to be downloaded separately.
 
 <span id="multi-objective-optimization">Multi Objective Optimization</span>
 ---------------------------------------------------------------------------
@@ -623,8 +608,7 @@ corresponding libraries have to be installed separately.
     genetic algorithm (NGSA-II); it was initially developed for the
     calibration of hydrological models.
 -   Multi-criteria optimization problems can be solved using package
-    [mco](https://cran.r-project.org/package=mco) which implements genetic
-    algorithms. \[MOP\]
+    [mco](https://cran.r-project.org/package=mco) which implements genetic algorithms.
 -   [GPareto](https://cran.r-project.org/package=GPareto)
     provides multi-objective optimization algorithms for expensive black-box
     functions and uncertainty quantification methods.
@@ -641,7 +625,7 @@ corresponding libraries have to be installed separately.
 -   [irace](https://cran.r-project.org/package=irace) contains an optimization
     algorithm for optimizing the parameters of other optimization
     algorithms. This problem is called "(offline) algorithm
-    configuration". \[GO\]
+    configuration".
 -   Package [kofnGA](https://cran.r-project.org/package=kofnGA) uses a genetic
     algorithm to choose a subset of a fixed size k from the integers
     1:n, such that a user- supplied objective function is minimized at
@@ -670,7 +654,7 @@ corresponding libraries have to be installed separately.
     forms described by Derringer and Suich (1980).
 -   Package [sna](https://cran.r-project.org/package=sna) contains the function
     `lab.optim()` which is the front-end to a series of heuristic
-    routines for optimizing some bivariate graph statistic. \[GRAPH\]
+    routines for optimizing some bivariate graph statistic.
 -   [maxLik](https://cran.r-project.org/package=maxLik) adds a likelihood-specific
     layer on top of a number of maximization routines like
     Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It
