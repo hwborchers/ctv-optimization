@@ -15,7 +15,7 @@ view. If you are looking for regression methods, the following views
 will contain useful starting points:
 [Multivariate](https://cran.r-project.org/web/views/Multivariate.html),
 [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html),
-[Robust](https://cran.r-project.org/web/views/Robust.html) among others.
+[Robust](https://cran.r-project.org/web/views/Robust.html), among others.
 
 The focus of this task view is on [Optimization Infrastructure
 Packages](#optimization-infrastructure-packages) , [General Purpose
