@@ -83,7 +83,7 @@ Additionally, for minimizing a function subject to linear inequality
 constraints, stats contains the routine `constrOptim()`. Then there is
 `nlm` which is used for solving nonlinear unconstrained minimization
 problems. `nlminb()` offers box-constrained optimization using the PORT
-routines. \[RGA, QN\]
+routines.
 
 -   Package [lbfgs](https://cran.r-project.org/package=lbfgs) wraps the libBFGS C
     library by Okazaki and Morales (converted from Nocedal's L-BFGS-B
