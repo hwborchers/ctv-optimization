@@ -24,7 +24,7 @@ Programming Solvers](#mathematical-programming-solvers) , and [Specific
 Applications in Optimization](#specific-applications-in-optimization), or
 [Multi-objective Optimization](#multi-objective-optimization).
 
-Packages are categorized in these sections. Many packages provide
+Packages are categorized according to these sections. Many packages provide
 functionality for more than one of the these subjects. E.g., mixed integer
 linear programming solvers typically offer standard linear programming
 routines like the simplex algorithm. Therefore please read the more detailed
@@ -418,6 +418,9 @@ parameters or getting stuck in local solutions.
     simulated annealing). The latter two methods also work for discrete
     optimization problems, as does the implementation of a genetic
     algorithm that is included in the package.
+-   [OOR](https://cran.r-project.org/package=OOR) implements optimistic
+    optimization methods for global optimization of deterministic or stochastic
+    functions (in small dimensions).
 -   [SACOBRA](https://cran.r-project.org/package=SACOBRA) is a package for numeric
     constrained optimization of expensive black-box functions under
     severely limited budgets; it implements an extension of the COBRA
