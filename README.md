@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2019-05-25                                                 |
+| **Version:**    | 2019-11-22                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -16,25 +16,21 @@ will contain useful starting points:
 [Multivariate](https://cran.r-project.org/web/views/Multivariate.html),
 [SocialSciences](https://cran.r-project.org/web/views/SocialSciences.html),
 [Robust](https://cran.r-project.org/web/views/Robust.html) among others.
+
 The focus of this task view is on [Optimization Infrastructure
 Packages](#optimization-infrastructure-packages) , [General Purpose
 Continuous Solvers](#general-purpose-continuous-solvers) , [Mathematical
 Programming Solvers](#mathematical-programming-solvers) , and [Specific
-Applications in Optimization](#specific-applications-in-optimization) .
-Packages are categorized in these sections.
+Applications in Optimization](#specific-applications-in-optimization), or
+[Multi-objective Optimization](#multi-objective-optimization).
 
-Many packages provide functionality for more than one of the subjects
-listed at the end of this task view. E.g., mixed integer linear
-programming solvers typically offer standard linear programming routines
-like the simplex algorithm. Therefore following each package description
-a list of abbreviations describes the typical features of the optimizer
-(i.e., the problems which can be solved). The full names of the
-abbreviations given in square brackets can be found at the end of this
-task view under [Classification According to
-Subject](#classification-according-to-subject) .
+Packages are categorized in these sections. Many packages provide
+functionality for more than one of the these subjects. E.g., mixed integer
+linear programming solvers typically offer standard linear programming
+routines like the simplex algorithm. Therefore please read the more detailed
+package descriptions to make sure which problems can be solved. 
 
-If you think that some package is missing from the list, please let us
-know.
+If you think that packages are missing from the list, please let us know.
 
 <span id="optimization-infrastructure-packages">Optimization Infrastructure Packages</span>
 -------------------------------------------------------------------------------------------
@@ -377,6 +373,9 @@ parameters or getting stuck in local solutions.
     a routine which is capable of solving complex function
     minimization/maximization problems by combining evolutionary
     algorithms with a derivative-based (quasi-Newtonian) approach.
+-   The [Jaya](https://cran.r-project.org/package=Jaya) package provides an
+    implementation of the Jaya algorithm, a population based heuristic algorithm
+    which repeatedly modifies a population by looking at best and worst solutions.
 -   Machine coded genetic algorithm (MCGA) provided by package
     [mcga](https://cran.r-project.org/package=mcga) is a tool which solves
     optimization problems based on byte representation of variables.
@@ -611,11 +610,11 @@ corresponding libraries have to be installed separately.
     infrastructure for handling and solving the traveling salesperson
     problem (TSP). The main routine `solve_TSP()` solves the TSP through
     several heuristics. In addition, it provides an interface to the
-    [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde/index.html)
-    , which has to be downloaded separately. \[SPLP\]
+    [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde/index.html),
+    which has to be downloaded separately. \[SPLP\]
 
-<span id="specific-applications-in-optimization">Specific Applications in Optimization</span>
----------------------------------------------------------------------------------------------
+<span id="multi-objective-optimization">Multi Objective Optimization</span>
+---------------------------------------------------------------------------
 
 -   Function `caRamel` in package
     [caRamel](https://cran.r-project.org/package=caRamel) is a multi-objective
@@ -626,6 +625,13 @@ corresponding libraries have to be installed separately.
 -   Multi-criteria optimization problems can be solved using package
     [mco](https://cran.r-project.org/package=mco) which implements genetic
     algorithms. \[MOP\]
+-   [GPareto](https://cran.r-project.org/package=GPareto)
+    provides multi-objective optimization algorithms for expensive black-box
+    functions and uncertainty quantification methods.
+
+<span id="specific-applications-in-optimization">Specific Applications in Optimization</span>
+---------------------------------------------------------------------------------------------
+
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
     [dclone](https://cran.r-project.org/package=dclone). The package provides low
@@ -673,252 +679,9 @@ corresponding libraries have to be installed separately.
     algorithms. It also provides a function to check whether an analytic
     derivative is computed directly.
 
-<span id="classification-according-to-subject">Classification According to Subject</span>
------------------------------------------------------------------------------------------
 
-What follows is an attempt to provide a by-subject overview of packages.
-The full name of the subject as well as the corresponding [MSC
-2010](http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&btn=Current)
-code (if available) are given in brackets.
-
--   LP (Linear programming, 90C05): [boot](https://cran.r-project.org/package=boot),
-    [clpAPI](https://cran.r-project.org/package=clpAPI),
-    [cplexAPI](https://cran.r-project.org/package=cplexAPI),
-    [glpkAPI](https://cran.r-project.org/package=glpkAPI),
-    [limSolve](https://cran.r-project.org/package=limSolve),
-    [linprog](https://cran.r-project.org/package=linprog),
-    [lpSolve](https://cran.r-project.org/package=lpSolve),
-    [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI),
-    [quantreg](https://cran.r-project.org/package=quantreg),
-    [rcdd](https://cran.r-project.org/package=rcdd),
-    [Rcplex](https://cran.r-project.org/package=Rcplex),
-    [Rglpk](https://cran.r-project.org/package=Rglpk),
-    [rLindo](https://cran.r-project.org/package=rLindo),
-    [Rmosek](https://cran.r-project.org/package=Rmosek),
-    [Rsymphony](https://cran.r-project.org/package=Rsymphony)
--   GO (Global Optimization): [DEoptim](https://cran.r-project.org/package=DEoptim),
-    [DEoptimR](https://cran.r-project.org/package=DEoptimR),
-    [GenSA](https://cran.r-project.org/package=GenSA),
-    [GA](https://cran.r-project.org/package=GA/index.html), [pso](../packages/pso),
-    [hydroPSO](https://cran.r-project.org/package=hydroPSO),
-    [cmaes](https://cran.r-project.org/package=cmaes),
-    [nloptr](https://cran.r-project.org/package=nloptr),
-    [NMOF](https://cran.r-project.org/package=NMOF)
--   SPLP (Special problems of linear programming like transportation,
-    multi-index, etc., 90C08): [clue](https://cran.r-project.org/package=clue),
-    [lpSolve](https://cran.r-project.org/package=lpSolve),
-    [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI),
-    [quantreg](https://cran.r-project.org/package=quantreg),
-    [TSP](https://cran.r-project.org/package=TSP)
--   BP (Boolean programming, 90C09):
-    [cplexAPI](https://cran.r-project.org/package=cplexAPI),
-    [glpkAPI](https://cran.r-project.org/package=glpkAPI),
-    [lpSolve](https://cran.r-project.org/package=lpSolve),
-    [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI),
-    [Rcplex](https://cran.r-project.org/package=Rcplex),
-    [Rglpk](https://cran.r-project.org/package=Rglpk)
--   IP (Integer programming, 90C10):
-    [cplexAPI](https://cran.r-project.org/package=cplexAPI),
-    [glpkAPI](https://cran.r-project.org/package=glpkAPI),
-    [lpSolve](https://cran.r-project.org/package=lpSolve),
-    [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI),
-    [Rcplex](https://cran.r-project.org/package=Rcplex),
-    [Rglpk](https://cran.r-project.org/package=Rglpk),
-    [rLindo](https://cran.r-project.org/package=rLindo)
-    [Rmosek](https://cran.r-project.org/package=Rmosek),
-    [Rsymphony](https://cran.r-project.org/package=Rsymphony)
--   MIP (Mixed integer programming and its variants MILP for LP and MIQP
-    for QP, 90C11): [cplexAPI](https://cran.r-project.org/package=cplexAPI),
-    [glpkAPI](https://cran.r-project.org/package=glpkAPI),
-    [lpSolve](https://cran.r-project.org/package=lpSolve),
-    [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI),
-    [Rcplex](https://cran.r-project.org/package=Rcplex),
-    [Rglpk](https://cran.r-project.org/package=Rglpk),
-    [rLindo](https://cran.r-project.org/package=rLindo),
-    [Rmosek](https://cran.r-project.org/package=Rmosek),
-    [Rsymphony](https://cran.r-project.org/package=Rsymphony)
--   SP (Stochastic programming, 90C15):
-    [rLindo](https://cran.r-project.org/package=rLindo)
--   QP (Quadratic programming, 90C20):
-    [cplexAPI](https://cran.r-project.org/package=cplexAPI),
-    [kernlab](https://cran.r-project.org/package=kernlab),
-    [limSolve](https://cran.r-project.org/package=limSolve),
-    [LowRankQP](https://cran.r-project.org/package=LowRankQP),
-    [quadprog](https://cran.r-project.org/package=quadprog),
-    [Rcplex](https://cran.r-project.org/package=Rcplex),
-    [Rmosek](https://cran.r-project.org/package=Rmosek)
--   SDP (Semidefinite programming, 90C22):
-    [Rcsdp](https://cran.r-project.org/package=Rcsdp),
-    [Rdsdp](https://cran.r-project.org/package=Rdsdp)
--   CP (Convex programming, 90C25): [cccp](https://cran.r-project.org/package=cccp),
-    [CLSOCP](https://cran.r-project.org/package=CLSOCP)
--   COP (Combinatorial optimization, 90C27):
-    [adagio](https://cran.r-project.org/package=adagio),
-    [CEoptim](https://cran.r-project.org/package=CEoptim),
-    [TSP](https://cran.r-project.org/package=TSP),
-    [matchingR](https://cran.r-project.org/package=matchingR)
--   MOP (Multi-objective and goal programming, 90C29):
-    [mco](https://cran.r-project.org/package=mco)
--   NLP (Nonlinear programming, 90C30):
-    [nloptr](https://cran.r-project.org/package=nloptr),
-    [alabama](https://cran.r-project.org/package=alabama),
-    [Rsolnp](https://cran.r-project.org/package=Rsolnp), Rdonlp2,
-    [rLindo](https://cran.r-project.org/package=rLindo)
--   GRAPH (Programming involving graphs or networks, 90C35):
-    [igraph](https://cran.r-project.org/package=igraph),
-    [sna](https://cran.r-project.org/package=sna)
--   IPM (Interior-point methods, 90C51):
-    [cplexAPI](https://cran.r-project.org/package=cplexAPI),
-    [kernlab](https://cran.r-project.org/package=kernlab),
-    [glpkAPI](https://cran.r-project.org/package=glpkAPI),
-    [LowRankQP](https://cran.r-project.org/package=LowRankQP),
-    [quantreg](https://cran.r-project.org/package=quantreg),
-    [Rcplex](https://cran.r-project.org/package=Rcplex)
--   RGA (Methods of reduced gradient type, 90C52): stats ( `optim()`),
-    [gsl](https://cran.r-project.org/package=gsl)
--   QN (Methods of quasi-Newton type, 90C53): stats ( `optim()`),
-    [gsl](https://cran.r-project.org/package=gsl),
-    [lbfgs](https://cran.r-project.org/package=lbfgs),
-    [lbfgsb3](https://cran.r-project.org/package=lbfgsb3),
-    [nloptr](https://cran.r-project.org/package=nloptr),
-    [ucminf](https://cran.r-project.org/package=ucminf)
--   DF (Derivative-free methods, 90C56):
-    [dfoptim](https://cran.r-project.org/package=dfoptim),
-    [minqa](https://cran.r-project.org/package=minqa),
-    [nloptr](https://cran.r-project.org/package=nloptr)
--   HEUR (Approximation methods and heuristics, 90C59):
-    [irace](https://cran.r-project.org/package=irace)
-
-### CRAN packages:
-
--   [ABCoptim](https://cran.r-project.org/package=ABCoptim)
--   [adagio](https://cran.r-project.org/package=adagio)
--   [alabama](https://cran.r-project.org/package=alabama) (core)
--   [BB](https://cran.r-project.org/package=BB)
--   [boot](https://cran.r-project.org/package=boot)
--   [bvls](https://cran.r-project.org/package=bvls)
--   [caRamel](https://cran.r-project.org/package=caRamel)
--   [cccp](https://cran.r-project.org/package=cccp)
--   [cec2005benchmark](https://cran.r-project.org/package=cec2005benchmark)
--   [cec2013](https://cran.r-project.org/package=cec2013)
--   [CEoptim](https://cran.r-project.org/package=CEoptim)
--   [clpAPI](https://cran.r-project.org/package=clpAPI)
--   [CLSOCP](https://cran.r-project.org/package=CLSOCP)
--   [clue](https://cran.r-project.org/package=clue)
--   [cmaes](https://cran.r-project.org/package=cmaes)
--   [cmaesr](https://cran.r-project.org/package=cmaesr)
--   [colf](https://cran.r-project.org/package=colf)
--   [coneproj](https://cran.r-project.org/package=coneproj)
--   [copulaedas](https://cran.r-project.org/package=copulaedas)
--   [cplexAPI](https://cran.r-project.org/package=cplexAPI)
--   [crs](https://cran.r-project.org/package=crs)
--   [CVXR](https://cran.r-project.org/package=CVXR)
--   [dclone](https://cran.r-project.org/package=dclone)
--   [DEoptim](https://cran.r-project.org/package=DEoptim) (core)
--   [DEoptimR](https://cran.r-project.org/package=DEoptimR)
--   [desirability](https://cran.r-project.org/package=desirability)
--   [dfoptim](https://cran.r-project.org/package=dfoptim) (core)
--   [Dykstra](https://cran.r-project.org/package=Dykstra)
--   [ECOSolveR](https://cran.r-project.org/package=ECOSolveR)
--   [ecr](https://cran.r-project.org/package=ecr)
--   [flacco](https://cran.r-project.org/package=flacco)
--   [FLSSS](https://cran.r-project.org/package=FLSSS)
--   [GA](https://cran.r-project.org/package=GA)
--   [genalg](https://cran.r-project.org/package=genalg)
--   [GenSA](https://cran.r-project.org/package=GenSA)
--   [globalOptTests](https://cran.r-project.org/package=globalOptTests)
--   [glpkAPI](https://cran.r-project.org/package=glpkAPI)
--   [GrassmannOptim](https://cran.r-project.org/package=GrassmannOptim)
--   [gsl](https://cran.r-project.org/package=gsl)
--   [hydroPSO](https://cran.r-project.org/package=hydroPSO)
--   [igraph](https://cran.r-project.org/package=igraph)
--   [irace](https://cran.r-project.org/package=irace)
--   [isotone](https://cran.r-project.org/package=isotone)
--   [kernlab](https://cran.r-project.org/package=kernlab)
--   [kofnGA](https://cran.r-project.org/package=kofnGA)
--   [lbfgs](https://cran.r-project.org/package=lbfgs)
--   [lbfgsb3](https://cran.r-project.org/package=lbfgsb3)
--   [lbfgsb3c](https://cran.r-project.org/package=lbfgsb3c)
--   [limSolve](https://cran.r-project.org/package=limSolve)
--   [linprog](https://cran.r-project.org/package=linprog)
--   [localsolver](https://cran.r-project.org/package=localsolver)
--   [LowRankQP](https://cran.r-project.org/package=LowRankQP)
--   [lpSolve](https://cran.r-project.org/package=lpSolve)
--   [lpSolveAPI](https://cran.r-project.org/package=lpSolveAPI)
--   [lsei](https://cran.r-project.org/package=lsei)
--   [ManifoldOptim](https://cran.r-project.org/package=ManifoldOptim)
--   [matchingMarkets](https://cran.r-project.org/package=matchingMarkets)
--   [matchingR](https://cran.r-project.org/package=matchingR)
--   [maxLik](https://cran.r-project.org/package=maxLik)
--   [mcga](https://cran.r-project.org/package=mcga)
--   [mco](https://cran.r-project.org/package=mco)
--   [metaheuristicOpt](https://cran.r-project.org/package=metaheuristicOpt)
--   [minpack.lm](https://cran.r-project.org/package=minpack.lm)
--   [minqa](https://cran.r-project.org/package=minqa)
--   [mize](https://cran.r-project.org/package=mize)
--   [mknapsack](https://cran.r-project.org/package=mknapsack)
--   [mlrMBO](https://cran.r-project.org/package=mlrMBO)
--   [n1qn1](https://cran.r-project.org/package=n1qn1)
--   [neldermead](https://cran.r-project.org/package=neldermead)
--   [nilde](https://cran.r-project.org/package=nilde)
--   [NlcOptim](https://cran.r-project.org/package=NlcOptim)
--   [nlmrt](https://cran.r-project.org/package=nlmrt)
--   [nloptr](https://cran.r-project.org/package=nloptr)
--   [nls2](https://cran.r-project.org/package=nls2)
--   [nlsr](https://cran.r-project.org/package=nlsr)
--   [NMOF](https://cran.r-project.org/package=NMOF)
--   [nnls](https://cran.r-project.org/package=nnls)
--   [ompr](https://cran.r-project.org/package=ompr)
--   [onls](https://cran.r-project.org/package=onls)
--   [optimParallel](https://cran.r-project.org/package=optimParallel)
--   [optimsimplex](https://cran.r-project.org/package=optimsimplex)
--   [optimx](https://cran.r-project.org/package=optimx)
--   [optmatch](https://cran.r-project.org/package=optmatch)
--   [osqp](https://cran.r-project.org/package=osqp)
--   [parma](https://cran.r-project.org/package=parma)
--   [pso](https://cran.r-project.org/package=pso)
--   [psoptim](https://cran.r-project.org/package=psoptim)
--   [qap](https://cran.r-project.org/package=qap)
--   [quadprog](https://cran.r-project.org/package=quadprog) (core)
--   [quadprogXT](https://cran.r-project.org/package=quadprogXT)
--   [quantreg](https://cran.r-project.org/package=quantreg)
--   [rBayesianOptimization](https://cran.r-project.org/package=rBayesianOptimization)
--   [rcdd](https://cran.r-project.org/package=rcdd)
--   [RCEIM](https://cran.r-project.org/package=RCEIM)
--   [Rcgmin](https://cran.r-project.org/package=Rcgmin)
--   [rCMA](https://cran.r-project.org/package=rCMA)
--   [Rcplex](https://cran.r-project.org/package=Rcplex)
--   [RcppDE](https://cran.r-project.org/package=RcppDE)
--   [RcppNumerical](https://cran.r-project.org/package=RcppNumerical)
--   [Rcsdp](https://cran.r-project.org/package=Rcsdp)
--   [Rdsdp](https://cran.r-project.org/package=Rdsdp)
--   [rgenoud](https://cran.r-project.org/package=rgenoud)
--   [Rglpk](https://cran.r-project.org/package=Rglpk)
--   [rLindo](https://cran.r-project.org/package=rLindo)
--   [Rmalschains](https://cran.r-project.org/package=Rmalschains)
--   [Rmosek](https://cran.r-project.org/package=Rmosek)
--   [rneos](https://cran.r-project.org/package=rneos)
--   [ROI](https://cran.r-project.org/package=ROI)
--   [ROI.plugin.clp](https://cran.r-project.org/package=ROI.plugin.clp)
--   [ROI.plugin.qpoases](https://cran.r-project.org/package=ROI.plugin.qpoases)
--   [Rsolnp](https://cran.r-project.org/package=Rsolnp)
--   [Rsymphony](https://cran.r-project.org/package=Rsymphony)
--   [Rtnmin](https://cran.r-project.org/package=Rtnmin)
--   [Rvmmin](https://cran.r-project.org/package=Rvmmin)
--   [SACOBRA](https://cran.r-project.org/package=SACOBRA)
--   [scs](https://cran.r-project.org/package=scs)
--   [sdpt3r](https://cran.r-project.org/package=sdpt3r)
--   [smoof](https://cran.r-project.org/package=smoof)
--   [sna](https://cran.r-project.org/package=sna)
--   [soma](https://cran.r-project.org/package=soma)
--   [subplex](https://cran.r-project.org/package=subplex)
--   [tabuSearch](https://cran.r-project.org/package=tabuSearch)
--   [trust](https://cran.r-project.org/package=trust)
--   [trustOptim](https://cran.r-project.org/package=trustOptim)
--   [TSP](https://cran.r-project.org/package=TSP)
--   [ucminf](https://cran.r-project.org/package=ucminf) (core)
-
-### Related links:
+<span id="related-links">Related Links</span>
+---------------------------------------------
 
 -   [Journal of Statistical Software Special Volume on Optimization
     (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
