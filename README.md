@@ -121,6 +121,9 @@ routines.
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
     (L-BFGS) methods. Most internal parameters can be set through the
     calling interface.
+-   [nonneg.cg](https://cran.r-project.org/package=nonneg.cg) realizes a
+    conjugate-gradient based method to minimize functions subject to all
+    variables being non-negative.
 -   Package [dfoptim](https://cran.r-project.org/package=dfoptim), for
     derivative-free optimization procedures, contains quite efficient R
     implementations of the Nelder-Mead and Hooke-Jeeves algorithms
@@ -156,6 +159,9 @@ routines.
     providing a spectral projected gradient method for large scale
     optimization with simple constraints. It takes a nonlinear objective
     function as an argument as well as basic constraints.
+-   Package [SCOR](https://cran.r-project.org/package=SCOR) solves optimization
+    problems under the constraint that the combined parameters lie on the surface
+    of a unit hypersphere.
 -   [GrassmannOptim](https://cran.r-project.org/package=GrassmannOptim) is a package
     for Grassmann manifold optimization. The implementation uses
     gradient-based algorithms and embeds a stochastic gradient method
@@ -418,13 +424,12 @@ parameters or getting stuck in local solutions.
     simulated annealing). The latter two methods also work for discrete
     optimization problems, as does the implementation of a genetic
     algorithm that is included in the package.
--   [OOR](https://cran.r-project.org/package=OOR) implements optimistic
-    optimization methods for global optimization of deterministic or stochastic
-    functions (in small dimensions).
 -   [SACOBRA](https://cran.r-project.org/package=SACOBRA) is a package for numeric
     constrained optimization of expensive black-box functions under
     severely limited budgets; it implements an extension of the COBRA
     algorithm with initial design generation and self-adjusting random restarts.
+-   [OOR](https://cran.r-project.org/package=OOR) implements optimistic optimization
+    methods for global optimization of deterministic or stochastic functions.
 -   [RCEIM](https://cran.r-project.org/package=RCEIM) implements a stochastic
     heuristic method for performing multi-dimensional function optimization.
 
