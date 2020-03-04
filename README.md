@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2020-01-02                                                 |
+| **Version:**    | 2020-02-20                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -404,10 +404,6 @@ parameters or getting stuck in local solutions.
     [psoptim](https://cran.r-project.org/package=psoptim). Another (parallelized)
     implementation of the PSO algorithm can be found in package `ppso`
     available from [rforge.net/ppso](https://www.rforge.net/ppso/) .
--   Package [hydroPSO](https://cran.r-project.org/package=hydroPSO) implements the
-    latest Standard Particle Swarm Optimization algorithm (SPSO-2011);
-    it is parallel-capable, and includes several fine-tuning options and
-    post-processing functions.
 -   [<span
     class="GitHub">hydromad</span>](https://github.com/floybix/hydromad/)
     (on Github) contains the `SCEoptim` function for Shuffled Compex
@@ -734,7 +730,6 @@ code (if available) are given in brackets.
     [DEoptimR](https://cran.r-project.org/package=DEoptimR),
     [GenSA](https://cran.r-project.org/package=GenSA),
     [GA](https://cran.r-project.org/package=GA/index.html), [pso](../packages/pso),
-    [hydroPSO](https://cran.r-project.org/package=hydroPSO),
     [Jaya](https://cran.r-project.org/package=Jaya),
     [rgenoud](https://cran.r-project.org/package=rgenoud),
     [cmaes](https://cran.r-project.org/package=cmaes),
