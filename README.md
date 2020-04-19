@@ -253,6 +253,10 @@ routines. \[RGA, QN\]
     the ROI plugin
     [ROI.plugin.qpoases](https://cran.r-project.org/package=ROI.plugin.qpoases)
     makes it accessible for R users. \[QP\]
+-   [mixsqp](https://cran.r-project.org/package=mixsqp) implements the "mix-SQP"
+    algorithm, based on sequential quadratic programming (SQP), for maximum
+    likelihood estimations in finite mixture models; the algorithm is expected 
+    to be accurate and fast.
 -   [limSolve](https://cran.r-project.org/package=limSolve) offers to solve linear
     or quadratic optimization functions, subject to equality and/or
     inequality constraints. \[LP, QP\]
