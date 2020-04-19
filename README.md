@@ -403,6 +403,10 @@ parameters or getting stuck in local solutions.
     [psoptim](https://cran.r-project.org/package=psoptim). Another (parallelized)
     implementation of the PSO algorithm can be found in package `ppso`
     available from [rforge.net/ppso](https://www.rforge.net/ppso/) .
+-   Package [hydroPSO](https://cran.r-project.org/package=hydroPSO)
+    implements the latest Standard Particle Swarm Optimization algorithm
+    (SPSO-2011); it is parallel-capable, and includes several fine-tuning
+    options and post-processing functions.
 -   [<span
     class="GitHub">hydromad</span>](https://github.com/floybix/hydromad/)
     (on Github) contains the `SCEoptim` function for Shuffled Compex
