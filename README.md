@@ -272,10 +272,9 @@ routines. \[RGA, QN\]
     optimization problems, capable of quantifying rather complex
     properties, such as the global structure, separability, etc., of the
     optimization problems.
--   [cec2013](https://cran.r-project.org/package=cec2013) and
-    [cec2005benchmark](https://cran.r-project.org/package=cec2005benchmark) contain
-    many test functions for global optimization from the 2005 and 2013
-    special sessions on real-parameter optimization at the IEEE CEC
+-   [cec2013](https://cran.r-project.org/package=cec2013) and 'cec2005benchmark'
+    (archived) contain many test functions for global optimization from the 2005
+    and 2013 special sessions on real-parameter optimization at the IEEE CEC
     congresses on evolutionary computation.
 -   Package [<span
     class="GitHub">funconstrain</span>](https://github.com/jlmelville/funconstrain/)
