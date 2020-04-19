@@ -662,10 +662,6 @@ corresponding libraries have to be installed separately.
     level functions for implementing maximum likelihood estimating
     procedures for complex models using data cloning and Bayesian Markov
     chain Monte Carlo methods.
--   [irace](https://cran.r-project.org/package=irace) contains an optimization
-    algorithm for optimizing the parameters of other optimization
-    algorithms. This problem is called "(offline) algorithm
-    configuration". \[GO\]
 -   Package [kofnGA](https://cran.r-project.org/package=kofnGA) uses a genetic
     algorithm to choose a subset of a fixed size k from the integers
     1:n, such that a user- supplied objective function is minimized at
@@ -822,9 +818,6 @@ code (if available) are given in brackets.
     [dfoptim](https://cran.r-project.org/package=dfoptim),
     [minqa](https://cran.r-project.org/package=minqa),
     [nloptr](https://cran.r-project.org/package=nloptr)
--   HEUR (Approximation methods and heuristics, 90C59):
-    [irace](https://cran.r-project.org/package=irace)
-
 
 <span id="related-links">Related Links</span>
 ---------------------------------------------
