@@ -99,12 +99,10 @@ routines. \[RGA, QN\]
     3.0 Fortran code), interfacing both the L-BFGS and the OWL-QN
     algorithm, the latter being particularly suited for
     higher-dimensional problems.
--   [lbfgsb3](https://cran.r-project.org/package=lbfgsb3) and
-    [lbfgsb3c](https://cran.r-project.org/package=lbfgsb3c) both interface
-    J.Nocedal's L-BFGS-B 3.0 Fortran code, a limited memory BFGS
-    minimizer, allowing bound constraints and being applicable to
-    higher-dimensional problems. ('lbfgsb3c' has an 'optim'-like
-    interface based on 'Rcpp'.)
+-   [lbfgsb3c](https://cran.r-project.org/package=lbfgsb3c) interfaces
+    J.Nocedal's L-BFGS-B 3.0 Fortran code, a limited memory BFGS minimizer,
+    allowing bound constraints and being applicable to higher-dimensional
+    problems. 'lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.
 -   Package [roptim](https://cran.r-project.org/package=roptim) provides a unified
     wrapper to call C++ functions of the algorithms underlying the
     optim() solver; and
