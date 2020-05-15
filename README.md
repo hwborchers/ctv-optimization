@@ -693,9 +693,6 @@ corresponding libraries have to be installed separately.
     contains S3 classes for multivariate optimization using the
     desirability function approach of Harrington (1965) using functional
     forms described by Derringer and Suich (1980).
--   Package [sna](https://cran.r-project.org/package=sna) contains the function
-    `lab.optim()` which is the front-end to a series of heuristic
-    routines for optimizing some bivariate graph statistic. \[GRAPH\]
 -   [maxLik](https://cran.r-project.org/package=maxLik) adds a likelihood-specific
     layer on top of a number of maximization routines like
     Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It
@@ -801,8 +798,7 @@ code (if available) are given in brackets.
     [Rsolnp](https://cran.r-project.org/package=Rsolnp), Rdonlp2,
     [rLindo](https://cran.r-project.org/package=rLindo)
 -   GRAPH (Programming involving graphs or networks, 90C35):
-    [igraph](https://cran.r-project.org/package=igraph),
-    [sna](https://cran.r-project.org/package=sna)
+    [igraph](https://cran.r-project.org/package=igraph)
 -   IPM (Interior-point methods, 90C51):
     [cplexAPI](https://cran.r-project.org/package=cplexAPI),
     [kernlab](https://cran.r-project.org/package=kernlab),
