@@ -229,6 +229,9 @@ routines. \[RGA, QN\]
     the University of Oxford Control Group; it solves sparse convex
     quadratic programming problems with optional equality and inequality
     constraints efficiently. \[QP\]
+-   [qpmadr](https://cran.r-project.org/package=qpmadr) interfaces the 'qpmad' 
+    software and solves quadratic programming (QP) problems with linear inequality, 
+    equality and bound constraints, using the method by Goldfarb and Idnani. \[QP\]
 -   [kernlab](https://cran.r-project.org/package=kernlab) contains the function
     `ipop` for solving quadratic programming problems using interior
     point methods. (The matrix can be positive semidefinite.) \[IPM,
