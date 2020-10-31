@@ -307,12 +307,6 @@ parameters or getting stuck in local solutions.
     function `nls.lm()` for solving nonlinear least-squares problems by
     a modification of the Levenberg-Marquardt algorithm, with support
     for lower and upper parameter bounds, as found in MINPACK.
--   Package [lsei](https://cran.r-project.org/package=lsei) contains functions that
-    solve least-squares linear regression problems under linear
-    equality/inequality constraints. Functions for solving quadratic
-    programming problems are also available, which transform such
-    problems into least squares ones first. (Based on Fortran programs
-    of Lawson and Hanson.)
 -   Package [nnls](https://cran.r-project.org/package=nnls) interfaces the
     Lawson-Hanson implementation of an algorithm for non-negative
     least-squares, allowing the combination of non-negative and
@@ -567,11 +561,6 @@ corresponding libraries have to be installed separately.
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
     **not free** and you have to get a license. Academics will receive a
     free licence upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
--   The API of the commercial solver LINDO can be accessed in R via
-    package [rLindo](https://cran.r-project.org/package=rLindo). The [LINDO
-    API](http://www.lindo.com/) allows for solving linear, integer,
-    quadratic, conic, general nonlinear, global and stochastic
-    programming problems. \[LP, IP, BP, QP,MILP, MIQP, SP\]
 -   Package [Rmosek](https://cran.r-project.org/package=Rmosek) offers an interface
     to the commercial optimizer from [MOSEK](https://www.mosek.com/) .
     It provides dual/primal simplex optimizers as well as a barrier
