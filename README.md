@@ -658,7 +658,7 @@ corresponding libraries have to be installed separately.
     [dclone](https://cran.r-project.org/package=dclone). The package provides low
     level functions for implementing maximum likelihood estimating
     procedures for complex models.
--   The [irace](https://cran.r-project.org/package=dclone) package implements
+-   The [irace](https://cran.r-project.org/package=irace) package implements
     automatic configuration procedures for optimizing the parameters of other
     optimization algorithms, that is (offline) tuning their parameters by finding
     the most appropriate settings given a set of optimization problems.
