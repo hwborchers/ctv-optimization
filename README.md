@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2020-05-15                                                 |
+| **Version:**    | 2020-11-25                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -657,8 +657,11 @@ corresponding libraries have to be installed separately.
     variant of simulated annealing which has been implemented in package
     [dclone](https://cran.r-project.org/package=dclone). The package provides low
     level functions for implementing maximum likelihood estimating
-    procedures for complex models using data cloning and Bayesian Markov
-    chain Monte Carlo methods.
+    procedures for complex models.
+-   The [irace](https://cran.r-project.org/package=dclone) package implements
+    automatic configuration procedures for optimizing the parameters of other
+    optimization algorithms, that is (offline) tuning their parameters by finding
+    the most appropriate settings given a set of optimization problems.
 -   Package [kofnGA](https://cran.r-project.org/package=kofnGA) uses a genetic
     algorithm to choose a subset of a fixed size k from the integers
     1:n, such that a user- supplied objective function is minimized at
