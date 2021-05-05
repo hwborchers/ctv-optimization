@@ -637,7 +637,7 @@ corresponding libraries have to be installed separately.
     to the open-source constraint modeling language and system (to be
     downloaded separately) [MiniZinc](https://www.minizinc.org/) . R
     users can apply the package to solve combinatorial optimization
-    problems by modify existing 'MiniZinc' models, and also by creating
+    problems by modifying existing 'MiniZinc' models, and also by creating
     their own models.
 
 ## <span id="multi-objective-optimization">Multi Objective Optimization</span>
