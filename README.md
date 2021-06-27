@@ -558,18 +558,21 @@ corresponding libraries have to be installed separately.
     handle SOCP and quadratically constrained programming (QPQC) tasks.
     Furthermore, it offers a mixed integer optimizer to solve difficult
     mixed integer programs (MILP, MISOCP, etc.). You have to get a
-    license, but Academic licenses are free of charge. \[LP, IP, BP, QP,
-    MILP, MIQP, IPM\]
--   Gurobi Optimization ships an R binding since their 5.0 release that
-    allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models from
-    within R. See the [R with
-    Gurobi](https://www.gurobi.com/products/modeling-languages/r)
-    website for more details. \[LP, QP, MILP, MIQP\]
+    license, but Academic licenses are free of charge.
+    \[LP, IP, BP, QP, MILP, MIQP, IPM\]
 -   The [localsolver](https://cran.r-project.org/package=localsolver) package
-    provides an interface to the hybrid mathematical programming
-    software [LocalSolver](http://www.localsolver.com/) from Innovation
-    24. LocalSolver is a commercial product, academic licenses are
-    available on request. \[LP, MIP, QP, NLP, HEUR\]
+    provides an interface to the mathematical programming software 'LocalSolver'
+    from Innovation 24, combining exact and heuristic techniques. See the website
+    for more details. (Academic licenses are available on request.)
+    \[LP, MIP, QP, NLP, HEUR\]
+-   'Gurobi Optimization' ships an R package with its software that allows to
+    call its solvers from R. Gurobi provides powerful solvers for LP, MIP, QP,
+    MIQP, SOCP, and MISOCP models. See the website for more details. (Academic 
+    licenses are available on request.) \[LP, QP, MILP, MIQP\]
+
+Some more commercial companies, e.g. 'Artelys Knitro' or 'FICO Xpress Optimization',
+have R interfaces that are installed while the software gets installed. Trial licenses
+are available, see the corresponding websites for more information.
 
 ## <span id="combinatorial-optimization">Combinatorial Optimization</span>
 
