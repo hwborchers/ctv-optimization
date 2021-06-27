@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2021-05-05                                                 |
+| **Version:**    | 2021-06-27                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -186,16 +186,6 @@ nlminb() offers box-constrained optimization using the PORT routines.
     gradient, steepest descent, and Nelder-Mead algorithms. It uses a
     "line search" approach via the function multimin(). It is based on
     the GNU Scientific Library (GSL). \[RGA, QN\]
--   An R port of the Scilab neldermead module is packaged in
-    [neldermead](https://cran.r-project.org/package=neldermead) offering several
-    direct search algorithms based on the simplex approach. And
-    [n1qn1](https://cran.r-project.org/package=n1qn1) provides an R port of the
-    n1qn1 optimization procedure in Scilab, a quasi-Newton BFGS method
-    without constraints.
--   [optimsimplex](https://cran.r-project.org/package=optimsimplex) provides
-    building blocks for simplex-based optimization algorithms such as
-    the Nelder-Mead, Spendley, Box method, or multi-dimensional search
-    by Torczon, etc.
 -   Several derivative-free optimization algorithms are provided with
     package [minqa](https://cran.r-project.org/package=minqa); e.g., the functions
     bobyqa(), newuoa(), and uobyqa() allow to minimize a function of
@@ -207,15 +197,13 @@ nlminb() offers box-constrained optimization using the PORT routines.
 -   In package [trust](https://cran.r-project.org/package=trust), a routine with the
     same name offers local optimization based on the "trust region"
     approach.
--   [trustOptim](https://cran.r-project.org/package=trustOptim) implements a "trust
-    region" algorithm for unconstrained nonlinear optimization. The
-    algorithm is optimized for objective functions with sparse Hessians.
-    This makes the algorithm highly scalable and efficient, in terms of
-    both time and memory footprint.
+-   [trustOptim](https://cran.r-project.org/package=trustOptim)
+    implements "trust region" for unconstrained nonlinear optimization.
+    The algorithm is optimized for objective functions with sparse Hessians.
 -   Package [quantreg](https://cran.r-project.org/package=quantreg) contains
-    variations of simplex and of interior point routines ( nlrq(),
-    crq()). It provides an interface to L1 regression in the R code of
-    function rq(). \[SPLP, LP, IPM\]
+    variations of simplex and of interior point routines (nlrq(), crq()).
+    It provides an interface to L1 regression in the R code of function rq().
+    \[SPLP, LP, IPM\]
 
 ### <span id="quadratic-optimization">Quadratic Optimization</span>
 
