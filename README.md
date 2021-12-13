@@ -5,7 +5,7 @@ CRAN Task View: Optimization and Mathematical Programming
 |-----------------|------------------------------------------------------------|
 | **Maintainer:** | Stefan Theussl, Florian Schwendinger, Hans W. Borchers     |
 | **Contact:**    | R-optimization at mailbox.org                              |
-| **Version:**    | 2021-06-27                                                 |
+| **Version:**    | 2021-12-12                                                 |
 | **URL:**        | <https://CRAN.R-project.org/view=Optimization>             |
 
 This CRAN task view contains a list of packages which offer facilities
@@ -129,6 +129,10 @@ nlminb() offers box-constrained optimization using the PORT routines.
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
     (L-BFGS) methods. Most internal parameters can be set through the
     calling interface.
+-   [stochQN](https://cran.r-project.org/package=stochQN)
+    provides implementations of stochastic, limited-memory quasi-Newton
+    optimizers, similar in spirit to the LBFGS. It includes an implementation 
+    of online LBFGS, stochastic quasi-Newton and adaptive quasi-Newton. 
 -   [nonneg.cg](https://cran.r-project.org/package=nonneg.cg) realizes a
     conjugate-gradient based method to minimize functions subject to all
     variables being non-negative.
@@ -302,6 +306,11 @@ parameters or getting stuck in local solutions.
     Lawson-Hanson implementation of an algorithm for non-negative
     least-squares, allowing the combination of non-negative and
     non-positive constraints.
+-   Package [gslnls](https://cran.r-project.org/package=gslnls) provides 
+    an interface to nonlinear least-squares optimization methods from the 
+    GNU Scientific Library (GSL). The available trust region methods include 
+    the Levenberg-Marquadt algorithm with and without geodesic acceleration, 
+    and several variants of Powell's dogleg algorithm. 
 -   Package [bvls](https://cran.r-project.org/package=bvls) interfaces the
     Stark-Parker implementation of an algorithm for least-squares with
     upper and lower bounded variables.
@@ -381,10 +390,6 @@ parameters or getting stuck in local solutions.
     routine which is capable of solving complex function
     minimization/maximization problems by combining evolutionary
     algorithms with a derivative-based (quasi-Newtonian) approach.
--   The [Jaya](https://cran.r-project.org/package=Jaya) package provides an
-    implementation of the Jaya algorithm, a population based heuristic
-    algorithm which repeatedly modifies a population by looking at best
-    and worst solutions.
 -   Machine coded genetic algorithm (MCGA) provided by package
     [mcga](https://cran.r-project.org/package=mcga) is a tool which solves
     optimization problems based on byte representation of variables.
@@ -489,9 +494,6 @@ of this task view.
 
 ### <span id="interfaces-to-open-source-optimizers">Interfaces to Open Source Optimizers</span>
 
--   Package [clpAPI](https://cran.r-project.org/package=clpAPI) provides high level
-    access from R to low-level API routines of the [COIN OR
-    Clp](https://projects.coin-or.org/Clp) solver library. \[LP\]
 -   Package [lpSolve](https://cran.r-project.org/package=lpSolve) contains the
     routine lp() to solve LPs and MILPs by calling the freely available
     solver [lp_solve](http://lpsolve.sourceforge.net) . This solver is
@@ -541,11 +543,9 @@ of this task view.
 This section surveys interfaces to commercial solvers. Typically, the
 corresponding libraries have to be installed separately.
 
--   Packages [cplexAPI](https://cran.r-project.org/package=cplexAPI) and
-    [Rcplex](https://cran.r-project.org/package=Rcplex) provide interfaces to the
-    IBM [CPLEX
-    Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/)
-    . CPLEX provides dual/primal simplex optimizers as well as a barrier
+-   [Rcplex](https://cran.r-project.org/package=Rcplex) provide interfaces to the IBM [CPLEX
+    Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/).
+    CPLEX provides dual/primal simplex optimizers as well as a barrier
     optimizer for solving large scale linear and quadratic programs. It
     offers a mixed integer optimizer to solve difficult mixed integer
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
@@ -706,8 +706,6 @@ The full name of the subject as well as the corresponding [MSC
 code (if available) are given in brackets.
 
 -   LP (Linear programming, 90C05): [boot](https://cran.r-project.org/package=boot),
-    [clpAPI](https://cran.r-project.org/package=clpAPI),
-    [cplexAPI](https://cran.r-project.org/package=cplexAPI),
     [glpkAPI](https://cran.r-project.org/package=glpkAPI),
     [limSolve](https://cran.r-project.org/package=limSolve),
     [linprog](https://cran.r-project.org/package=linprog),
@@ -723,7 +721,6 @@ code (if available) are given in brackets.
     [DEoptimR](https://cran.r-project.org/package=DEoptimR),
     [GenSA](https://cran.r-project.org/package=GenSA),
     [GA](https://cran.r-project.org/package=GA/index.html), [pso](../packages/pso),
-    [Jaya](https://cran.r-project.org/package=Jaya),
     [rgenoud](https://cran.r-project.org/package=rgenoud),
     [cmaes](https://cran.r-project.org/package=cmaes),
     [nloptr](https://cran.r-project.org/package=nloptr),
@@ -825,7 +822,6 @@ code (if available) are given in brackets.
 -   [cccp](https://cran.r-project.org/package=cccp)
 -   [cec2013](https://cran.r-project.org/package=cec2013)
 -   [CEoptim](https://cran.r-project.org/package=CEoptim)
--   [clpAPI](https://cran.r-project.org/package=clpAPI)
 -   [CLSOCP](https://cran.r-project.org/package=CLSOCP)
 -   [clue](https://cran.r-project.org/package=clue)
 -   [cmaes](https://cran.r-project.org/package=cmaes)
@@ -855,11 +851,11 @@ code (if available) are given in brackets.
 -   [GPareto](https://cran.r-project.org/package=GPareto)
 -   [GrassmannOptim](https://cran.r-project.org/package=GrassmannOptim)
 -   [gsl](https://cran.r-project.org/package=gsl)
+-   [gslnls](https://cran.r-project.org/package=gslnls)
 -   [hydroPSO](https://cran.r-project.org/package=hydroPSO)
 -   [igraph](https://cran.r-project.org/package=igraph)
 -   [irace](https://cran.r-project.org/package=irace)
 -   [isotone](https://cran.r-project.org/package=isotone)
--   [Jaya](https://cran.r-project.org/package=Jaya)
 -   [kernlab](https://cran.r-project.org/package=kernlab)
 -   [kofnGA](https://cran.r-project.org/package=kofnGA)
 -   [lbfgs](https://cran.r-project.org/package=lbfgs)
@@ -883,8 +879,6 @@ code (if available) are given in brackets.
 -   [mize](https://cran.r-project.org/package=mize)
 -   [mknapsack](https://cran.r-project.org/package=mknapsack)
 -   [mlrMBO](https://cran.r-project.org/package=mlrMBO)
--   [n1qn1](https://cran.r-project.org/package=n1qn1)
--   [neldermead](https://cran.r-project.org/package=neldermead)
 -   [nilde](https://cran.r-project.org/package=nilde)
 -   [NlcOptim](https://cran.r-project.org/package=NlcOptim)
 -   [nlmrt](https://cran.r-project.org/package=nlmrt)
@@ -898,7 +892,6 @@ code (if available) are given in brackets.
 -   [onls](https://cran.r-project.org/package=onls)
 -   [OOR](https://cran.r-project.org/package=OOR)
 -   [optimParallel](https://cran.r-project.org/package=optimParallel)
--   [optimsimplex](https://cran.r-project.org/package=optimsimplex)
 -   [optimx](https://cran.r-project.org/package=optimx)
 -   [optmatch](https://cran.r-project.org/package=optmatch)
 -   [osqp](https://cran.r-project.org/package=osqp)
@@ -945,6 +938,7 @@ code (if available) are given in brackets.
 -   [smoof](https://cran.r-project.org/package=smoof)
 -   [soma](https://cran.r-project.org/package=soma)
 -   [SPOT](https://cran.r-project.org/package=SPOT)
+-   [stochQN](https://cran.r-project.org/package=stochQN)
 -   [subplex](https://cran.r-project.org/package=subplex)
 -   [tabuSearch](https://cran.r-project.org/package=tabuSearch)
 -   [trust](https://cran.r-project.org/package=trust)
@@ -959,7 +953,7 @@ code (if available) are given in brackets.
 -   [Nonlinear Parameter Optimization Using R Tools -- John C. Nash
     (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
 -   [Modern Optimization With R -- Paulo Cortez (Springer UseR
-    Series)](https://www.springer.com/mathematics/book/978-3-319-08262-2)
+    Series)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
 -   [Yet Another Math Programming
     Consultant](http://yetanothermathprogrammingconsultant.blogspot.com)
 -   [COIN-OR Project](http://www.coin-or.org/)
