@@ -11,4 +11,4 @@ or via e-mail to the maintainer address. For further details see the
 guide. All contributions must adhere to the
 [code of conduct](https://github.com/cran-task-views/ctv/blob/main/CodeOfConduct.md).
 
-See as HTML page: [Optimization Task View](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/Optimization.html)
+See as HTML page: [Optimization.html](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/Optimization.html)
