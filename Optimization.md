@@ -2,7 +2,7 @@
 name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers, Stefan Theussl
-email: R-optimization at mailbox.org
+email: R-optimization@mailbox.org
 version: 2021-12-29
 ---
 
