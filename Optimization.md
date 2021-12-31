@@ -1,11 +1,13 @@
 ---
 name: Optimization
 topic: Optimization and Mathematical Programming
-maintainer: Florian Schwendinger, Hans W. Borchers, Stefan Theussl
-email: R-optimization@mailbox.org
-version: 2021-12-29
+maintainer: Hans W. Borchers, Florian Schwendinger
+email: R-optimization at mailbox.org
+version: 2021-12-31
 ---
 
+
+## CRAN Task View: Optimization and Mathematical Programming
 
 This CRAN Task View contains a list of packages which offer facilities
 for solving optimization problems. Although every regression model in
@@ -18,13 +20,13 @@ will contain useful starting points:
 
 **Contents**
 
-- [Optimization Infrastructure Packages](#optimization-infrastructure-packages)
-- [General Purpose Continuous Solvers](#general-purpose-continuous-solvers)
-- [Mathematical Programming Solvers](#mathematical-programming-solvers)
-- [Combinatorial Optimization](#combinatorial-optimization)
-- [Multi Objective Optimization](#multi-objective-optimization)
-- [Specific Applications in Optimization](#specific-applications-in-optimization)
-- [References and Bibliography](#references-and-bibliography)
+- Optimization Infrastructure Packages
+- General Purpose Continuous Solvers
+- Mathematical Programming Solvers
+- Combinatorial Optimization
+- Multi Objective Optimization
+- Specific Applications in Optimization
+- References and Bibliography
 
 Packages are categorized according to these sections.
 See also the "Related Links" and "Other Resources" sections at the end.
@@ -33,7 +35,7 @@ Many packages provide functionality for more than one type of optimization
 problem. E.g., mixed integer linear programming solvers typically offer
 standard linear programming routines like the simplex algorithm for linear
 programming. Convex solvers will handle linear, quadratic, or cone problems
-extremely well.
+extremely well, etc.
 
 Suggestions and improvements for this task view are welcome and can be made
 through issues or pull requests on GitHub or via e-mail to the maintainer
@@ -43,7 +45,7 @@ guide. All contributions must adhere to the
 [code of conduct](https://github.com/cran-task-views/ctv/blob/main/CodeOfConduct.md).
 
 
-### [Optimization Infrastructure Packages]{#optimization-infrastructure-packages}
+### Optimization Infrastructure Packages
 
 -   The `r pkg("optimx")` package provides a replacement and
     extension of the `optim()` function in Base R with a call to several
@@ -74,7 +76,7 @@ guide. All contributions must adhere to the
     see the [CVXR home page](https://cvxr.rbind.io/).
 
 
-### [General Purpose Continuous Solvers]{#general-purpose-continuous-solvers}
+### General Purpose Continuous Solvers
 
 Package stats offers several general purpose optimization routines. For
 one-dimensional unconstrained function optimization there is
@@ -83,7 +85,7 @@ Function `optim()` provides an implementation of the
 Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, bounded BFGS, conjugate
 gradient (CG), Nelder-Mead, and simulated annealing (SANN) optimization
 methods. It utilizes gradients, if provided, for faster convergence.
-Typically it is used for unconstrained optimization but includes an
+Typically it is used for unconstrained optimization, but includes an
 option for box-constrained optimization.
 
 Additionally, for minimizing a function subject to linear inequality
@@ -201,7 +203,7 @@ routines.
     interface to L1 regression in the R code of function `rq()`.
 
 
-### [Quadratic Optimization]{#quadratic-optimization}
+### Quadratic Optimization
 
 -   In package `r pkg("quadprog", priority = "core")`
     `solve.QP()` solves quadratic programming problems with linear
@@ -247,7 +249,7 @@ routines.
     constraints.
 
 
-### [Optimization Test Functions]{#optimization-test-functions}
+### Optimization Test Functions
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -270,7 +272,7 @@ routines.
     useful for testing unconstrained optimization methods.
 
 
-### [Least-Squares Problems]{#least-squares-problems}
+### Least-Squares Problems
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and
 under-determined systems of linear equations, returning least-squares
@@ -313,7 +315,7 @@ getting stuck in local solutions.
     `lm()`.
 
 
-### [Semidefinite and Convex Solvers]{#semidefinite-and-convex-solvers}
+### Semidefinite and Convex Solvers
 
 -   Package `r pkg("ECOSolveR")` provides an interface to the
     Embedded COnic Solver (ECOS), a well-known, efficient, and robust C
@@ -351,7 +353,7 @@ getting stuck in local solutions.
     below.)
 
 
-### [Global and Stochastic Optimization]{#global-and-stochastic-optimization}
+### Global and Stochastic Optimization
 
 -   Package `r pkg("DEoptim", priority = "core")` provides a
     global optimizer based on the Differential Evolution algorithm.
@@ -439,7 +441,7 @@ getting stuck in local solutions.
     for performing multi-dimensional function optimization.
 
 
-### [Mathematical Programming Solvers]{#mathematical-programming-solvers}
+### Mathematical Programming Solvers
 
 This section provides an overview of open source as well as commercial
 optimizers.
@@ -466,7 +468,7 @@ optimizers.
     `r pkg("ROI.plugin.neos")` enable the user to pass
     optimization problems to NEOS and retrieve results within R.
 
-#### [Interfaces to Open Source Optimizers]{#interfaces-to-open-source-optimizers}
+#### Interfaces to Open Source Optimizers
 
 -   Package `r pkg("lpSolve")` contains the routine `lp()` to
     solve LPs and MILPs by calling the freely available solver
@@ -506,7 +508,7 @@ optimizers.
     on 'Clp'); package 'rcbc' can be installed from:
     `r github("dirkschumacher/rcbc")` (on Github).
 
-#### [Interfaces to Commercial Optimizers]{#interfaces-to-commercial-optimizers}
+#### Interfaces to Commercial Optimizers
 
 This section surveys interfaces to commercial solvers. Typically, the
 corresponding libraries have to be installed separately.
@@ -544,7 +546,7 @@ gets installed. Trial licenses are available, see the corresponding
 websites for more information.
 
 
-### [Combinatorial Optimization]{#combinatorial-optimization}
+### Combinatorial Optimization
 
 -   Package `r pkg("adagio")` provides R functions for single
     and multiple knapsack problems, and solves subset sum and assignment
@@ -601,7 +603,7 @@ websites for more information.
     creating their own models.
 
 
-### [Multi Objective Optimization]{#multi-objective-optimization}
+### Multi Objective Optimization
 
 -   Function `caRamel` in package `r pkg("caRamel")` is a
     multi-objective optimizer, applying a combination of the
@@ -619,7 +621,7 @@ websites for more information.
     configurations.
 
 
-### [Specific Applications in Optimization]{#specific-applications-in-optimization}
+### Specific Applications in Optimization
 
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
@@ -666,7 +668,7 @@ websites for more information.
     matrix and allows easy swapping of maximization algorithms.
 
 
-### References and Bibliography{#references-and-bibliography}
+### References and Bibliography
 
 **Journal of Statistical Software**
 
@@ -689,7 +691,5 @@ websites for more information.
 ### Links
 
 -   [COIN-OR Projects](https://www.coin-or.org/)
--   [NEOS Optimization
-    Guide](https://www.neos-guide.org/Optimization-Guide)
--   [Decision Tree for Optimization
-    Software](http://plato.asu.edu/sub/pns.html)
+-   [NEOS Optimization Guide](https://www.neos-guide.org/Optimization-Guide)
+-   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
