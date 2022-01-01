@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Hans W. Borchers, Florian Schwendinger
 email: R-optimization at mailbox.org
-version: 2021-12-31
+version: 2022-01-01
 ---
 
 
@@ -13,10 +13,9 @@ This CRAN Task View contains a list of packages which offer facilities
 for solving optimization problems. Although every regression model in
 statistics solves an optimization problem, they are not part of this
 view. If you are looking for regression methods, the following views
-will contain useful starting points: 
-`r view("Multivariate")`, 
-`r view("SocialSciences")`, 
-`r view("Robust")`
+will contain useful starting points:
+`r view("Multivariate")`, `r view("Robust")`,
+`r view("Econometrics")`, or `r view("SocialSciences")`. 
 
 **Contents**
 
@@ -26,23 +25,13 @@ will contain useful starting points:
 - Combinatorial Optimization
 - Multi Objective Optimization
 - Specific Applications in Optimization
-- References and Bibliography
 
-Packages are categorized according to these sections.
-See also the "Related Links" and "Other Resources" sections at the end.
-
-Many packages provide functionality for more than one type of optimization
-problem. E.g., mixed integer linear programming solvers typically offer
-standard linear programming routines like the simplex algorithm for linear
-programming. Convex solvers will handle linear, quadratic, or cone problems
-extremely well, etc.
-
-Suggestions and improvements for this task view are welcome and can be made
-through issues or pull requests on GitHub or via e-mail to the maintainer
-address. For further details see the
-[Contributing](https://github.com/cran-task-views/ctv/blob/main/Contributing.md)
-guide. All contributions must adhere to the
-[code of conduct](https://github.com/cran-task-views/ctv/blob/main/CodeOfConduct.md).
+Packages in this view are roughly structured according to these topics.
+(See also the "Related links" section at the end of the task view.)
+Please note that many packages provide functionality for more than one 
+class of optimization problems. Suggestions and improvements for this task
+view are welcome and can be made through issues or pull requests on GitHub
+or via e-mail to the maintainer address.
 
 
 ### Optimization Infrastructure Packages
@@ -595,12 +584,11 @@ websites for more information.
     heuristics. In addition, it provides an interface to the [Concorde
     TSP Solver](http://www.tsp.gatech.edu/concorde/index.html) , which
     has to be downloaded separately.
--   `r pkg("rminizinc")` provides an interface to the
-    open-source constraint modeling language and system (to be
-    downloaded separately) [MiniZinc](https://www.minizinc.org/) . R
-    users can apply the package to solve combinatorial optimization
-    problems by modifying existing 'MiniZinc' models, and also by
-    creating their own models.
+-   `r pkg("rminizinc")` provides an interface to the open-source constraint
+    modeling language and system [MiniZinc](https://www.minizinc.org/) 
+    (to be downloaded separately). R users can apply the package to solve
+    combinatorial optimization problems by modifying existing 'MiniZinc'
+    models, and also by creating their own models.
 
 
 ### Multi Objective Optimization
@@ -668,28 +656,16 @@ websites for more information.
     matrix and allows easy swapping of maximization algorithms.
 
 
-### References and Bibliography
-
-**Journal of Statistical Software**
-
+### Links
 -   JSS Article: [ROI: An Extensible R Optimization Infrastructure (Theußl, Schwendinger, Hornik)](https://www.jstatsoft.org/article/view/v094i15)
 -   JSS Article: [CVXR: An R Package for Disciplined Convex Optimization (Fu, Narasimhan, Boyd)](https://www.jstatsoft.org/article/view/v094i14)
 -   JSS Special Issue: [Special Volume on Optimization (Ed. R. Varadhan)](https://www.jstatsoft.org/v60)
-
-**Textbooks**
-
 -   Textbook: [Nonlinear Parameter Optimization Using R Tools (J.C. Nash)](https://www.wiley.com/en-us/Nonlinear+Parameter+Optimization+Using+R+Tools-p-9781118569283)
 -   Textbook: [Modern Optimization With R (P. Cortez)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
 -   Textbook: [Numerical Optimization (Nocedal, Wright)](https://link.springer.com/book/10.1007/978-0-387-40065-5)
-
-**Tutorials / Manuals**
-
 -   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
 -   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
 -   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
-
-### Links
-
 -   [COIN-OR Projects](https://www.coin-or.org/)
 -   [NEOS Optimization Guide](https://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
