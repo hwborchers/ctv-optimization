@@ -659,7 +659,7 @@ websites for more information.
 ### Links
 -   JSS Article: [ROI: An Extensible R Optimization Infrastructure (Theußl, Schwendinger, Hornik)](https://www.jstatsoft.org/article/view/v094i15)
 -   JSS Article: [CVXR: An R Package for Disciplined Convex Optimization (Fu, Narasimhan, Boyd)](https://www.jstatsoft.org/article/view/v094i14)
--   JSS Special Issue: [Special Volume on Optimization (Ed. R. Varadhan)](https://www.jstatsoft.org/v60)
+-   JSS Special Issue: [Numerical Optimization in R: Beyond optim (Ed.: R. Varadhan)](https://www.jstatsoft.org/v60)
 -   Textbook: [Nonlinear Parameter Optimization Using R Tools (J.C. Nash)](https://www.wiley.com/en-us/Nonlinear+Parameter+Optimization+Using+R+Tools-p-9781118569283)
 -   Textbook: [Modern Optimization With R (P. Cortez)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
 -   Textbook: [Numerical Optimization (Nocedal, Wright)](https://link.springer.com/book/10.1007/978-0-387-40065-5)
