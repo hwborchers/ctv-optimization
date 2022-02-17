@@ -21,10 +21,14 @@ will contain useful starting points:
 
 - Optimization Infrastructure Packages
 - General Purpose Continuous Solvers
+- Quadratic Optimization
+- Test and Benchmarking Collections
+- Least-Squares Problems
+- Semidefinite and Convex Solvers
+- Global and Stochastic Optimization
 - Mathematical Programming Solvers
 - Combinatorial Optimization
 - Multi Objective Optimization
-- Specific Applications in Optimization
 
 Packages in this view are roughly structured according to these topics.
 (See also the "Related links" section at the end of the task view.)
@@ -238,7 +242,7 @@ routines.
     constraints.
 
 
-### Optimization Test Functions
+### Test and Benchmarking Collections
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -609,7 +613,7 @@ websites for more information.
     configurations.
 
 
-### Specific Applications in Optimization
+### Miscellaneous
 
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
