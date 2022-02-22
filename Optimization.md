@@ -19,16 +19,16 @@ will contain useful starting points:
 
 **Contents**
 
-- Optimization Infrastructure Packages
-- General Purpose Continuous Solvers
-- Quadratic Optimization
-- Test and Benchmarking Collections
-- Least-Squares Problems
-- Semidefinite and Convex Solvers
-- Global and Stochastic Optimization
-- Mathematical Programming Solvers
-- Combinatorial Optimization
-- Multi Objective Optimization
+* Optimization Infrastructure Packages
+* General Purpose Continuous Solvers
+* Quadratic Optimization
+* Test and Benchmarking Collections
+* Least-Squares Problems
+* Semidefinite and Convex Solvers
+* Global and Stochastic Optimization
+* Mathematical Programming Solvers
+* Combinatorial Optimization
+* Multi Objective Optimization
 
 Packages in this view are roughly structured according to these topics.
 (See also the "Related links" section at the end of the task view.)
