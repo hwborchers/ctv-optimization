@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Hans W. Borchers, Florian Schwendinger
 email: R-optimization at mailbox.org
-version: 2022-01-01
+version: 2022-03-21
 ---
 
 
@@ -329,9 +329,6 @@ getting stuck in local solutions.
     constrained convex problems by means of interior-point methods. The
     implemented algorithms are partially ported from CVXOPT, a Python
     module for convex optimization
--   The `r pkg("CLSOCP")` package provides an implementation
-    of a one-step smoothing Newton method for the solution of second
-    order cone programming (SOCP) problems.
 -   CSDP is a library of routines that implements a primal-dual barrier
     method for solving semidefinite programming problems; it is
     interfaced in the `r pkg("Rcsdp")` package.
