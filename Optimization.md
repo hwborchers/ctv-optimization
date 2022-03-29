@@ -12,10 +12,8 @@ version: 2022-03-21
 This CRAN Task View contains a list of packages which offer facilities
 for solving optimization problems. Although every regression model in
 statistics solves an optimization problem, they are not part of this
-view. If you are looking for regression methods, the following views
-will contain useful starting points:
-`r view("Multivariate")`, `r view("Robust")`,
-`r view("Econometrics")`, or `r view("SocialSciences")`. 
+view. If you are looking for regression methods, the are Task Views
+which will contain useful starting points. 
 
 **Contents**
 
@@ -120,6 +118,8 @@ routines.
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
     (L-BFGS) methods. Most internal parameters can be set through the
     calling interface.
+-   `r pkg("n1qn1")` provides an R port of the `n1qn1` optimization procedure 
+    ported from Scilab, a quasi-Newton BFGS method without constraints.
 -   `r pkg("stochQN")` provides implementations of stochastic,
     limited-memory quasi-Newton optimizers, similar in spirit to the
     LBFGS. It includes an implementation of online LBFGS, stochastic
@@ -127,6 +127,12 @@ routines.
 -   `r pkg("nonneg.cg")` realizes a conjugate-gradient based
     method to minimize functions subject to all variables being
     non-negative.
+-   An R port of the Scilab neldermead module is packaged in
+    `r pkg("neldermead")` offering several direct search algorithms based
+    on the simplex approach.
+-   `r pkg("optimsimplex")` provides building blocks for simplex-based 
+    optimization algorithms such as the Nelder-Mead, Spendley, Box method, 
+    or multi-dimensional search by Torczon, etc.
 -   Package `r pkg("dfoptim", priority = "core")`, for
     derivative-free optimization procedures, contains quite efficient R
     implementations of the Nelder-Mead and Hooke-Jeeves algorithms
@@ -290,6 +296,11 @@ getting stuck in local solutions.
     implementation of an algorithm for non-negative least-squares,
     allowing the combination of non-negative and non-positive
     constraints.
+-   Package `r pkg("lsei")` contains functions that solve least-squares 
+    linear regression problems under linear equality/inequality constraints. 
+    Functions for solving quadratic programming problems are also available, 
+    which transform such problems into least squares ones first. (Based on 
+    Fortran programs of Lawson and Hanson.)
 -   Package `r pkg("gslnls")` provides an interface to
     nonlinear least-squares optimization methods from the GNU Scientific
     Library (GSL). The available trust region methods include the
@@ -363,9 +374,10 @@ getting stuck in local solutions.
 -   `r pkg("GA")` provides functions for optimization using
     Genetic Algorithms in both, the continuous and discrete case. This
     package allows to run corresponding optimization tasks in parallel.
--   Package `r pkg("genalg")` contains `rbga()`, an
-    implementation of a genetic algorithm for multi-dimensional function
-    optimization.
+-   In package `r pkg("gafit")` `gafit()` uses a genetic algorithm approach
+    to find the minimum of a one-dimensional function.
+-   Package `r pkg("genalg")` contains `rbga()`, an implementation
+    of a genetic algorithm for multi-dimensional function optimization.
 -   Package `r pkg("rgenoud")` offers `genoud()`, a routine
     which is capable of solving complex function
     minimization/maximization problems by combining evolutionary
@@ -650,6 +662,9 @@ websites for more information.
 -   The `r pkg("desirability")` package contains S3 classes
     for multivariate optimization using the desirability function
     approach of Harrington (1965).
+-   Package `r pkg("sna")` contains the function `lab.optimize()`
+    which is the front-end to a set of heuristic routines for optimizing
+    some bivariate graph statistics.
 -   `r pkg("maxLik")` adds a likelihood-specific layer on top
     of a number of maximization routines like Brendt-Hall-Hall-Hausman
     (BHHH) and Newton-Raphson among others. It includes summary and
