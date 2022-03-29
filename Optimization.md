@@ -13,7 +13,8 @@ This CRAN Task View contains a list of packages which offer facilities
 for solving optimization problems. Although every regression model in
 statistics solves an optimization problem, they are not part of this
 view. If you are looking for regression methods, the are Task Views
-which will contain useful starting points. 
+which will contain useful starting points, for instance
+`r view("MachineLearning")`, `r view("Econometrics")`, or `r view("Robust")`.
 
 **Contents**
 
