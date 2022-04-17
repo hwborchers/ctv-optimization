@@ -19,15 +19,15 @@ which will contain useful starting points, for instance
 **Contents**
 
 * [Optimization Infrastructure Packages](#infrastr)
-* General Purpose Continuous Solvers
-* Quadratic Optimization
-* Test and Benchmarking Collections
-* Least-Squares Problems
-* Semidefinite and Convex Solvers
-* Global and Stochastic Optimization
-* Mathematical Programming Solvers
-* Combinatorial Optimization
-* Multi Objective Optimization
+* [General Purpose Continuous Solvers](#general)
+* [Quadratic Optimization](#quadratic)
+* [Test and Benchmarking Collections](#benchmark)
+* [Least-Squares Problems](#leastsquares)
+* [Semidefinite and Convex Solvers](#convex)
+* [Global and Stochastic Optimization](#global)
+* [Mathematical Programming Solvers](#mathprog)
+* [Combinatorial Optimization](#discrete)
+* ]Multi Objective Optimization](#multiobj)
 
 Packages in this view are roughly structured according to these topics.
 (See also the "Related links" section at the end of the task view.)
@@ -68,7 +68,7 @@ or via e-mail to the maintainer address.
     see the [CVXR home page](https://cvxr.rbind.io/).
 
 
-### General Purpose Continuous Solvers
+### [General Purpose Continuous Solvers]{#general}
 
 Package stats offers several general purpose optimization routines. For
 one-dimensional unconstrained function optimization there is
@@ -203,7 +203,7 @@ routines.
     interface to L1 regression in the R code of function `rq()`.
 
 
-### Quadratic Optimization
+### [Quadratic Optimization]{#quadratic}
 
 -   In package `r pkg("quadprog", priority = "core")`
     `solve.QP()` solves quadratic programming problems with linear
@@ -249,7 +249,7 @@ routines.
     constraints.
 
 
-### Test and Benchmarking Collections
+### [Test and Benchmarking Collections]{#benchmark}
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -272,7 +272,7 @@ routines.
     useful for testing unconstrained optimization methods.
 
 
-### Least-Squares Problems
+### [Least-Squares Problems]{#leastsquares}
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and
 under-determined systems of linear equations, returning least-squares
@@ -320,7 +320,7 @@ getting stuck in local solutions.
     `lm()`.
 
 
-### Semidefinite and Convex Solvers
+### [Semidefinite and Convex Solvers]{#convex}
 
 -   Package `r pkg("ECOSolveR")` provides an interface to the
     Embedded COnic Solver (ECOS), a well-known, efficient, and robust C
@@ -355,7 +355,7 @@ getting stuck in local solutions.
     below.)
 
 
-### Global and Stochastic Optimization
+### [Global and Stochastic Optimization]{#global}
 
 -   Package `r pkg("DEoptim", priority = "core")` provides a
     global optimizer based on the Differential Evolution algorithm.
@@ -444,7 +444,7 @@ getting stuck in local solutions.
     for performing multi-dimensional function optimization.
 
 
-### Mathematical Programming Solvers
+### [Mathematical Programming Solvers]{#mathprog}
 
 This section provides an overview of open source as well as commercial
 optimizers.
@@ -549,7 +549,7 @@ gets installed. Trial licenses are available, see the corresponding
 websites for more information.
 
 
-### Combinatorial Optimization
+### [Combinatorial Optimization]{#discrete}
 
 -   Package `r pkg("adagio")` provides R functions for single
     and multiple knapsack problems, and solves subset sum and assignment
@@ -605,7 +605,7 @@ websites for more information.
     models, and also by creating their own models.
 
 
-### Multi Objective Optimization
+### [Multi Objective Optimization]{#multiobj}
 
 -   Function `caRamel` in package `r pkg("caRamel")` is a
     multi-objective optimizer, applying a combination of the
