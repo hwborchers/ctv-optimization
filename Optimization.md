@@ -18,7 +18,7 @@ which will contain useful starting points, for instance
 
 **Contents**
 
-* Optimization Infrastructure Packages
+* [Optimization Infrastructure Packages](#infrastr)
 * General Purpose Continuous Solvers
 * Quadratic Optimization
 * Test and Benchmarking Collections
@@ -37,7 +37,7 @@ view are welcome and can be made through issues or pull requests on GitHub
 or via e-mail to the maintainer address.
 
 
-### Optimization Infrastructure Packages
+### [Optimization Infrastructure Packages]{#infrastr}
 
 -   The `r pkg("optimx")` package provides a replacement and
     extension of the `optim()` function in Base R with a call to several
