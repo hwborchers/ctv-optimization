@@ -7,14 +7,13 @@ version: 2022-03-21
 ---
 
 
-## CRAN Task View: Optimization and Mathematical Programming
+## Task View: Optimization and Mathematical Programming
 
-This CRAN Task View contains a list of packages which offer facilities
-for solving optimization problems. Although every regression model in
-statistics solves an optimization problem, they are not part of this
-view. If you are looking for regression methods, the are Task Views
-which will contain useful starting points, for instance
-`r view("MachineLearning")`, `r view("Econometrics")`, or `r view("Robust")`.
+This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
+For the current CRAN Task View see [here](https://CRAN.R-project.org/view=Optimization). 
+This page will be further developed in a different direction. It still contains a list of R packages which offer 
+facilities for solving numerical and combinatorial optimization problems, including statistical regression tasks 
+modeled as optimization problems. 
 
 **Contents**
 
@@ -27,7 +26,7 @@ which will contain useful starting points, for instance
 * [Global and Stochastic Optimization](#global)
 * [Mathematical Programming Solvers](#mathprog)
 * [Combinatorial Optimization](#discrete)
-* ]Multi Objective Optimization](#multiobj)
+* [Multi Objective Optimization](#multiobj)
 
 Packages in this view are roughly structured according to these topics.
 (See also the "Related links" section at the end of the task view.)
