@@ -1,9 +1,11 @@
----
-title: Optimization and Mathematical Programming
-author: Hans W. Borchers
-date: 2022-04-17
----
 
+# Optimization and Mathematical Programming
+
+|                 |                                                        |
+|-----------------|--------------------------------------------------------|  
+| **Maintainer:** | Hans W. Borchers                                       | 
+| **Contact:**    | hwb at mailbox.org                                     | 
+| **Version:**    | 2022-01-08                                             | 
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
 For the current CRAN Task View see [here](https://CRAN.R-project.org/view=Optimization). 
@@ -670,16 +672,31 @@ websites for more information.
     matrix and allows easy swapping of maximization algorithms.
 
 
-### Links
+### References
+
 -   JSS Article: [ROI: An Extensible R Optimization Infrastructure (Theußl, Schwendinger, Hornik)](https://www.jstatsoft.org/article/view/v094i15)
 -   JSS Article: [CVXR: An R Package for Disciplined Convex Optimization (Fu, Narasimhan, Boyd)](https://www.jstatsoft.org/article/view/v094i14)
 -   JSS Special Issue: [Numerical Optimization in R: Beyond optim (Ed.: R. Varadhan)](https://www.jstatsoft.org/v60)
 -   Textbook: [Nonlinear Parameter Optimization Using R Tools (J.C. Nash)](https://www.wiley.com/en-us/Nonlinear+Parameter+Optimization+Using+R+Tools-p-9781118569283)
 -   Textbook: [Modern Optimization With R (P. Cortez)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
 -   Textbook: [Numerical Optimization (Nocedal, Wright)](https://link.springer.com/book/10.1007/978-0-387-40065-5)
--   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
--   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
--   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
+
+
+### Core packages
+
+
+
+
+### Related links
+
 -   [COIN-OR Projects](https://www.coin-or.org/)
 -   [NEOS Optimization Guide](https://www.neos-guide.org/Optimization-Guide)
 -   [Decision Tree for Optimization Software](http://plato.asu.edu/sub/pns.html)
+
+
+### Other resources
+
+-   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
+-   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
+-   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
+
