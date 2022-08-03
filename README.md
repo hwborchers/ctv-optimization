@@ -310,10 +310,9 @@ getting stuck in local solutions.
 -   Package [bvls](https://cran.r-project.org/web/packages/bvls/index.html) interfaces the Stark-Parker
     implementation of an algorithm for least-squares with upper and
     lower bounded variables.
--   Package [onls](https://cran.r-project.org/web/packages/onls/index.html) implements orthogonal nonlinear
-    least-squares regression (ONLS, a.k.a. Orthogonal Distance
-    Regression, ODR) using a Levenberg-Marquardt-type minimization
-    algorithm based on the ODRPACK Fortran library.
+-   Package [onls](https://cran.r-project.org/web/packages/onls/index.html) (archived) implements orthogonal
+    nonlinear least-squares regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR)
+    using a Levenberg-Marquardt-type minimization algorithm based on the ODRPACK Fortran library.
 -   [colf](https://cran.r-project.org/web/packages/colf/index.html) performs least squares constrained
     optimization on a linear objective function. It contains a number of
     algorithms to choose from and offers a formula syntax similar to
