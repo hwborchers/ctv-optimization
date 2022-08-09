@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2022-04-19                                             | 
+| **Version:**    | 2022-08-08                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
@@ -114,6 +114,10 @@ routines.
     to GC; [Rvmmin](https://cran.r-project.org/web/packages/Rvmmin/index.html): variable metric function
     minimization; [Rtnmin](https://cran.r-project.org/web/packages/Rtnmin/index.html): truncated Newton function
     minimization.
+-   [marqLevAlg](https://cran.r-project.org/web/packages/marqLevAlg/index.html)
+    implements a parallelized version of the Marquardt-Levenberg algorithm.
+    It is particularly suited for complex problems and when starting from points very far from the final optimum.
+    The package is designed to be used for unconstrained local optimization.
 -   [mize](https://cran.r-project.org/web/packages/mize/index.html) implements optimization algorithms in pure
     R, including conjugate gradient (CG),
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
