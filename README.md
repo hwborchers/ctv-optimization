@@ -291,8 +291,7 @@ getting stuck in local solutions.
     intended to eventually supersede the 'nls()' function in Base R,
     by applying a variant of the Marquardt procedure for nonlinear
     least-squares, with bounds constraints and optionally Jacobian
-    described as R functions. (It is based on the now-deprecated package
-    [nlmrt](https://cran.r-project.org/web/packages/nlmrt/index.html).)
+    described as R functions.
 -   Package [minpack.lm](https://cran.r-project.org/web/packages/minpack.lm/index.html) provides a function
     `nls.lm()` for solving nonlinear least-squares problems by a
     modification of the Levenberg-Marquardt algorithm, with support for
