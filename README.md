@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2022-08-08                                             | 
+| **Version:**    | 2022-12-07                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
@@ -267,7 +267,7 @@ routines.
     problems, capable of quantifying rather complex properties, such as
     the global structure, separability, etc., of the optimization
     problems.
--   [cec2013](https://cran.r-project.org/web/packages/cec2013/index.html) and 'cec2005benchmark' (archived)
+-   Packages 'cec2013' and 'cec2005benchmark' (both archived)
     contain many test functions for global optimization from the 2005
     and 2013 special sessions on real-parameter optimization at the IEEE
     CEC congresses on evolutionary computation.
@@ -297,6 +297,11 @@ getting stuck in local solutions.
     `nls.lm()` for solving nonlinear least-squares problems by a
     modification of the Levenberg-Marquardt algorithm, with support for
     lower and upper parameter bounds, as found in MINPACK.
+-   Package [onls](https://cran.r-project.org/web/packages/onls/index.html)
+    fits two-dimensional data by means of orthogonal
+    nonlinear least-squares regression (ONLS), using Levenberg-Marquardt
+    minimization; it provides functionality for fit diagnostics and plotting
+    and comes into question when one encounters "error in variables" problems.
 -   Package [nnls](https://cran.r-project.org/web/packages/nnls/index.html) interfaces the Lawson-Hanson
     implementation of an algorithm for non-negative least-squares,
     allowing the combination of non-negative and non-positive
