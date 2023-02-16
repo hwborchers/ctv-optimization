@@ -242,9 +242,6 @@ routines.
     particularly suited for model predictive control (MPC) applications;
     the ROI plugin [ROI.plugin.qpoases](https://cran.r-project.org/web/packages/ROI.plugin.qpoases/index.html) makes it
     accessible for R users.
--   [QPmin](https://cran.r-project.org/web/packages/QPmin/index.html) is active set method solver for the
-    solution of indefinite quadratic programs, subject to lower bounds
-    on linear functions of the variables.
 -   [mixsqp](https://cran.r-project.org/web/packages/mixsqp/index.html) implements the "mix-SQP" algorithm,
     based on sequential quadratic programming (SQP), for maximum
     likelihood estimations in finite mixture models.
