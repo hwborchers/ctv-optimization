@@ -303,8 +303,7 @@ getting stuck in local solutions.
     Levenberg-Marquardt type minimization algorithm based on the ODRPACK Fortran library.
 -   [colf](https://cran.r-project.org/web/packages/colf/index.html) performs least squares constrained
     optimization on a linear objective function. It contains a number of
-    algorithms to choose from and offers a formula syntax similar to
-    `lm()`.
+    algorithms to choose from and offers a formula syntax similar to `lm()`.
 
 
 ### [Semidefinite and Convex Solvers]{#convex}
