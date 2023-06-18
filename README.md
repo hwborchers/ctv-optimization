@@ -264,10 +264,6 @@ routines.
     problems, capable of quantifying rather complex properties, such as
     the global structure, separability, etc., of the optimization
     problems.
--   Packages 'cec2013' and 'cec2005benchmark' (both archived)
-    contain many test functions for global optimization from the 2005
-    and 2013 special sessions on real-parameter optimization at the IEEE
-    CEC congresses on evolutionary computation.
 -   Package `r github("jlmelville/funconstrain")` (on Github)
     implements 35 of the test functions by More, Garbow, and Hillstom,
     useful for testing unconstrained optimization methods.
