@@ -171,12 +171,9 @@ routines.
     constrained optimization problems via the sequential unconstrained
     minimization technique (SUMT).
 -   [BB](https://cran.r-project.org/web/packages/BB/index.html) contains the function `spg()` providing a
-    spectral projected gradient method for large scale optimization with
+    spectral projected gradient method for large-scale optimization with
     simple constraints. It takes a nonlinear objective function as an
     argument as well as basic constraints.
--   Package [SCOR](https://cran.r-project.org/web/packages/SCOR/index.html) solves optimization problems under
-    the constraint that the combined parameters lie on the surface of a
-    unit hypersphere.
 -   [GrassmannOptim](https://cran.r-project.org/web/packages/GrassmannOptim/index.html) is a package for Grassmann
     manifold optimization. The implementation uses gradient-based
     algorithms and embeds a stochastic gradient method for global
@@ -234,9 +231,8 @@ routines.
 -   [coneproj](https://cran.r-project.org/web/packages/coneproj/index.html) contains routines for cone projection
     and quadratic programming, estimation and inference for constrained
     parametric regression, and shape-restricted regression problems.
--   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) primal/dual interior point method
-    solving quadratic programming problems (especially for semidefinite
-    quadratic forms).
+-   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) (archived) primal/dual
+    interior point method for solving quadratic programming problems (especially for semidefinite quadratic forms).
 -   The COIN-OR project 'qpOASES' implements a reliable QP solver,
     even when tackling semi-definite or degenerated QP problems; it is
     particularly suited for model predictive control (MPC) applications;
@@ -584,10 +580,9 @@ websites for more information.
     integer solutions of linear Diophantine equations, resp. all
     solutions of knapsack, subset sum, and additive partitioning
     problems (based on a generating functions approach).
--   [matchingR](https://cran.r-project.org/web/packages/matchingR/index.html) and
-    [matchingMarkets](https://cran.r-project.org/web/packages/matchingMarkets/index.html) implement the Gale-Shapley
-    algorithm for the stable marriage and the college admissions
-    problem, the stable roommates and the house allocation problem.
+-   [matchingR](https://cran.r-project.org/web/packages/matchingR/index.html) implements
+    the Gale-Shapley algorithm for the stable marriage and the college admissions
+    problems, the stable roommates, and the house allocation problems.
 -   Package [optmatch](https://cran.r-project.org/web/packages/optmatch/index.html) provides routines for solving
     matching problems by translating them into minimum-cost flow
     problems and then solved optimaly by the RELAX-IV codes of Bertsekas
