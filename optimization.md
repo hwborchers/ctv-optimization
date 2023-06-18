@@ -169,9 +169,6 @@ routines.
     spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
     argument as well as basic constraints.
--   Package [SCOR](https://cran.r-project.org/web/packages/SCOR/index.html) solves optimization problems under
-    the constraint that the combined parameters lie on the surface of a
-    unit hypersphere.
 -   [GrassmannOptim](https://cran.r-project.org/web/packages/GrassmannOptim/index.html) is a package for Grassmann
     manifold optimization. The implementation uses gradient-based
     algorithms and embeds a stochastic gradient method for global
@@ -229,17 +226,14 @@ routines.
 -   [coneproj](https://cran.r-project.org/web/packages/coneproj/index.html) contains routines for cone projection
     and quadratic programming, estimation and inference for constrained
     parametric regression, and shape-restricted regression problems.
--   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) primal/dual interior point method
-    solving quadratic programming problems (especially for semidefinite
-    quadratic forms).
+-   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) (archived)
+    implements a primal/dual interior point method solving quadratic programming problems 
+    (especially for semidefinite quadratic forms).
 -   The COIN-OR project 'qpOASES' implements a reliable QP solver,
     even when tackling semi-definite or degenerated QP problems; it is
     particularly suited for model predictive control (MPC) applications;
-    the ROI plugin [ROI.plugin.qpoases](https://cran.r-project.org/web/packages/ROI.plugin.qpoases/index.html) makes it
-    accessible for R users.
--   [QPmin](https://cran.r-project.org/web/packages/QPmin/index.html) is active set method solver for the
-    solution of indefinite quadratic programs, subject to lower bounds
-    on linear functions of the variables.
+    the ROI plugin [ROI.plugin.qpoases](https://cran.r-project.org/web/packages/ROI.plugin.qpoases/index.html) 
+    makes it accessible for R users.
 -   [mixsqp](https://cran.r-project.org/web/packages/mixsqp/index.html) implements the "mix-SQP" algorithm,
     based on sequential quadratic programming (SQP), for maximum
     likelihood estimations in finite mixture models.
@@ -260,12 +254,7 @@ routines.
 -   [flacco](https://cran.r-project.org/web/packages/flacco/index.html) contains tools and features used for an
     Exploratory Landscape Analysis (ELA) of continuous optimization
     problems, capable of quantifying rather complex properties, such as
-    the global structure, separability, etc., of the optimization
-    problems.
--   [cec2013](https://cran.r-project.org/web/packages/cec2013/index.html) and 'cec2005benchmark' (archived)
-    contain many test functions for global optimization from the 2005
-    and 2013 special sessions on real-parameter optimization at the IEEE
-    CEC congresses on evolutionary computation.
+    the global structure, separability, etc., of the optimization problems.
 -   Package `r github("jlmelville/funconstrain")` (on Github)
     implements 35 of the test functions by More, Garbow, and Hillstom,
     useful for testing unconstrained optimization methods.
@@ -582,9 +571,8 @@ websites for more information.
     integer solutions of linear Diophantine equations, resp. all
     solutions of knapsack, subset sum, and additive partitioning
     problems (based on a generating functions approach).
--   [matchingR](https://cran.r-project.org/web/packages/matchingR/index.html) and
-    [matchingMarkets](https://cran.r-project.org/web/packages/matchingMarkets/index.html) implement the Gale-Shapley
-    algorithm for the stable marriage and the college admissions
+-   [matchingR](https://cran.r-project.org/web/packages/matchingR/index.html) implements
+    the Gale-Shapley algorithm for the stable marriage and the college admissions
     problem, the stable roommates and the house allocation problem.
 -   Package [optmatch](https://cran.r-project.org/web/packages/optmatch/index.html) provides routines for solving
     matching problems by translating them into minimum-cost flow
