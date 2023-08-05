@@ -337,12 +337,6 @@ getting stuck in local solutions.
 -   The DSDP library implements an interior-point method for
     semidefinite programming with primal and dual solutions; it is
     interfaced in package [Rdsdp](https://cran.r-project.org/web/packages/Rdsdp/index.html).
--   Package [Rmosek](https://cran.r-project.org/web/packages/Rmosek/index.html) provides an interface to the
-    (commercial) MOSEK optimization library for large-scale LP, QP, and
-    MIP problems, with emphasis on (nonlinear) conic, semidefinite, and
-    convex tasks; academic licenses are available. (An article on Rmosek
-    appeared in the JSS special issue on Optimization with R, see
-    below.)
 
 
 ### [Global and Stochastic Optimization]{#global}
@@ -509,34 +503,27 @@ corresponding libraries have to be installed separately.
 
 -   Package [Rcplex](https://cran.r-project.org/web/packages/Rcplex/index.html) provides an interface to the IBM
     [CPLEX
-    Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/)
-    . CPLEX provides dual/primal simplex optimizers as well as a barrier
+    Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/).
+    CPLEX provides dual/primal simplex optimizers as well as a barrier
     optimizer for solving large-scale linear and quadratic programs. It
     offers a mixed integer optimizer to solve difficult mixed integer
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
     not free and you have to get a license. Academics will receive a
     free license upon request.
--   Package [Rmosek](https://cran.r-project.org/web/packages/Rmosek/index.html) offers an interface to the
-    commercial optimizer from [MOSEK](https://www.mosek.com/) . It
-    provides dual/primal simplex optimizers as well as a barrier
-    optimizer. In addition to solving LP and QP problems, this solver can
-    handle SOCP and quadratically constrained programming (QPQC) tasks.
-    Furthermore, it offers a mixed integer optimizer to solve difficult
-    mixed integer programs (MILP, MISOCP, etc.). You have to get a
-    license, but Academic licenses are free of charge.
--   The [localsolver](https://cran.r-project.org/web/packages/localsolver/index.html) package provides an interface
-    to the hybrid mathematical programming software
-    [LocalSolver](http://www.localsolver.com/) from Innovation 24,
-    combining exact and heuristic techniques. See their website for more
-    details. (Academic licenses are available on request.)
--   'Gurobi Optimization' ships an R package with its software that
-    allows to call its solvers from R. Gurobi provides powerful solvers
-    for LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website
-    for more details. (Academic licenses are available on request.)
+-   Package [Rmosek](https://cran.r-project.org/web/packages/Rmosek/index.html)
+    offers an interface to the [MOSEK](https://www.mosek.com/) optimization library
+    for large-scale LP, QP, and MIP problems; it can handle SOCP and quadratically
+    constrained programming (QPQC) tasks as well as difficult mixed integer programs
+    (MILP, MISOCP, etc.). Academic licenses are free of charge. (An article on Rmosek
+    appeared in the JSS special issue on Optimization with R, see below.)
+-   '[Gurobi](https://www.gurobi.com/) Optimization' ships an R package with its software
+    that allows for calling its solvers from R. Gurobi provides powerful solvers for
+    LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website for more details.
+    (Academic licenses are available on request.)
 
-Some more commercial companies, e.g. 'Artelys Knitro' or 'FICO Xpress
-Optimization', have R interfaces that are installed while the software
-gets installed. Trial licenses are available, see the corresponding
+Some more commercial companies, e.g. 'LocalSolver', 'Artelys Knitro', or
+'FICO Xpress Optimization', have R interfaces that are installed while the
+software gets installed. Trial licenses are available, see the corresponding
 websites for more information.
 
 
