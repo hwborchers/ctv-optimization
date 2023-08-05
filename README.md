@@ -497,6 +497,10 @@ optimizers.
     'Cbc' is a powerful mixed integer linear programming solver (based
     on 'Clp'); package 'rcbc' can be installed from:
     `r github("dirkschumacher/rcbc")` (on Github).
+-   Package [highs](https://cran.r-project.org/web/packages/highs/index.html)
+    is an R interface to the HiGHS solver. [HiGHS](https://highs.dev/)
+    is currently among the best open-source mixed-integer linear programming solvers.
+    Furthermore, it can be used to solve quadratic optimization problems (without mixed integer constraints).
 
 #### Interfaces to Commercial Optimizers
 
