@@ -547,7 +547,7 @@ websites for more information.
     set cover problems, and finds Hamiltonian paths in graphs.
 -   In package [clue](https://cran.r-project.org/web/packages/clue/index.html) `solve_LSAP()` enables the user
     to solve the linear sum assignment problem (LSAP) using an efficient C implementation of the Hungarian algorithm.
-    And function `LAPJV()` from package [Treedist](https://cran.r-project.org/web/packages/TreeDist/index.html)
+    And function `LAPJV()` from package [TreeDist](https://cran.r-project.org/web/packages/TreeDist/index.html)
     implements the Jonker-Volgenant algorithm to solve the Linear Sum Assignment Problem (LSAP) even faster.
 -   [FLSSS](https://cran.r-project.org/web/packages/FLSSS/index.html) provides multi-threaded solvers for
     fixed-size single and multi-dimensional subset sum problems with
