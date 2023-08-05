@@ -132,12 +132,6 @@ routines.
 -   [nonneg.cg](https://cran.r-project.org/web/packages/nonneg.cg/index.html) realizes a conjugate-gradient based
     method to minimize functions subject to all variables being
     non-negative.
--   An R port of the Scilab neldermead module is packaged in
-    [neldermead](https://cran.r-project.org/web/packages/neldermead/index.html) offering several direct search algorithms based
-    on the simplex approach.
--   [optimsimplex](https://cran.r-project.org/web/packages/optimsimplex/index.html) provides building blocks for simplex-based 
-    optimization algorithms such as the Nelder-Mead, Spendley, Box method, 
-    or multi-dimensional search by Torczon, etc.
 -   Package [dfoptim](https://cran.r-project.org/web/packages/dfoptim/index.html), for
     derivative-free optimization procedures, contains quite efficient R
     implementations of the Nelder-Mead and Hooke-Jeeves algorithms
@@ -182,16 +176,15 @@ routines.
     'ROPTLIB' optimization library. It optimizes real-valued functions
     over manifolds such as Stiefel, Grassmann, and Symmetric Positive
     Definite matrices.
--   Package [gsl](https://cran.r-project.org/web/packages/gsl/index.html) provides BFGS, conjugate gradient,
-    steepest descent, and Nelder-Mead algorithms. It uses a "line
-    search" approach via the function `multimin()`. It is based on the
-    GNU Scientific Library (GSL).
+-   Function `multimin()` in the [gsl](https://cran.r-project.org/web/packages/gsl/index.html)
+    package, based on the GNU Scientific Library ([GSL](https://www.gnu.org/software/gsl/)),
+    provides BFGS, conjugate gradient, steepest descent, and Nelder-Mead algorithms.
+    NOTE: `multimin()` has been removed from the package temporarily, awaiting a permanent fix.
 -   Several derivative-free optimization algorithms are provided with
-    package [minqa](https://cran.r-project.org/web/packages/minqa/index.html); e.g., the functions `bobyqa()`,
-    `newuoa()`, and `uobyqa()` allow to minimize a function of many
-    variables by a trust region method that forms quadratic models by
-    interpolation. `bobyqa()` additionally permits box constraints
-    (bounds) on the parameters.
+    package [minqa](https://cran.r-project.org/web/packages/minqa/index.html);
+    e.g., the functions `bobyqa()`, newuoa()`, and `uobyqa()` allow minimizing a function of many
+    variables by a trust region method that forms quadratic models by interpolation.
+    `bobyqa()` additionally permits box constraints bounds) on the parameters.
 -   [subplex](https://cran.r-project.org/web/packages/subplex/index.html) provides unconstrained function
     optimization based on a subspace searching simplex method.
 -   In package [trust](https://cran.r-project.org/web/packages/trust/index.html), a routine with the same name
