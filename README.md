@@ -317,11 +317,17 @@ getting stuck in local solutions.
     library for convex problems. Conic and equality constraints can be
     specified in addition to integer and boolean variable constraints
     for mixed-integer problems.
--   Package [scs](https://cran.r-project.org/web/packages/scs/index.html) applies operator splitting to solve
-    linear programs (LPs), second-order cone programs (SOCP),
+-   Package [scs](https://cran.r-project.org/web/packages/scs/index.html) applies operator splitting
+    to solve linear programs (LPs), second-order cone programs (SOCP),
     semidefinite programs, (SDPs), exponential cone programs (ECPs), and
     power cone programs (PCPs), or problems with any combination of
     those cones.
+-   Package [clarabel](https://cran.r-project.org/web/packages/clarabel/index.html)
+    provides an interior point numerical solver for convex optimization problems using 
+    a novel homogeneous embedding, that solves linear programs (LPs), quadratic programs (QPs),
+    second-order cone programs (SOCPs), semidefinite programs (SDPs), and problems with
+    exponential and power cone constraints.
+    (See Clarabel [Docs](https://oxfordcontrol.github.io/ClarabelDocs/stable/))
 -   [sdpt3r](https://cran.r-project.org/web/packages/sdpt3r/index.html) solves general semidefinite Linear
     Programming problems, using an R implementation of the MATLAB
     toolbox SDPT3. Includes problems such as the nearest correlation
@@ -495,8 +501,8 @@ optimizers.
     on 'Clp'); package 'rcbc' can be installed from:
     `r github("dirkschumacher/rcbc")` (on Github).
 -   Package [highs](https://cran.r-project.org/web/packages/highs/index.html)
-    is an R interface to the HiGHS solver. [HiGHS](https://highs.dev/)
-    is currently among the best open-source mixed-integer linear programming solvers.
+    is an R interface to the HiGHS solver.
+    [HiGHS](https://highs.dev/) is currently among the best open-source mixed-integer linear programming solvers.
     Furthermore, it can be used to solve quadratic optimization problems (without mixed integer constraints).
 
 #### Interfaces to Commercial Optimizers
