@@ -425,6 +425,9 @@ getting stuck in local solutions.
     for global optimization of deterministic or stochastic functions.
 -   [RCEIM](https://cran.r-project.org/web/packages/RCEIM/index.html) implements a stochastic heuristic method
     for performing multi-dimensional function optimization.
+-   Package [graDiEnt](https://cran.r-project.org/web/packages/graDiEnt/index.html) implements the Stochastic
+    Quasi-Gradient Differential Evolution (SQG-DE) optimization algorithm; being derivative-free, it combines the
+    robustness of the population-based "Differential Evolution" with the efficiency of gradient-based optimization.
 
 
 ### [Mathematical Programming Solvers]{#mathprog}
@@ -511,11 +514,12 @@ corresponding libraries have to be installed separately.
     not free and you have to get a license. Academics will receive a
     free license upon request.
 -   Package [Rmosek](https://cran.r-project.org/web/packages/Rmosek/index.html)
-    offers an interface to the [MOSEK](https://www.mosek.com/) optimization library
-    for large-scale LP, QP, and MIP problems; it can handle SOCP and quadratically
-    constrained programming (QPQC) tasks as well as difficult mixed integer programs
-    (MILP, MISOCP, etc.). Academic licenses are free of charge. (An article on Rmosek
-    appeared in the JSS special issue on Optimization with R, see below.)
+    provides an interface to the (commercial) MOSEK optimization library for large-scale
+    LP, QP, and MIP problems, with emphasis on (nonlinear) conic, semidefinite, and convex tasks.
+    The solver can handle SOCP and quadratically constrained programming (QPQC) tasks and offers
+    to solve difficult mixed integer programs.
+    (Academic licenses are available free of charge. An article on Rmosek appeared in the
+    JSS special issue on Optimization with R, see below.)
 -   '[Gurobi](https://www.gurobi.com/) Optimization' ships an R package with its software
     that allows for calling its solvers from R. Gurobi provides powerful solvers for
     LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website for more details.
