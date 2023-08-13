@@ -17,16 +17,16 @@ including statistical regression tasks modeled as optimization problems.
 
 **Contents**
 
-* [Optimization Infrastructure Packages](#infrastr)
-* [General Purpose Continuous Solvers](#general)
-* [Quadratic Optimization](#quadratic)
-* [Test and Benchmarking Collections](#benchmark)
-* [Least-Squares Problems](#leastsquares)
-* [Semidefinite and Convex Solvers](#convex)
-* [Global and Stochastic Optimization](#global)
-* [Mathematical Programming Solvers](#mathprog)
-* [Combinatorial Optimization](#discrete)
-* [Multi Objective Optimization](#multiobj)
+* [Optimization Infrastructure Packages](#optimization-infrastructure-packages)
+* [General Purpose Continuous Solvers](#general-purpose-continuous-solvers)
+* [Quadratic Optimization](#quadratic-optimization)
+* [Test and Benchmarking Collections](#test-and-benchmarking-collections)
+* [Least Squares Problems](#least-squares-problems)
+* [Semidefinite and Convex Solvers](#semidefinite-and-convex-solvers)
+* [Global and Stochastic Optimization](#global-and-stochastic-optimization)
+* [Mathematical Programming Solvers](#mathematical-programming-solvers)
+* [Combinatorial Optimization](#combinatorial-optimization)
+* [Multi Objective Optimization](#multi-objective-optimization)
 
 Packages in this view are roughly structured according to these topics.
 (See also the "Related links" section at the end of the task view.)
@@ -36,7 +36,7 @@ view are welcome and can be made through issues or pull requests on GitHub
 or via e-mail to the maintainer address.
 
 
-### [Optimization Infrastructure Packages]{#infrastr}
+### Optimization Infrastructure Packages
 
 -   The [optimx](https://cran.r-project.org/web/packages/optimx/index.html) package provides a replacement and
     extension of the `optim()` function in Base R with a call to several
@@ -67,7 +67,7 @@ or via e-mail to the maintainer address.
     see the [CVXR home page](https://cvxr.rbind.io/).
 
 
-### [General Purpose Continuous Solvers]{#general}
+### General Purpose Continuous Solvers
 
 Package stats offers several general purpose optimization routines. For
 one-dimensional unconstrained function optimization there is
@@ -199,7 +199,7 @@ routines.
     interface to L1 regression in the R code of function `rq()`.
 
 
-### [Quadratic Optimization]{#quadratic}
+### Quadratic Optimization
 
 -   In package [quadprog](https://cran.r-project.org/web/packages/quadprog/index.html)
     `solve.QP()` solves quadratic programming problems with linear
@@ -242,7 +242,7 @@ routines.
     constraints.
 
 
-### [Test and Benchmarking Collections]{#benchmark}
+### Test and Benchmarking Collections
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -260,7 +260,7 @@ routines.
     useful for testing unconstrained optimization methods.
 
 
-### [Least-Squares Problems]{#leastsquares}
+### Least Squares Problems
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and
 under-determined systems of linear equations, returning least-squares
@@ -306,7 +306,7 @@ getting stuck in local solutions.
     algorithms to choose from and offers a formula syntax similar to `lm()`.
 
 
-### [Semidefinite and Convex Solvers]{#convex}
+### Semidefinite and Convex Solvers
 
 -   Package [ECOSolveR](https://cran.r-project.org/web/packages/ECOSolveR/index.html) provides an interface to the
     Embedded COnic Solver (ECOS), a well-known, efficient, and robust C
@@ -341,7 +341,7 @@ getting stuck in local solutions.
     below.)
 
 
-### [Global and Stochastic Optimization]{#global}
+### Global and Stochastic Optimization
 
 -   Package [DEoptim](https://cran.r-project.org/web/packages/DEoptim/index.html) provides a
     global optimizer based on the Differential Evolution algorithm.
@@ -430,7 +430,7 @@ getting stuck in local solutions.
     for performing multi-dimensional function optimization.
 
 
-### [Mathematical Programming Solvers]{#mathprog}
+### Mathematical Programming Solvers
 
 This section provides an overview of open source as well as commercial
 optimizers.
@@ -535,7 +535,7 @@ gets installed. Trial licenses are available, see the corresponding
 websites for more information.
 
 
-### [Combinatorial Optimization]{#discrete}
+### Combinatorial Optimization
 
 -   Package [adagio](https://cran.r-project.org/web/packages/adagio/index.html) provides R functions for single
     and multiple knapsack problems, and solves subset sum and assignment
@@ -590,7 +590,7 @@ websites for more information.
     models, and also by creating their own models.
 
 
-### [Multi Objective Optimization]{#multiobj}
+### Multi Objective Optimization
 
 -   Function `caRamel` in package [caRamel](https://cran.r-project.org/web/packages/caRamel/index.html) is a
     multi-objective optimizer, applying a combination of the
