@@ -208,35 +208,39 @@ routines.
     absolute value constraints and absolute values in the objective
     function.
 -   [osqp](https://cran.r-project.org/web/packages/osqp/index.html) provides bindings to
-    [OSQP](https://osqp.org) , the 'Operator Splitting QP' solver from
+    [OSQP](https://osqp.org), the 'Operator Splitting QP' solver from
     the University of Oxford Control Group; it solves sparse convex
     quadratic programming problems with optional equality and inequality
     constraints efficiently.
+-   Package [piqp](https://cran.r-project.org/web/packages/piqp/index.html)
+    implements an interface to the Proximal Interior Point Quadratic
+    (see [PIQP](https://predict-epfl.github.io/piqp/)) programming Solver.
+    It combines an infeasible interior point method with the proximal method of multipliers.
 -   [qpmadr](https://cran.r-project.org/web/packages/qpmadr/index.html) interfaces the 'qpmad' software and
     solves quadratic programming (QP) problems with linear inequality,
-    equality and bound constraints, using the method by Goldfarb and
-    Idnani.
+    equality and bound constraints, using the method by Goldfarb and Idnani.
 -   [kernlab](https://cran.r-project.org/web/packages/kernlab/index.html) contains the function `ipop` for
     solving quadratic programming problems using interior point methods.
     (The matrix can be positive semidefinite.)
 -   [Dykstra](https://cran.r-project.org/web/packages/Dykstra/index.html) solves quadratic programming problems
-    using R. L. Dykstra's cyclic projection algorithm for positive
-    definite and semidefinite matrices. The routine allows for a
-    combination of equality and inequality constraints.
+    using R. L. Dykstra's cyclic projection algorithm for positive definite and semidefinite matrices.
+    The routine allows for a combination of equality and inequality constraints.
 -   [coneproj](https://cran.r-project.org/web/packages/coneproj/index.html) contains routines for cone projection
-    and quadratic programming, estimation and inference for constrained
+    and quadratic programming, estimation, and inference for constrained
     parametric regression, and shape-restricted regression problems.
--   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) (archived)
-    implements a primal/dual interior point method solving quadratic programming problems 
-    (especially for semidefinite quadratic forms).
--   The COIN-OR project 'qpOASES' implements a reliable QP solver,
-    even when tackling semi-definite or degenerated QP problems; it is
-    particularly suited for model predictive control (MPC) applications;
+-   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html)
+    solves low rank (and semi-definite) Quadratic Programming problems with linear constraints
+    by implementing a primal-dual interior point method.
+-   The COIN-OR project [qpOASES](https://github.com/coin-or/qpOASES) implements a reliable QP solver,
+    even when tackling semi-definite or degenerated QP problems;
+    it is particularly suited for model predictive control (MPC) applications;
     the ROI plugin [ROI.plugin.qpoases](https://cran.r-project.org/web/packages/ROI.plugin.qpoases/index.html) 
     makes it accessible for R users.
 -   [mixsqp](https://cran.r-project.org/web/packages/mixsqp/index.html) implements the "mix-SQP" algorithm,
-    based on sequential quadratic programming (SQP), for maximum
-    likelihood estimations in finite mixture models.
+    based on sequential quadratic programming (SQP), for maximum likelihood estimations in finite mixture models.
+    Packages [nspmix](https://cran.r-project.org/web/packages/nspmix/index.html) and
+    [REBayes](https://cran.r-project.org/web/packages/REBayes/index.html)
+    solve for nonparametric maximum likelihood estimators of mixture models.
 -   [limSolve](https://cran.r-project.org/web/packages/limSolve/index.html) offers to solve linear or quadratic
     optimization functions, subject to equality and/or inequality
     constraints.
