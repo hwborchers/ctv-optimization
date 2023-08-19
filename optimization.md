@@ -214,7 +214,7 @@ routines.
     constraints efficiently.
 -   Package [piqp](https://cran.r-project.org/web/packages/piqp/index.html)
     implements an interface to the Proximal Interior Point Quadratic
-    (see [PIQP](https://predict-epfl.github.io/piqp/)) programming Solver.
+    Programming solver [PIQP](https://predict-epfl.github.io/piqp/).
     It combines an infeasible interior point method with the proximal method of multipliers.
 -   [qpmadr](https://cran.r-project.org/web/packages/qpmadr/index.html) interfaces the 'qpmad' software and
     solves quadratic programming (QP) problems with linear inequality,
