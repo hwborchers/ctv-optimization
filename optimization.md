@@ -236,11 +236,6 @@ routines.
     it is particularly suited for model predictive control (MPC) applications;
     the ROI plugin [ROI.plugin.qpoases](https://cran.r-project.org/web/packages/ROI.plugin.qpoases/index.html) 
     makes it accessible for R users.
--   [mixsqp](https://cran.r-project.org/web/packages/mixsqp/index.html) implements the "mix-SQP" algorithm,
-    based on sequential quadratic programming (SQP), for maximum likelihood estimations in finite mixture models.
-    Packages [nspmix](https://cran.r-project.org/web/packages/nspmix/index.html) and
-    [REBayes](https://cran.r-project.org/web/packages/REBayes/index.html)
-    solve for nonparametric maximum likelihood estimators of mixture models.
 -   [limSolve](https://cran.r-project.org/web/packages/limSolve/index.html) offers to solve linear or quadratic
     optimization functions, subject to equality and/or inequality
     constraints.
@@ -377,10 +372,10 @@ getting stuck in local solutions.
     [mcga](https://cran.r-project.org/web/packages/mcga/index.html) is a tool which solves optimization
     problems based on byte representation of variables.
 -   A particle swarm optimizer (PSO) is implemented in package
-    [pso](https://cran.r-project.org/web/packages/pso/index.html), and also in [psoptim](https://cran.r-project.org/web/packages/psoptim/index.html).
+    [pso](https://cran.r-project.org/web/packages/pso/index.html), and also in
+    [psoptim](https://cran.r-project.org/web/packages/psoptim/index.html).
     Another (parallelized) implementation of the PSO algorithm can be
-    found in package `ppso` available from
-    [rforge.net/ppso](https://www.rforge.net/ppso/) .
+    found in package `ppso` available from [rforge.net/ppso](https://www.rforge.net/ppso/) .
 -   Package [hydroPSO](https://cran.r-project.org/web/packages/hydroPSO/index.html) implements the Standard
     Particle Swarm Optimization (SPSO) algorithm; it is parallel-capable
     and includes several fine-tuning options and post-processing
@@ -608,17 +603,25 @@ websites for more information.
     quantification methods.
 -   The [rmoo](https://cran.r-project.org/web/packages/rmoo/index.html) package is a framework for multi- and
     many-objective optimization, allowing to work with representation of
-    real numbers, permutations and binaries, offering a high range of
-    configurations.
+    real numbers, permutations, and binaries, offering a high range of configurations.
 
 
 ### Miscellaneous
 
+-   [maxLik](https://cran.r-project.org/web/packages/maxLik/index.html) adds a likelihood-specific layer on top
+    of a number of maximization routines like Brendt-Hall-Hall-Hausman
+    (BHHH) and Newton-Raphson among others. It includes summary and
+    print methods which extract the standard errors based on the Hessian
+    matrix and allows easy swapping of maximization algorithms.
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
     [dclone](https://cran.r-project.org/web/packages/dclone/index.html). The package provides low level
-    functions for implementing maximum likelihood estimating procedures
-    for complex models.
+    functions for implementing maximum likelihood estimating procedures for complex models.
+-   [mixsqp]() implements the "mix-SQP" algorithm, based on sequential quadratic programming (SQP),
+    for maximum likelihood estimations in finite mixture models.
+    Packages [nspmix](https://cran.r-project.org/web/packages/nspmix/index.html) and
+    [REBayes](https://cran.r-project.org/web/packages/REBayes/index.html)
+    solve for nonparametric maximum likelihood estimators of mixture models.
 -   The [irace](https://cran.r-project.org/web/packages/irace/index.html) package implements automatic
     configuration procedures for optimizing the parameters of other
     optimization algorithms, that is (offline) tuning their parameters
@@ -655,11 +658,6 @@ websites for more information.
 -   Package [sna](https://cran.r-project.org/web/packages/sna/index.html) contains the function `lab.optimize()`
     which is the front-end to a set of heuristic routines for optimizing
     some bivariate graph statistics.
--   [maxLik](https://cran.r-project.org/web/packages/maxLik/index.html) adds a likelihood-specific layer on top
-    of a number of maximization routines like Brendt-Hall-Hall-Hausman
-    (BHHH) and Newton-Raphson among others. It includes summary and
-    print methods which extract the standard errors based on the Hessian
-    matrix and allows easy swapping of maximization algorithms.
 
 
 ### References
