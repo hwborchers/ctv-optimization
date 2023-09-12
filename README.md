@@ -108,12 +108,6 @@ routines.
     optimization, combining a trust region with line search approaches.
     The interface of `ucminf()` is designed for easy interchange with
     `optim()`.
--   The following packages implement optimization routines in pure R,
-    for nonlinear functions with bounds constraints:
-    [Rcgmin](https://cran.r-project.org/web/packages/Rcgmin/index.html): gradient function minimization similar
-    to GC; [Rvmmin](https://cran.r-project.org/web/packages/Rvmmin/index.html): variable metric function
-    minimization; [Rtnmin](https://cran.r-project.org/web/packages/Rtnmin/index.html): truncated Newton function
-    minimization.
 -   [marqLevAlg](https://cran.r-project.org/web/packages/marqLevAlg/index.html)
     implements a parallelized version of the Marquardt-Levenberg algorithm.
     It is particularly suited for complex problems and when starting from points very far from the final optimum.
