@@ -308,8 +308,12 @@ getting stuck in local solutions.
 -   Package [scs](https://cran.r-project.org/web/packages/scs/index.html) applies operator splitting to solve
     linear programs (LPs), second-order cone programs (SOCP),
     semidefinite programs, (SDPs), exponential cone programs (ECPs), and
-    power cone programs (PCPs), or problems with any combination of
-    those cones.
+    power cone programs (PCPs), or problems with any combination of those cones.
+-   Package [clarabel](https://cran.r-project.org/web/packages/clarabel/index.html)
+    provides an interior point numerical solver for convex optimization problems using a novel 
+    homogeneous embedding that solves linear programs (LPs), quadratic programs (QPs), second-order cone 
+    programs (SOCPs), semidefinite programs (SDPs), and problems with exponential and power cone 
+    constraints.
 -   [sdpt3r](https://cran.r-project.org/web/packages/sdpt3r/index.html) solves general semidefinite Linear
     Programming problems, using an R implementation of the MATLAB
     toolbox SDPT3. Includes problems such as the nearest correlation
@@ -485,9 +489,13 @@ optimizers.
 -   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite.
     'Clp' solves linear programs with continuous objective variables
     and is available through [ROI.plugin.clp](https://cran.r-project.org/web/packages/ROI.plugin.clp/index.html).
-    'Cbc' is a powerful mixed integer linear programming solver (based
-    on 'Clp'); package 'rcbc' can be installed from:
-    `r github("dirkschumacher/rcbc")` (on Github).
+    'Cbc' is a powerful mixed integer linear programming solver (based on 'Clp');
+    package 'rcbc' can be installed from: `r github("dirkschumacher/rcbc")` (on Github).
+-   Package [highs](https://cran.r-project.org/web/packages/highs/index.html)
+    is an R interface to the HiGHS solver. [HiGHS](https://highs.dev/)
+    is currently among the best open source mixed integer linear programming solver.
+    Furthermore, it can be used to solve quadratic optimization problems
+    (without mixed integer constraints).
 
 #### Interfaces to Commercial Optimizers
 
