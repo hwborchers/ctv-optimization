@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2023-08-18                                             | 
+| **Version:**    | 2023-09-12                                             | 
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
 For the current CRAN Task View see [here](https://CRAN.R-project.org/view=Optimization). 
@@ -105,14 +105,7 @@ routines.
 -   Package [ucminf](https://cran.r-project.org/web/packages/ucminf/index.html) implements an
     algorithm of quasi-Newton type for nonlinear unconstrained
     optimization, combining a trust region with line search approaches.
-    The interface of `ucminf()` is designed for easy interchange with
-    `optim()`.
--   The following packages implement optimization routines in pure R,
-    for nonlinear functions with bounds constraints:
-    [Rcgmin](https://cran.r-project.org/web/packages/Rcgmin/index.html): gradient function minimization similar
-    to GC; [Rvmmin](https://cran.r-project.org/web/packages/Rvmmin/index.html): variable metric function
-    minimization; [Rtnmin](https://cran.r-project.org/web/packages/Rtnmin/index.html): truncated Newton function
-    minimization.
+    The interface of `ucminf()` is designed for easy interchange with `optim()`.
 -   [mize](https://cran.r-project.org/web/packages/mize/index.html) implements optimization algorithms in pure
     R, including conjugate gradient (CG),
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
