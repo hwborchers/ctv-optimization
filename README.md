@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2023-08-06                                             | 
+| **Version:**    | 2023-09-19                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
@@ -159,17 +159,11 @@ routines.
     constrained optimization problems via the sequential unconstrained
     minimization technique (SUMT).
 -   [BB](https://cran.r-project.org/web/packages/BB/index.html) contains the function `spg()` providing a
-    spectral projected gradient method for large-scale optimization with
-    simple constraints. It takes a nonlinear objective function as an
-    argument as well as basic constraints.
--   [GrassmannOptim](https://cran.r-project.org/web/packages/GrassmannOptim/index.html) is a package for Grassmann
-    manifold optimization. The implementation uses gradient-based
-    algorithms and embeds a stochastic gradient method for global
-    search.
+    spectral projected gradient method for large-scale optimization with simple constraints.
+    It takes a nonlinear objective function as an argument as well as basic constraints.
 -   [ManifoldOptim](https://cran.r-project.org/web/packages/ManifoldOptim/index.html) is an R interface to the
     'ROPTLIB' optimization library. It optimizes real-valued functions
-    over manifolds such as Stiefel, Grassmann, and Symmetric Positive
-    Definite matrices.
+    over manifolds such as Stiefel, Grassmann, and Symmetric Positive Definite matrices.
 -   Function `multimin()` in the [gsl](https://cran.r-project.org/web/packages/gsl/index.html)
     package, based on the GNU Scientific Library ([GSL](https://www.gnu.org/software/gsl/)),
     provides BFGS, conjugate gradient, steepest descent, and Nelder-Mead algorithms.
@@ -204,6 +198,9 @@ routines.
     the University of Oxford Control Group; it solves sparse convex
     quadratic programming problems with optional equality and inequality
     constraints efficiently.
+-   Package [piqp](https://cran.r-project.org/web/packages/piqp/index.html)
+    implements an interface to the Proximal Interior Point Quadratic Programming solver, cf. PIQP;
+    it combines an infeasible interior point method with the proximal method of multipliers.
 -   [qpmadr](https://cran.r-project.org/web/packages/qpmadr/index.html) interfaces the 'qpmad' software and
     solves quadratic programming (QP) problems with linear inequality,
     equality and bound constraints, using the method by Goldfarb and
@@ -417,10 +414,6 @@ getting stuck in local solutions.
     latter two methods also work for discrete optimization problems, as
     does the implementation of a genetic algorithm that is included in
     the package.
--   [SACOBRA](https://cran.r-project.org/web/packages/SACOBRA/index.html) is a package for numeric constrained
-    optimization of expensive black-box functions under severely limited
-    budgets; it implements an extension of the COBRA algorithm with
-    initial design generation and self-adjusting random restarts.
 -   [OOR](https://cran.r-project.org/web/packages/OOR/index.html) implements optimistic optimization methods
     for global optimization of deterministic or stochastic functions.
 -   [RCEIM](https://cran.r-project.org/web/packages/RCEIM/index.html) implements a stochastic heuristic method
