@@ -37,7 +37,7 @@ view are welcome and can be made through issues or pull requests on GitHub
 or via e-mail to the maintainer address.
 
 
-### [Optimization Infrastructure Packages]
+### Optimization Infrastructure Packages
 
 -   The [optimx](https://cran.r-project.org/web/packages/optimx/index.html) package provides a replacement and
     extension of the `optim()` function in Base R with a call to several
@@ -68,7 +68,7 @@ or via e-mail to the maintainer address.
     see the [CVXR home page](https://cvxr.rbind.io/).
 
 
-### [General Purpose Continuous Solvers]
+### General Purpose Continuous Solvers
 
 Package stats offers several general-purpose optimization routines. For
 one-dimensional unconstrained function optimization there is
@@ -185,7 +185,7 @@ routines.
     interface to L1 regression in the R code of function `rq()`.
 
 
-### [Quadratic Optimization]
+### Quadratic Optimization
 
 -   In package [quadprog](https://cran.r-project.org/web/packages/quadprog/index.html)
     `solve.QP()` solves quadratic programming problems with linear
@@ -232,7 +232,7 @@ routines.
     least-squares problems, without assuming uniqueness of the solution.
 
 
-### [Test and Benchmarking Collections]
+### Test and Benchmarking Collections
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -251,7 +251,7 @@ routines.
     useful for testing unconstrained optimization methods.
 
 
-### [Least-Squares Problems]
+### Least-Squares Problems
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and
 under-determined systems of linear equations, returning least-squares
@@ -302,7 +302,7 @@ getting stuck in local solutions.
     `lm()`.
 
 
-### [Semidefinite and Convex Solvers]
+### Semidefinite and Convex Solvers
 
 -   Package [ECOSolveR](https://cran.r-project.org/web/packages/ECOSolveR/index.html) provides an interface to the
     Embedded COnic Solver (ECOS), a well-known, efficient, and robust C
@@ -337,7 +337,7 @@ getting stuck in local solutions.
     interfaced in package [Rdsdp](https://cran.r-project.org/web/packages/Rdsdp/index.html).
 
 
-### [Global and Stochastic Optimization]
+### Global and Stochastic Optimization
 
 -   Package [DEoptim](https://cran.r-project.org/web/packages/DEoptim/index.html) provides a
     global optimizer based on the Differential Evolution algorithm.
@@ -424,7 +424,7 @@ getting stuck in local solutions.
     robustness of the population-based "Differential Evolution" with the efficiency of gradient-based optimization.
 
 
-### [Mathematical Programming Solvers]
+### Mathematical Programming Solvers
 
 This section provides an overview of open source as well as commercial
 optimizers.
@@ -525,7 +525,7 @@ software gets installed. Trial licenses are available, see the corresponding
 websites for more information.
 
 
-### [Combinatorial Optimization]
+### Combinatorial Optimization
 
 -   Package [adagio](https://cran.r-project.org/web/packages/adagio/index.html) provides R functions for single
     and multiple knapsack and bin packing problems, solves subset sum, maximal sum subarray, empty rectangle and
@@ -580,7 +580,7 @@ websites for more information.
     models, and also by creating their own models.
 
 
-### [Multi Objective Optimization]
+### Multi Objective Optimization
 
 -   Function `caRamel` in package [caRamel](https://cran.r-project.org/web/packages/caRamel/index.html) is a
     multi-objective optimizer, applying a combination of the
