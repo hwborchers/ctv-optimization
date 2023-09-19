@@ -199,7 +199,8 @@ routines.
     quadratic programming problems with optional equality and inequality
     constraints efficiently.
 -   Package [piqp](https://cran.r-project.org/web/packages/piqp/index.html)
-    implements an interface to the Proximal Interior Point Quadratic Programming solver, cf. PIQP;
+    implements an interface to the Proximal Interior Point Quadratic Programming solver,
+    cf. [PIQP](https://github.com/PREDICT-EPFL/piqp) from EPFL;
     it combines an infeasible interior point method with the proximal method of multipliers.
 -   [qpmadr](https://cran.r-project.org/web/packages/qpmadr/index.html) interfaces the 'qpmad' software and
     solves quadratic programming (QP) problems with linear inequality,
