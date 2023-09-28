@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2023-09-19                                             | 
+| **Version:**    | 2023-09-28                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
@@ -658,8 +658,6 @@ websites for more information.
 ### Core packages
 
 
-
-
 ### Related links
 
 -   [COIN-OR Projects](https://www.coin-or.org/)
@@ -670,6 +668,7 @@ websites for more information.
 ### Other resources
 
 -   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
+-   Cheatsheet: [Selected Optimization Solvers](https://hwborchers.lima-city.de/Optimist/selectedSolvers/)
 -   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
 -   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
 
