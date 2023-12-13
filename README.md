@@ -216,8 +216,9 @@ routines.
 -   [coneproj](https://cran.r-project.org/web/packages/coneproj/index.html) contains routines for cone projection
     and quadratic programming, estimation, and inference for constrained
     parametric regression, and shape-restricted regression problems.
--   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) (archived) primal/dual
-    interior point method for solving quadratic programming problems (especially for semidefinite quadratic forms).
+-   [LowRankQP](https://cran.r-project.org/web/packages/LowRankQP/index.html) solves quadratic programming
+    problems where the Hessian is represented as the product of two matrices.
+    It implements a primal-dual interior point method (for semidefinite quadratic forms).
 -   The COIN-OR project 'qpOASES' implements a reliable QP solver,
     even when tackling semi-definite or degenerated QP problems; it is
     particularly suited for model predictive control (MPC) applications;
