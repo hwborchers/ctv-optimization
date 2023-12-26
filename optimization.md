@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2023-09-12                                             | 
+| **Version:**    | 2023-12-26                                             | 
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
 For the current CRAN Task View see [here](https://CRAN.R-project.org/view=Optimization). 
@@ -373,10 +373,6 @@ getting stuck in local solutions.
     [psoptim](https://cran.r-project.org/web/packages/psoptim/index.html).
     Another (parallelized) implementation of the PSO algorithm can be
     found in package `ppso` available from [rforge.net/ppso](https://www.rforge.net/ppso/) .
--   Package [hydroPSO](https://cran.r-project.org/web/packages/hydroPSO/index.html) implements the Standard
-    Particle Swarm Optimization (SPSO) algorithm; it is parallel-capable
-    and includes several fine-tuning options and post-processing
-    functions.
 -   `r github("floybix/hydromad")` (on Github) contains the
     `SCEoptim` function for Shuffled Compex Evolution (SCE)
     optimization, an evolutionary algorithm, combined with a simplex
