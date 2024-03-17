@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2023-09-28                                             | 
+| **Version:**    | 2024-03-17                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
@@ -164,10 +164,9 @@ routines.
 -   [ManifoldOptim](https://cran.r-project.org/web/packages/ManifoldOptim/index.html) is an R interface to the
     'ROPTLIB' optimization library. It optimizes real-valued functions
     over manifolds such as Stiefel, Grassmann, and Symmetric Positive Definite matrices.
--   Function `multimin()` in the [gsl](https://cran.r-project.org/web/packages/gsl/index.html)
-    package, based on the GNU Scientific Library ([GSL](https://www.gnu.org/software/gsl/)),
-    provides BFGS, conjugate gradient, steepest descent, and Nelder-Mead algorithms.
-    NOTE: `multimin()` has been removed from the package temporarily, awaiting a permanent fix.
+-   The [calibrar](https://cran.r-project.org/web/packages/calibrar/index.html) package
+    allows for general optimization and parameter estimation of complex and stochastic models;
+    it combines various optimization solvers in a single interface, all with the same syntax as optim() in Base R.
 -   Several derivative-free optimization algorithms are provided with
     package [minqa](https://cran.r-project.org/web/packages/minqa/index.html);
     e.g., the functions `bobyqa()`, newuoa()`, and `uobyqa()` allow minimizing a function of many
