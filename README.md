@@ -117,8 +117,6 @@ routines.
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
     (L-BFGS) methods. Most internal parameters can be set through the
     calling interface.
--   [n1qn1](https://cran.r-project.org/web/packages/n1qn1/index.html) provides an R port of the `n1qn1` optimization procedure 
-    ported from Scilab, a quasi-Newton BFGS method without constraints.
 -   [stochQN](https://cran.r-project.org/web/packages/stochQN/index.html) provides implementations of stochastic,
     limited-memory quasi-Newton optimizers, similar in spirit to the
     LBFGS. It includes an implementation of online LBFGS, stochastic
@@ -164,9 +162,6 @@ routines.
 -   [ManifoldOptim](https://cran.r-project.org/web/packages/ManifoldOptim/index.html) is an R interface to the
     'ROPTLIB' optimization library. It optimizes real-valued functions
     over manifolds such as Stiefel, Grassmann, and Symmetric Positive Definite matrices.
--   The [calibrar](https://cran.r-project.org/web/packages/calibrar/index.html) package
-    allows for general optimization and parameter estimation of complex and stochastic models;
-    it combines various optimization solvers in a single interface, all with the same syntax as optim() in Base R.
 -   Several derivative-free optimization algorithms are provided with
     package [minqa](https://cran.r-project.org/web/packages/minqa/index.html);
     e.g., the functions `bobyqa()`, newuoa()`, and `uobyqa()` allow minimizing a function of many
