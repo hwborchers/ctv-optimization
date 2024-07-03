@@ -539,12 +539,6 @@ websites for more information.
 -   In package [clue](https://cran.r-project.org/web/packages/clue/index.html) `solve_LSAP()` enables the user
     to solve the linear sum assignment problem (LSAP) using an efficient
     C implementation of the Hungarian algorithm.
--   [FLSSS](https://cran.r-project.org/web/packages/FLSSS/index.html) provides multi-threaded solvers for
-    fixed-size single and multi dimensional subset sum problems with
-    optional constraints on target sum and element range, fixed-size
-    single and multi dimensional knapsack problems, binary knapsack
-    problems and generalized assignment problems via exact algorithms or
-    metaheuristics.
 -   Package [qap](https://cran.r-project.org/web/packages/qap/index.html) solves Quadratic Assignment
     Problems (QAP) applying a simulated annealing heuristics (other
     approaches will follow).
