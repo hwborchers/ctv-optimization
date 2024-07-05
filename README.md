@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2024-03-17                                             | 
+| **Version:**    | 2024-07-05                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
