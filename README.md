@@ -625,9 +625,6 @@ websites for more information.
     [rBayesianOptimization](https://cran.r-project.org/web/packages/rBayesianOptimization/index.html) is an implementation of
     Bayesian global optimization with Gaussian Processes, for parameter
     tuning and optimization of hyperparameters.
--   The Sequential Parameter Optimization Toolbox
-    [SPOT](https://cran.r-project.org/web/packages/SPOT/index.html) provides a set of tools for model-based
-    optimization and tuning of algorithms. It includes surrogate models and the design of experiment approaches.
 -   The [desirability](https://cran.r-project.org/web/packages/desirability/index.html) package contains S3 classes
     for multivariate optimization using the desirability function
     approach of Harrington (1965).
