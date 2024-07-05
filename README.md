@@ -529,12 +529,6 @@ websites for more information.
     to solve the linear sum assignment problem (LSAP) using an efficient C implementation of the Hungarian algorithm.
     And function `LAPJV()` from package [TreeDist](https://cran.r-project.org/web/packages/TreeDist/index.html)
     implements the Jonker-Volgenant algorithm to solve the Linear Sum Assignment Problem (LSAP) even faster.
--   [FLSSS](https://cran.r-project.org/web/packages/FLSSS/index.html) provides multi-threaded solvers for
-    fixed-size single and multi-dimensional subset sum problems with
-    optional constraints on target sum and element range, fixed-size
-    single and multi-dimensional knapsack problems, binary knapsack
-    problems and generalized assignment problems via exact algorithms or
-    metaheuristics.
 -   Package [qap](https://cran.r-project.org/web/packages/qap/index.html) solves Quadratic Assignment
     Problems (QAP) applying a simulated annealing heuristics (other
     approaches will follow).
@@ -563,16 +557,13 @@ websites for more information.
     problems and then solved optimally by the RELAX-IV codes of Bertsekas
     and Tseng (free for research).
 -   Package [TSP](https://cran.r-project.org/web/packages/TSP/index.html) provides basic infrastructure for
-    handling and solving the traveling salesperson problem (TSP). The
-    main routine `solve_TSP()` solves the TSP through several
-    heuristics. In addition, it provides an interface to the [Concorde
-    TSP Solver](http://www.tsp.gatech.edu/concorde/index.html), which
-    has to be downloaded separately.
--   [rminizinc](https://cran.r-project.org/web/packages/rminizinc/index.html) provides an interface to the open-source constraint
-    modeling language and system [MiniZinc](https://www.minizinc.org/) 
-    (to be downloaded separately). R users can apply the package to solve
-    combinatorial optimization problems by modifying existing 'MiniZinc'
-    models, and also by creating their own models.
+    handling and solving the traveling salesperson problem (TSP). The main routine `solve_TSP()` solves 
+    the TSP through several heuristics. In addition, it provides an interface to the
+    [Concorde TSP Solver](http://www.tsp.gatech.edu/concorde/index.html), which has to be downloaded separately.
+-   [rminizinc](https://cran.r-project.org/web/packages/rminizinc/index.html) provides an interface to the
+    open-source constraint modeling language and system [MiniZinc](https://www.minizinc.org/) 
+    (to be downloaded separately). R users can apply the package to solve combinatorial optimization problems
+    by modifying existing 'MiniZinc' models, and also by creating their own models.
 
 
 ### Multi Objective Optimization
