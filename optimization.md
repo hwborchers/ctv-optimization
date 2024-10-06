@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2023-12-26                                             | 
+| **Version:**    | 2024-10-06                                             | 
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
 For the current CRAN Task View see [here](https://CRAN.R-project.org/view=Optimization). 
