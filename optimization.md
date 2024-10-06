@@ -45,7 +45,8 @@ or via e-mail to the maintainer address.
     or many parameters. Function `optimr()` in this package extends the
     `optim()` function with the same syntax but more 'method' choices.
     Function `opm()` applies several solvers to a selected optimization
-    task and returns a dataframe of results for easy comparison.
+    task and returns a dataframe of results for easy comparison. For more
+    information see its [README](https://github.com/nashjc/optimx/blob/main/README.md).
 
 -   The R Optimization Infrastructure ([ROI](https://cran.r-project.org/web/packages/ROI/index.html)) package
     provides a framework for handling optimization problems in R. It
@@ -63,7 +64,7 @@ or via e-mail to the maintainer address.
     natural way following mathematical convention and DCP rules. The
     system analyzes the problem, verifies its convexity, converts it
     into a canonical form, and hands it off to an appropriate solver
-    such as ECOS or SCS to obtain the solution.For more information 
+    such as ECOS or SCS to obtain the solution. For more information 
     see the [CVXR home page](https://cvxr.rbind.io/).
 
 
