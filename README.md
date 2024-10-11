@@ -341,9 +341,6 @@ getting stuck in local solutions.
 -   [DEoptimR](https://cran.r-project.org/web/packages/DEoptimR/index.html) provides an implementation of the jDE
     variant of the differential evolution stochastic algorithm for
     nonlinear programming problems (It allows handling constraints in a fexible manner.)
--   The [CEoptim](https://cran.r-project.org/web/packages/CEoptim/index.html) package implements a cross-entropy
-    optimization technique that can be applied to continuous, discrete,
-    mixed, and constrained optimization problems.
 -   [GenSA](https://cran.r-project.org/web/packages/GenSA/index.html) is a package providing a function for
     generalized Simulated Annealing which can be used to search for the
     global minimum of a quite complex non-linear objective function with
@@ -414,6 +411,8 @@ getting stuck in local solutions.
     for global optimization of deterministic or stochastic functions.
 -   [RCEIM](https://cran.r-project.org/web/packages/RCEIM/index.html) implements a stochastic heuristic method
     for performing multi-dimensional function optimization.
+-   The [CEoptim](https://cran.r-project.org/web/packages/CEoptim/index.html) package implements a cross-entropy
+    optimization technique that can be applied to continuous, discrete, mixed, and constrained optimization problems.
 -   Package [graDiEnt](https://cran.r-project.org/web/packages/graDiEnt/index.html) implements the Stochastic
     Quasi-Gradient Differential Evolution (SQG-DE) optimization algorithm; being derivative-free, it combines the
     robustness of the population-based "Differential Evolution" with the efficiency of gradient-based optimization.
