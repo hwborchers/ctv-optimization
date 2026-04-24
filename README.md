@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2024-07-05                                             | 
+| **Version:**    | 2026-04-24                                             | 
 | **Web page**    | [Optimization and Mathematical Programming](http://htmlpreview.github.io/?https://github.com/hwborchers/ctv-optimization/blob/master/optimization.html) |
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
@@ -196,10 +196,6 @@ routines.
     implements an interface to the Proximal Interior Point Quadratic Programming solver,
     cf. [PIQP](https://github.com/PREDICT-EPFL/piqp) from EPFL;
     it combines an infeasible interior point method with the proximal method of multipliers.
--   [qpmadr](https://cran.r-project.org/web/packages/qpmadr/index.html) interfaces the 'qpmad' software and
-    solves quadratic programming (QP) problems with linear inequality,
-    equality and bound constraints, using the method by Goldfarb and
-    Idnani.
 -   [kernlab](https://cran.r-project.org/web/packages/kernlab/index.html) contains the function `ipop` for
     solving quadratic programming problems using interior point methods.
     (The matrix can be positive semidefinite.)
@@ -348,8 +344,6 @@ getting stuck in local solutions.
 -   [GA](https://cran.r-project.org/web/packages/GA/index.html) provides functions for optimization using
     Genetic Algorithms in both, the continuous and discrete case. This
     package allows to run corresponding optimization tasks in parallel.
--   In package [gafit](https://cran.r-project.org/web/packages/gafit/index.html) `gafit()` uses a genetic algorithm approach
-    to find the minimum of a one-dimensional function.
 -   Package [genalg](https://cran.r-project.org/web/packages/genalg/index.html) contains `rbga()`, an implementation
     of a genetic algorithm for multi-dimensional function optimization.
 -   Package [rgenoud](https://cran.r-project.org/web/packages/rgenoud/index.html) offers `genoud()`, a routine
@@ -388,8 +382,8 @@ getting stuck in local solutions.
     several packages: In packages [cmaes](https://cran.r-project.org/web/packages/cmaes/index.html) and
     [cmaesr](https://cran.r-project.org/web/packages/cmaesr/index.html), in [parma](https://cran.r-project.org/web/packages/parma/index.html) as
     `cmaes`, in [adagio](https://cran.r-project.org/web/packages/adagio/index.html) as `pureCMAES`, and in
-    [rCMA](https://cran.r-project.org/web/packages/rCMA/index.html) as `cmaOptimDP`, interfacing Hansen's own
-    Java implementation.
+    [rCMA](https://cran.r-project.org/web/packages/rCMA/index.html) (archived) as `cmaOptimDP`,
+    interfacing Hansen's own Java implementation.
 -   Package [Rmalschains](https://cran.r-project.org/web/packages/Rmalschains/index.html) implements an algorithm
     family for continuous optimization called memetic algorithms with
     local search chains (MA-LS-Chains).
@@ -486,6 +480,10 @@ optimizers.
     is an R interface to the HiGHS solver.
     [HiGHS](https://highs.dev/) is currently among the best open-source mixed-integer linear programming solvers.
     Furthermore, it can be used to solve quadratic optimization problems (without mixed integer constraints).
+-   [scip](https://cran.r-project.org/web/packages/scip/index.html) provides an R interface to SCIP
+    (Solving Constraint Integer Programs), a framework for mixed-integer programming (MIP)
+    mixed-integer nonlinear programming (MINLP), and constraint integer programming. Supports
+    knapsack constraints with continuous, binary, and integer variables.
 
 #### Interfaces to Commercial Optimizers
 
@@ -535,10 +533,9 @@ websites for more information.
     analysis, uses the very fast igraph C library. It can be used to
     calculate shortest paths, maximal network flows, minimum spanning
     trees, etc.
--   [mknapsack](https://cran.r-project.org/web/packages/mknapsack/index.html) solves multiple knapsack problems,
-    based on LP solvers such as 'lpSolve' or 'CBC'; will assign
-    items to knapsacks in a way that the value of the top knapsacks is
-    as large as possible.
+-   [mknapsack](https://cran.r-project.org/web/packages/mknapsack/index.html) (archived)
+    solves multiple knapsack problems, based on LP solvers such as 'lpSolve' or 'CBC';
+    will assign items to knapsacks in a way that the value of the top knapsacks is as large as possible.
 -   Package 'knapsack' (see R-Forge project
     `r rforge("optimist")`) provides routines from the book
     `Knapsack Problems' by Martello and Toth. There are functions for
