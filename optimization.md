@@ -5,7 +5,7 @@
 |-----------------|--------------------------------------------------------|  
 | **Maintainer:** | Hans W. Borchers                                       | 
 | **Contact:**    | hwb at mailbox.org                                     | 
-| **Version:**    | 2024-10-06                                             | 
+| **Version:**    | 2026-07-21                                             | 
 
 This page has been forged from the CRAN Task View "Optimization and Mathematical Programming", version end of 2021.
 For the current CRAN Task View see [here](https://CRAN.R-project.org/view=Optimization). 
@@ -244,10 +244,6 @@ routines.
     single- and multi-objective test functions that are frequently used
     for benchmarking optimization algorithms; offers a set of convenient
     functions to generate, plot, and work with objective functions.
--   [flacco](https://cran.r-project.org/web/packages/flacco/index.html) contains tools and features used for an
-    Exploratory Landscape Analysis (ELA) of continuous optimization
-    problems, capable of quantifying rather complex properties, such as
-    the global structure, separability, etc., of the optimization problems.
 -   Package `r github("jlmelville/funconstrain")` (on Github)
     implements 35 of the test functions by More, Garbow, and Hillstom,
     useful for testing unconstrained optimization methods.
@@ -294,9 +290,6 @@ getting stuck in local solutions.
 -   Package [onls](https://cran.r-project.org/web/packages/onls/index.html) (archived) implements orthogonal
     nonlinear least-squares regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR) using a
     Levenberg-Marquardt type minimization algorithm based on the ODRPACK Fortran library.
--   [colf](https://cran.r-project.org/web/packages/colf/index.html) performs least squares constrained
-    optimization on a linear objective function. It contains a number of
-    algorithms to choose from and offers a formula syntax similar to `lm()`.
 
 
 ### Semidefinite and Convex Solvers
@@ -464,20 +457,15 @@ optimizers.
     lp_solve (see also project `r rforge("lpsolve")` on
     R-Forge). [lpSolveAPI](https://cran.r-project.org/web/packages/lpSolveAPI/index.html) supports reading linear
     programs from files in lp and MPS format.
--   Packages [glpkAPI](https://cran.r-project.org/web/packages/glpkAPI/index.html) as well as package
-    [Rglpk](https://cran.r-project.org/web/packages/Rglpk/index.html) provide an interface to the [GNU Linear
-    Programming Kit](https://www.gnu.org/software/glpk/) (GLPK). Whereas
-    the former provides high level access to low level routines the
-    latter offers a high level routine `Rglpk_solve_LP()` to solve MILPs
-    using GLPK. Both packages offer the possibility to use models
+-   Package [Rglpk](https://cran.r-project.org/web/packages/Rglpk/index.html) provides an interface to the
+    [GNU Linear Programming Kit](https://www.gnu.org/software/glpk/) (GLPK). It offers a high level routine
+    `Rglpk_solve_LP()` to solve MILPs using GLPK. It provides the possibility to use models
     formulated in the MPS format.
 -   [Rsymphony](https://cran.r-project.org/web/packages/Rsymphony/index.html) has the routine
     `Rsymphony_solve_LP()` that interfaces the SYMPHONY solver for
     mixed-integer linear programs. (SYMPHONY is part of the
-    [Computational Infrastructure for Operations
-    Research](http://www.coin-or.org/) (COIN-OR) project.) Package
-    `lpsymphony` in Bioconductor provides a similar interface to
-    SYMPHONY that is easier to install.
+    [Computational Infrastructure for Operations Research](http://www.coin-or.org/) (COIN-OR) project.)
+    Package `lpsymphony` in Bioconductor provides a similar interface to SYMPHONY that is easier to install.
 -   The NOMAD solver is implemented in the [crs](https://cran.r-project.org/web/packages/crs/index.html)
     package for solving mixed integer programming problems. This
     algorithm is accessible via the `snomadr()` function and is
@@ -493,6 +481,11 @@ optimizers.
     is currently among the best open source mixed integer linear programming solver.
     Furthermore, it can be used to solve quadratic optimization problems
     (without mixed integer constraints).
+-   Package [scip](https://cran.r-project.org/web/packages/scip/index.html) provides an R interface
+    to SCIP (Solving Constraint Integer Programs), developed at the Zuse Institute Berlin (ZIB),
+    see [SCIPopt](https://www.scipopt.org/), a framework for mixed-integer programming (MIP),
+    mixed-integer programming (MINLP), and constraint integer programming. Supports linear, quadratic,
+    SOS, indicator, and knapsack constraints with continuous, binary, and integer variables.
 
 #### Interfaces to Commercial Optimizers
 
