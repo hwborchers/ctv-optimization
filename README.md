@@ -177,6 +177,11 @@ routines.
 -   Package [quantreg](https://cran.r-project.org/web/packages/quantreg/index.html) contains variations of simplex
     and of interior point routines ( `nlrq()`, `crq()`). It provides an
     interface to L1 regression in the R code of function `rq()`.
+-   The [Uno](https://cran.r-project.org/web/packages/Uno/index.html) package integrates
+    'Uno' (Unifying Nonlinear Optimization), a C++ solver for smooth nonlinearly constrained optimization.
+    It unifies Lagrange-Newton methods, including sequential quadratic programming and interior-point methods,
+    by decomposing them into interacting building blocks.
+    'Uno' is highly competitive against other state-of-the-art solvers.
 
 
 ### Quadratic Optimization
